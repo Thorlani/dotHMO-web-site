@@ -12,6 +12,7 @@ const Contact = () => {
         message: ""
     })
     const [formErrors, setFormErrors] = useState({})
+    const [isSubmit, setIsSubmit] = useState(false)
 
     function handleChange() {
         const {name, value, type, checked} = event.target
@@ -38,15 +39,17 @@ const Contact = () => {
 
     function handleSubmit(event) {
         event.preventDefault();
+        setIsSubmit(true)
         setFormErrors(errorChecker(contactForm));
-        if(Object.keys(formErrors).length === 0) {
+        if(Object.keys(formErrors).length === 0 && isSubmit) {
             Axios.post(url, {
                 name: contactForm.name,
                 phone: contactForm.phone,
                 message: contactForm.message
             })
             .then(res => {
-                console.log(res.data)
+                console.log(res)
+                console.log("successfully sent")
             })
             .catch(err => {
                 console.log(err)

@@ -1,6 +1,7 @@
 import styles from "../styles/request.module.css";
 import { useState, useEffect } from "react";
 import Axios from "axios";
+import Submitted from "./submitted";
 
 function tConvert (time) {
     // Check correct time format and split into components
@@ -34,7 +35,7 @@ const Request = ({ closeModal, savedd }) => {
         time: "",
     });
     const [formErrors, setFormErrors] = useState({});
-    // const [isSubmit, setIsSubmit] = useState(false);
+    const [isSubmit, setIsSubmit] = useState(false);
 
     const hasNoError = Object.keys(formErrors).length === 0 //&& isSubmit
 
@@ -47,22 +48,7 @@ const Request = ({ closeModal, savedd }) => {
             }
         })
     }
-
-    function handleSubmit(event) {
-        event.preventDefault();
-        setFormErrors(validate(formData));
-        Axios.post(url, {
-            firstname: formData.firstName,
-            lastname: formData.lastName,
-            email: formData.email,
-            phone: formData.phone,
-            dateOfCall: formData.date,
-            timeOfCall: tConvert(formData.time),
-        }).then(res => {
-            
-        })
-    }
-
+    
     useEffect(() => {
         // console.log(formErrors);
         if (Object.keys(formErrors).length === 0) {
@@ -98,6 +84,27 @@ const Request = ({ closeModal, savedd }) => {
             errors.time = 'This field is required'
         }
         return errors;
+    }
+
+    function handleSubmit(event) {
+        event.preventDefault();
+        setFormErrors(validate(formData));
+        setIsSubmit(true);
+        if(Object.keys(formErrors).length === 0 && isSubmit) {
+            Axios.post(url, {
+                firstname: formData.firstName,
+                lastname: formData.lastName,
+                email: formData.email,
+                phone: formData.phone,
+                dateOfCall: formData.date,
+                timeOfCall: tConvert(formData.time),
+            }).then(res => {
+                console.log(res);
+                savedd(false);
+            }).catch(err => {
+                console.log(err)
+            })
+        }
     }
 
 
@@ -194,7 +201,7 @@ const Request = ({ closeModal, savedd }) => {
                     <div className={styles.reverse}>
                         <button className={styles.btn2} onClick={cancel}>Cancel</button>
                         {/* <button type="submit" className={styles.btn3}>Submit</button> */}
-                        {hasNoError ? <button type="submit" onClick={submit} className={styles.btn3}>Submit</button> : <button type="submit" className={styles.btn3}>Submit</button>}
+                        {hasNoError ? <button type="submit" className={styles.btn3}>Submit</button> : <button type="submit" className={styles.btn3}>Submit</button>}
                     </div>
                 </form>
             </div>

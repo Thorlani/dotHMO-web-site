@@ -12,7 +12,7 @@ const Quote = ({ closeModal, savedd }) => {
         closeModal(false);
     }
 
-    function submit() {
+    function submited() {
         savedd(false);
     }
 
@@ -84,6 +84,7 @@ const Quote = ({ closeModal, savedd }) => {
     })
     const [formErrors, setFormErrors] = useState({});
     const [isSubmit, setIsSubmit] = useState(false);
+    const [isThereError, setIsThereError] = useState(true);
   
 
     function handleClick(event) {
@@ -97,7 +98,7 @@ const Quote = ({ closeModal, savedd }) => {
                 [name]: type === "checkbox" ? checked : value
             }
         })
-        console.log(formData);
+        // console.log(formData);
     }
 
     
@@ -105,21 +106,25 @@ const Quote = ({ closeModal, savedd }) => {
     function handleSubmit(event) {
         event.preventDefault();
         setFormErrors(validate(formData));
-        setIsSubmit(true)
-        Axios.post(url, {
-            firstname: formData.firstName,
-            lastname: formData.lastName,
-            email: formData.email,
-            phone: formData.phone,
-            address: formData.address,
-            state: formData.state,
-            lgaId: formData.localGovernment,
-            policyTypeId: formData.typeOfPolicy,
-            numberOfLives: formData.numberOfLives
-        })
-        .then(res => {
-            console.log(res.data)
-        })
+        setIsSubmit(true);
+        if(Object.keys(formErrors).length === 0 && isSubmit) {
+            Axios.post(url, {
+                firstname: formData.firstName,
+                lastname: formData.lastName,
+                email: formData.email,
+                phone: formData.phone,
+                address: formData.address,
+                state: formData.state,
+                lgaId: formData.localGovernment,
+                policyTypeId: formData.typeOfPolicy,
+                numberOfLives: formData.numberOfLives
+            })
+            .then(res => {
+                console.log(res.data)
+                console.log("successfully submited")
+                savedd(false);
+            })
+        } 
     }
 
     useEffect(() => {
@@ -169,6 +174,8 @@ const Quote = ({ closeModal, savedd }) => {
     }
 
     const errorMessage = Object.keys(formErrors).length === 0 && isSubmit
+
+
 
     return (
         <div className={styles.backgroundColor}>
@@ -325,8 +332,13 @@ const Quote = ({ closeModal, savedd }) => {
                     <div className={styles.line}></div>
 
                     <div className={styles.cancelOrSubmit}>
-                        <button onClick={cancel} className={styles.cancel}>CANCEL</button>
-                        {errorMessage ? <button type="submit" className={styles.submit} onClick={submit}>GET A QUOTE</button> : <button className={styles.submit}>GET A QUOTE</button>}
+                        <button type="button" onClick={cancel} className={styles.cancel}>CANCEL</button>
+                        {errorMessage
+                             ? 
+                            <button type="submit" className={styles.submit}>GET A QUOTE</button>
+                             : 
+                             <button type="submit" className={styles.submit}>GET A QUOTE</button>
+                        }
                     </div>
                 </form>
             </div>
