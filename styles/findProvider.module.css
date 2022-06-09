@@ -1,0 +1,423 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;400;600;700&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Poppins:ital,wght@0,200;0,300;0,500;0,600;0,700;0,800;0,900;1,400&family=Source+Serif+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,700&display=swap');
+
+.FindProviderHeader {
+    width: 100%;
+    padding: 88px 97px;
+    padding-bottom: 0;
+    display: flex;
+    background: #DDFFDA;
+}
+
+.FindProviderHeaderLeft {
+    width: 50%;
+}
+
+.h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 58px;
+    line-height: 77px;
+    letter-spacing: 0.5px;
+    color: #50897C;
+}
+
+.paragraph {
+    margin-top: -10px;
+    width: 536px;
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 32px;
+    letter-spacing: 0.5px;
+    color: #000000;
+}
+
+.FindProviderHeaderRight {
+    width: 50%;
+    position: relative;
+    top: 10px;
+}
+
+.FindProviderBody {
+    width: 100%;
+    height: 644px;
+    background: #FFFFFF;
+    display: grid;
+    place-items: center;
+}
+
+.FindProviderBodyContent {
+    width: 100%;
+    background: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    padding-top: 92px;
+}
+
+.input {
+    width: 588px;
+    height: 57px;
+    background: #FFFFFF;
+    border: 1px solid #D2D5E1;
+    border-radius: 2px;
+    outline: none;
+    padding-left: 16px;
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: 0.5px;
+    color: #263238;
+    margin-right: 20px;
+}
+
+.btn {
+    background: #65A999;
+    border-radius: 2px;
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    letter-spacing: 0.5px;
+    color: #FFFFFF;
+    padding: 19px 30px;
+    border: none;
+    cursor: pointer;
+}
+
+.results {
+    display: block;
+    height: 400px;
+    overflow-y: scroll;
+    scrollbar-width: 0px;
+}
+
+.noResults {
+    display: none;
+    height: 400px;
+    width: 100%;
+}
+
+.results::-webkit-scrollbar {
+    display: none;
+}
+
+.searchResult {
+    display: block;
+    height: 141px;
+    width: 865px;
+    border-radius: 4px;
+    background: #D8D8D81A;
+    display: flex;
+    justify-content: space-between;
+    padding: 16px 41px 26px 22px;
+    margin-bottom: 15px;
+}
+
+.searchResultLeft {
+    width: 75%;
+}
+.searchResultRight {
+    width: 25%;
+}
+
+.searchResultTitle {
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 21px;
+    color: #1C1D21;
+}
+
+.searchResultSpan {
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 18px;
+    color: #979797;
+}
+
+.noSearchResults {
+    display: none;
+    height: 400px;
+}
+
+.searchResultRightTop {
+    display: flex;
+    justify-content: space-between;
+}
+
+.searchResultRightTopLeftOne {
+    display: flex;
+    justify-content: space-between;
+}
+
+.locationOne {
+    position: relative;
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 18px;
+    color: #50897C;
+}
+
+.dotOne {
+    width: 8px;
+    height: 8px;
+    background: #7CE7AC;
+    border-radius: 50%;
+    position: relative;
+    top: 20px;
+    left: -10px;
+}
+
+.dotTwo {
+    width: 5px;
+    height: 5px;
+    background-color: #50897C;
+    border-radius: 50%;
+    position: relative;
+    top: 22px;
+    left: -10px;
+}
+
+.locationTwo {
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 18px;
+    color: #50897C;
+    margin-top: 10px;
+    margin-left: 5px;
+}
+
+.getDirection {
+    border: 1px solid #65A999;
+    border-radius: 2px;
+    padding: 11px 29px 12px;
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: 0.5px;
+    color: #65A999;
+    text-transform: uppercase;
+    background: #D8D8D81A;
+    cursor: pointer;
+}
+
+@media (max-width: 1024px) {
+    .FindProviderHeader {
+        width: 1024px;
+        padding: 88px 37px;
+        padding-bottom: 0;
+        display: flex;
+        background: #DDFFDA;
+    }
+    .paragraph {
+        max-width: 457px;
+    }
+    .FindProviderBody {
+        width: 1024px;
+    }
+}
+
+@media (max-width: 768px) {
+    .FindProviderHeader {
+        width: 768px;
+        display: flex;
+        flex-direction: column-reverse;
+        text-align: center;
+        padding-bottom: 40px;
+    }
+    .FindProviderHeaderRight {
+        width: 100%;
+    }
+    .FindProviderHeaderLeft {
+        width: 100%;
+    }
+    .paragraph {
+        margin: auto;
+        margin-top: -40px;
+    }
+    .FindProviderBody {
+        width: 768px;
+    }
+    .FindProviderBodyContent {
+        padding-top: 0px;
+    }
+    .searchResultLeft {
+        width: 65%;
+    }
+    .searchResultRight {
+        width: 35%;
+    }
+    .searchResult {
+        width: 715px;
+    }
+    .searchResultTitle {
+        width: 300px;
+    }
+}
+
+@media (max-width: 425px) {
+    .FindProviderHeader {
+        width: 425px;
+    }
+    .input {
+        width: 238px;
+    }
+    .paragraph {
+        max-width: 357px;
+    }
+    .FindProviderBody {
+        width: 425px;
+    }
+    .searchResult {
+        width: 415px;
+        height: 167px;
+    }
+    .searchResultTitle {
+        width: 200px;
+        font-size: 16px;
+    }
+    .locationOne {
+        font-weight: 600;
+        font-size: 14px;
+        max-width: 60px;
+        word-break: break-word;
+    }
+    .dotTwo{
+        margin-left: 18px;
+        width: 5px;
+        height: 5px;
+        background-color: #50897C;
+        border-radius: 50%;
+        position: relative;
+        top: 22px;
+        left: -10px;
+    }
+    .locationTwo {
+        font-weight: 600;
+        font-size: 14px;
+        margin-left: 20px;
+        width: 60px;
+        word-break: break-word;
+    }
+    .searchResultSpan {
+        font-size: 12px;
+    }
+    .getDirection {
+        padding: 8px 19px 9px;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 19px;
+    }
+}
+
+@media (max-width: 375px) {
+    .FindProviderHeader {
+        width: 375px;
+    }
+    .h1 {
+        font-size: 48px;
+        line-height: 47px;
+    }
+    .paragraph {
+        width: 307px;
+        margin-top: -20px;
+    }
+    .FindProviderBody {
+        width: 375px;
+    }
+    .input {
+        width: 208px;
+    }
+    .searchResult {
+        width: 355px;
+        height: 161px;
+    }
+    .searchResultLeft {
+        width: 60%;
+    }
+    .searchResultRight {
+        width: 40%;
+    }
+    .searchResultTitle {
+        width: 150px;
+        font-size: 16px;
+    }
+    .locationOne {
+        font-weight: 600;
+        font-size: 14px;
+        width: 60px;
+        word-break: break-word;
+    }
+    .locationTwo {
+        width: 60px;
+        word-break: break-word;
+    }
+    
+    
+}
+
+@media (max-width: 320px) {
+    .FindProviderHeader {
+        width: 320px;
+    }
+    .h1 {
+        font-size: 38px;
+        line-height: 42px;
+    }
+    .paragraph {
+        width: 250px;
+        margin-top: -20px;
+    }
+    .FindProviderBody {
+        width: 320px;
+    }
+    .btn {
+        font-size: 16px;
+        line-height: 19px;
+        padding: 15px 20px;
+    }
+    .input {
+        width: 208px;
+        margin-right: 0px;
+    }
+    .searchResult {
+        width: 310px;
+        height: 161px;
+    }
+    .searchResultTitle {
+        width: 148px;
+        font-size: 16px;
+    }
+    .dotTwo {
+        margin-left: 13px;
+        width: 5px;
+        height: 5px;
+        background-color: #50897C;
+        border-radius: 50%;
+        position: relative;
+        top: 22px;
+        left: -10px;
+    }
+    .locationTwo {
+        font-weight: 600;
+        font-size: 14px;
+        margin-left: 13px;
+        width: 57px;
+        word-break: break-word;
+    }
+}

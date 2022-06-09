@@ -1,0 +1,690 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;400;600;700&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Poppins:ital,wght@0,200;0,300;0,500;0,600;0,700;0,800;0,900;1,400&family=Source+Serif+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,700&display=swap');
+
+.provider {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 116px 200px 0px 204px;
+}
+
+.title {
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #808080;
+    mix-blend-mode: normal;
+    opacity: 0.9;
+}
+
+.errorMessage {
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    color: red;
+    font-size: 14px;
+}
+
+.step {
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: right;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #808080;
+    mix-blend-mode: normal;
+    opacity: 0.9;
+}
+
+.line {
+    /* margin-top: 22px; */
+    width: 100%;
+    height: 1px;
+    background-color: #C6C6C6;
+}
+
+.form {
+    margin-top: 40px;
+    padding: 0px 200px 140px;
+}
+
+.providerTypeContainer {
+    height: 116px;
+    width: 1030px;
+    border-radius: 10px;
+    padding: 23px 70px 31px 50px;
+    background: #F9F9F9;
+    display: flex;
+    flex-direction: column;
+}
+
+.selectProviderType {
+    margin-top: 5px;
+    background: #FFFFFF;
+    border: 1px solid #C6C6C6;
+    border-radius: 2px;
+    height: 42px;
+    width: 910px;
+    padding-left: 6px;
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: 0.5px;
+    color: #000000;
+    outline: none;
+}
+
+.providerName {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+}
+
+.inputProviderName {
+    margin-top: 5px;
+    background: #FFFFFF;
+    border: 1px solid #C6C6C6;
+    border-radius: 2px;
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: 0.5px;
+    color: #000000;
+    padding-left: 13px;
+    outline: none;
+    height: 42px;
+    width: 1028px;
+}
+
+.addressStateLG {
+    margin-top: 26px;
+    display: flex;
+}
+
+.address {
+    display: flex;
+    flex-direction: column;
+}
+
+.inputAddress {
+    margin-top: 5px;
+    height: 42px;
+    width: 501px;
+    border-radius: 2px;
+    background: #FFFFFF;
+    border: 1px solid #C6C6C6;
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: 0.5px;
+    color: #000000;
+    outline: none;
+}
+
+.state {
+    display: flex;
+    flex-direction: column;
+    margin-left: 26px;
+}
+
+.selectState {
+    margin-top: 5px;
+    background: #FFFFFF;
+    border: 1px solid #C6C6C6;
+    border-radius: 2px;
+    height: 42px;
+    width: 236px;
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: 0.5px;
+    color: #000000;
+    padding-left: 10px;
+    outline: none;
+}
+
+.lg {
+    display: flex;
+    flex-direction: column;
+    margin-left: 26px;
+}
+
+.selectLG {
+    margin-top: 5px;
+    background: #FFFFFF;
+    border: 1px solid #C6C6C6;
+    border-radius: 2px;
+    height: 42px;
+    width: 236px;
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: 0.5px;
+    color: #000000;
+    padding-left: 2px;
+    outline: none;
+}
+
+.phoneNumberAndEmail {
+    margin-top: 26px;
+    display: flex;
+}
+
+.phoneNumber {
+    display: flex;
+    flex-direction: column;
+}
+
+.inputPhoneNumber {
+    margin-top: 5px;
+    background: #FFFFFF;
+    border: 1px solid #C6C6C6;
+    border-radius: 2px;
+    height: 42px;
+    width: 501.0000305175781px;
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: 0.5px;
+    color: #000000;
+    padding-left: 20px;
+    outline: none;
+}
+
+.email {
+    display: flex;
+    flex-direction: column;
+    margin-left: 24px;
+}
+
+.inputEmail {
+    margin-top: 5px;
+    background: #FFFFFF;
+    border: 1px solid #C6C6C6;
+    border-radius: 2px;
+    height: 42px;
+    width: 501.0000305175781px;
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: 0.5px;
+    color: #000000;
+    padding-left: 20px;
+    outline: none;
+}
+
+.formFoot {
+    margin-top: 25px;
+    background: #F9F9F9;
+    border: 1px solid #D2D5E1;
+    border-radius: 4px;
+    height: 380px;
+    width: 1026px;
+    left: 208px;
+    top: 631px;
+    border-radius: 4px;
+    padding: 15px 52px 120px 31px;
+}
+
+.radioBtn {
+    margin-top: 20px;
+    display: flex;
+}
+
+.no {
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: 0.5px;
+
+    color: #65A999;
+}
+.yes {
+    margin-left: 48px;
+}
+.no:hover {
+    cursor: pointer;
+    color: #65A999;
+}
+.yes:hover {
+    cursor: pointer;
+    color: #65A999;
+}
+
+.anotherBranchAddresses {
+    margin-top: 50px;
+}
+
+.place {
+    display: flex;
+}
+
+.flexColumn {
+    display: flex;
+    flex-direction: column;
+}
+
+.inputPlace {
+    margin-top: 5px;
+    height: 42px;
+    width: 400px;
+    border-radius: 2px;
+    background: #FFFFFF;
+    border: 1px solid #C6C6C6;
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: 0.5px;
+    color: #000000;
+    outline: none;
+}
+
+.flexColumnState {
+    display: flex;
+    flex-direction: column;
+    margin-left: 36px;
+}
+
+.selectanotherBranchState {
+    margin-top: 5px;
+    padding-left: 5px;
+    height: 42px;
+    width: 236px;
+    border-radius: 2px;
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: 0.5px;
+    color: #000000;
+    background: #FFFFFF;
+    border: 1px solid #C6C6C6;
+    outline: none;
+}
+
+.flexColumnLG {
+    display: flex;
+    flex-direction: column;
+    margin-left: 36px;
+}
+
+.selectanotherBranchLG {
+    background: #FFFFFF;
+    border: 1px solid #C6C6C6;
+    border-radius: 2px;
+    height: 42px;
+    width: 236px;
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: 0.5px;
+    color: #000000;
+    padding-left: 2px;
+    outline: none;
+}
+
+.linee {
+    margin-top: 31px;
+    width: 100%;
+    height: 1px;
+    background: #C6C6C6;
+}
+
+.addBranch {
+    margin-top: 18px;
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 22px;
+    letter-spacing: 0.5px;
+    color: #65A999;
+    text-transform: uppercase;
+}
+
+.formNext {
+    width: 1026px;
+    margin-top: 50px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.save {
+    border: none;
+    background: #FFFFFF;
+    display: flex;
+    align-items: center;
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 22px;
+    letter-spacing: 0.5px;
+    color: #65A999;
+    cursor: pointer;
+}
+
+.next {
+    cursor: pointer;
+    background: #65A999;
+    border-radius: 2px;
+    height: 42px;
+    width: 148px;
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    letter-spacing: 0.5px;
+    color: #FFFFFF;
+    border: none;
+}
+
+@media (max-width: 1024px) {
+    .form {
+        width: 1024px;
+        margin-top: 40px;
+        padding: 0px 0px 140px 17px;
+    }
+    .providerTypeContainer {
+        height: 116px;
+        width: 998px;
+    }
+    .inputProviderName {
+        width: 990px;
+    }
+    .inputAddress {
+        margin-top: 5px;
+        height: 42px;
+        width: 466px;
+    }
+    .inputPhoneNumber {
+        width: 478px;
+    }
+    .inputEmail {
+        width: 478px;
+    }
+    .formFoot {
+        width: 998px;
+    }
+    .formNext {
+        width: 988px;
+    }
+}
+
+@media (max-width: 768px) {
+    .provider {
+        padding: 116px 20px 0px 20px;
+    }
+    .form {
+        width: 768px;
+    }
+    .providerTypeContainer {
+        height: 116px;
+        width: 740px;
+    }
+    .selectProviderType {
+        width: 640px;
+    }
+    .inputProviderName {
+        width: 740px;
+    }
+    .inputAddress {
+        width: 366px;
+    }
+    .selectState {
+        width: 134px;
+    }
+    .selectLG {
+        width: 134px;
+    }
+    .inputPhoneNumber{
+        width: 278px;
+    }
+    .inputEmail {
+        width: 438px;
+    }
+    .formFoot {
+        width: 740px;
+    }
+    .inputPlace {
+        width: 326px;
+    }
+    .selectanotherBranchState {
+        width: 136px;
+    }
+    .selectanotherBranchLG {
+        background: #FFFFFF;
+        border: 1px solid #C6C6C6;
+        border-radius: 2px;
+        height: 42px;
+        width: 136px;
+    }
+    .formNext {
+        width: 740px;
+    }
+}
+
+@media (max-width: 425px) {
+    .contentSection {
+        width: 425px;
+    }
+    .provider {
+        padding: 46px 20px 0px 20px;
+    }
+    .line {
+        width: 425px;
+    }
+    .form {
+        width: 425px;
+        padding: 0px 12px 80px;
+    }
+    .providerTypeContainer {
+        height: 110px;
+        width: 400px;
+        padding: 23px 10px 31px 10px;
+    }
+    .selectProviderType {
+        width: 380px;
+    }
+    .inputProviderName {
+        width: 400px;
+    }
+    .addressStateLG {
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+    }
+    .inputAddress {
+        width: 400px
+    }
+    .state {
+        margin-left: 0px;
+    }
+    .selectState {
+        width: 400px;
+    }
+    .lg {
+        margin-left: 0px;
+    }
+    .selectLG {
+        width: 400px;
+    }
+    .phoneNumberAndEmail {
+        flex-direction: column;
+    }
+    .inputPhoneNumber {
+        width: 400px;
+    }
+    .email {
+        margin-left: 0px;
+    }
+    .inputEmail {
+        width: 400px;
+    }
+    .place {
+        display: flex;
+        flex-direction: column;
+    }
+    .formFoot {
+        width: 400px;
+    }
+    .flexColumn {
+        display: flex;
+        flex-direction: column;
+        margin-top: -20px;
+    }
+    .flexColumnState {
+        margin-left: 0px;
+        margin: 7px 0px;
+    }
+    .flexColumnLG {
+        margin-left: 0px;
+    }
+    .selectanotherBranchState {
+        width: 326px;
+    }
+    .selectanotherBranchLG {
+        width: 326px;
+    }
+    .formNext {
+        width: 400px;
+    }
+    .next {
+        width: 88px;
+    }
+}
+
+@media (max-width: 375px) {
+    .contentSection {
+        width: 375px;
+    }
+    .provider {
+        padding: 46px 10px 0px 10px;
+    }
+    .line {
+        width: 375px;
+    }
+    .form {
+        width: 375px;
+    }
+    .providerTypeContainer {
+        width: 355px;
+        padding: 23px 10px 31px 10px;
+    }
+    .selectProviderType {
+        width: 330px;
+    }
+    .inputProviderName {
+        width: 355px;
+    }
+    .inputAddress {
+        width: 355px;
+    }
+    .selectState {
+        width: 355px;
+    }
+    .selectLG {
+        width: 355px;
+    }
+    .inputPhoneNumber {
+        width: 355px;
+    }
+    .inputEmail {
+        width: 355px;
+    }
+    .formFoot {
+        width: 355px;
+    }
+    .inputPlace {
+        width: 286px;
+    }
+    .selectanotherBranchState {
+        width: 286px;
+    }
+    .selectanotherBranchLG {
+        width: 286px;
+    }
+    .formNext {
+        width: 355px;
+    }
+}
+
+@media (max-width: 320px) {
+    .contentSection {
+        width: 320px;
+    }
+    .line {
+        width: 320px;
+    }
+    .form {
+        width: 320px;
+    }
+    .providerTypeContainer {
+        width: 300px;
+        padding: 23px 10px 31px 10px;
+    }
+    .selectProviderType {
+        width: 280px;
+    }
+    .inputProviderName {
+        width: 300px;
+    }
+    .inputAddress {
+        width: 300px;
+    }
+    .selectState {
+        width: 300px;
+    }
+    .selectLG {
+        width: 300px;
+    }
+    .inputPhoneNumber {
+        width: 300px;
+    }
+    .inputEmail {
+        width: 300px;
+    }
+    .formFoot {
+        width: 300px;
+    }
+    .inputPlace {
+        width: 236px;
+    }
+    .selectanotherBranchState {
+        width: 236px;
+    }
+    .selectanotherBranchLG {
+        width: 236px;
+    }
+    .formNext {
+        width: 300px;
+    }
+}

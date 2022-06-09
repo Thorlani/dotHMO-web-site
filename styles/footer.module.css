@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;400;600;700&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Poppins:ital,wght@0,200;0,300;0,500;0,600;0,700;0,800;0,900;1,400&family=Source+Serif+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,700&display=swap');
+
+.footer {
+    width: 100%;
+    height: 400px;
+    background-color: #ffffff;
+    padding-left: 76px;
+    padding-top: 76px;
+    display: flex;
+}
+
+.footerContent {
+    margin-left: 71px;
+}
+
+.footTitle {
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29px;
+    letter-spacing: 0.5px;
+    color: #343434;
+    margin-bottom: 42px;
+}
+
+.footerList {
+    list-style: none;
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 29px;
+    letter-spacing: 0.5px;
+    color: #343434;
+    margin-left: -40px;
+    margin-bottom: 28px;
+}
+
+@media (max-width: 768px) {
+    .footer {
+        width: 100%;
+        height: 400px;
+        background-color: #ffffff;
+        padding-left: 6px;
+        padding: 0px 20px;
+        padding-top: 76px;
+        display: flex;
+    }
+    .footerContent {
+        margin-left: 31px;
+    }
+    
+}
+@media (max-width: 425px) {
+    .footer {
+        width: 100%;
+        height: 400px;
+        background-color: #ffffff;
+        padding-left: 0px;
+        padding-top: 36px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .footerImage {
+        margin-left: 45px;
+    }
+}

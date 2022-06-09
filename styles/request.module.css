@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;400;600;700&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Poppins:ital,wght@0,200;0,300;0,500;0,600;0,700;0,800;0,900;1,400&family=Source+Serif+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,700&display=swap');
+
+.backgound {
+    position: fixed;
+    top: 25px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 99999;
+    background-color: rgba(200, 200, 200, 0.5);
+}
+
+.container {
+    height: 448px;
+    width: 665px;
+    background: #FFFFFF;
+    border: 1px solid #EAEDF7;
+    box-shadow: 0px 2px 4px rgba(28, 41, 90, 0.0367952);
+    border-radius: 10px;
+    padding: 36px 40px;
+    overflow-y: scroll;
+}
+
+.title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.inputSection {
+    display: flex;
+    flex-direction: column;
+}
+
+.form {
+    margin-top: 34px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 31px;
+    row-gap: 25px;
+    margin-bottom: 28px;
+}
+
+.buttonSection {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.span {
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 36px;
+    letter-spacing: 0.5px;
+    color: #242F57;
+}
+
+.btn {
+    color: #7C88B1;
+    border: none;
+    background-color: #FFFFFF;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.label {
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 15px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #808080;
+    mix-blend-mode: normal;
+    opacity: 0.9;
+    margin-bottom: 5px;
+}
+
+.input {
+    background: #FFFFFF;
+    border: 1px solid #C6C6C6;
+    border-radius: 2px;
+    padding-left: 10px;
+    font-size: 19px;
+    height: 42px;
+    width: 275px;
+    color: #343434;
+}
+
+.errorMessage {
+    color: red;
+}
+
+.btn2 {
+    height: 42px;
+    width: 118px;
+    border-radius: 2px;
+    border: 1px solid #65A999;
+    margin-right: 12px;
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    letter-spacing: 0.5px;
+    color: #65A999;
+    background: #ffffff;
+    cursor: pointer;
+}
+
+.btn3 {
+    height: 42px;
+    width: 118px;
+    border-radius: 2px;
+    border: none;
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    letter-spacing: 0.5px;
+    color: #FFFFFF;
+    background: #65A999;
+    cursor: pointer;
+}
+
+@media (max-width: 425px) {
+    .container {
+        height: 448px;
+        width: 422px;
+        background: #FFFFFF;
+        border: 1px solid #EAEDF7;
+        box-shadow: 0px 2px 4px rgba(28, 41, 90, 0.0367952);
+        border-radius: 10px;
+        padding: 36px 40px;
+        overflow-y: scroll;
+    }
+    .form {
+        margin-top: 34px;
+        display: grid;
+        grid-template-columns: 1fr;
+        column-gap: 31px;
+        row-gap: 25px;
+        margin-bottom: 28px;
+    }
+    .inputSection {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .input {
+        width: 100%;
+    }
+}
+@media (max-width: 375px) {
+    .container {
+        height: 448px;
+        width: 370px;
+        background: #FFFFFF;
+        border: 1px solid #EAEDF7;
+        box-shadow: 0px 2px 4px rgba(28, 41, 90, 0.0367952);
+        border-radius: 10px;
+        padding: 36px 40px;
+        overflow-y: scroll;
+    }
+}
+@media (max-width: 320px) {
+    .container {
+        height: 448px;
+        width: 315px;
+        background: #FFFFFF;
+        border: 1px solid #EAEDF7;
+        box-shadow: 0px 2px 4px rgba(28, 41, 90, 0.0367952);
+        border-radius: 10px;
+        padding: 36px 40px;
+        overflow-y: scroll;
+    }
+    .reverse{
+        display: flex;
+    }
+}

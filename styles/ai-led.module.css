@@ -1,0 +1,377 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;400;600;700&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Poppins:ital,wght@0,200;0,300;0,500;0,600;0,700;0,800;0,900;1,400&family=Source+Serif+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,700&display=swap');
+
+.heroSection {
+    width: 100%;
+    height: 535px;
+    background: #FEE3EC;
+    display: flex;
+    padding: 64px 97px 0px;
+    margin-bottom: -5rem;
+}
+
+.heroText {
+    width: 50%;
+}
+
+.heroImage {
+    width: 50%;
+    position: absolute;
+    right: 0;
+}
+
+.h1 {
+    width: 318px;
+    height: 154px;
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 64px;
+    line-height: 77px;
+    letter-spacing: 0.5px;
+    color: #FA5087;
+}
+
+.paragraph {
+    width: 536px;
+    height: 137px;
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 32px;
+    letter-spacing: 0.5px;
+    color: #000000;
+}
+
+.contentsection {
+    width: 100%;
+    height: 550px;
+    padding-top: 93px;
+    display: grid;
+    place-items: center;
+}
+
+.contentTitle {
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 40px;
+    line-height: 48px;
+    text-align: center;
+    letter-spacing: 0.5px;
+    width: 530px;
+    color: #50897C;
+}
+
+.contentText {
+    position: relative;
+    top: -5rem;
+    max-width: 902px;
+    height: 137px;
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 32px;
+    text-align: center;
+    letter-spacing: 0.5px;
+    color: #000000;
+}
+
+.contentsectionHeadings {
+    width: 100%;
+    height: 900px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: .8fr .8fr;
+    margin-bottom: 200px;
+}
+
+.grid1 {
+    text-align: left;
+    padding-left: 97px;
+}
+.grid2 {
+    display: grid;
+    place-items: center;
+}
+.grid3 {
+    display: grid;
+    place-items: center;
+}
+.grid4 {
+    text-align: right;
+    padding-right: 97px;
+}
+
+.contentSectionHeadingTitleLeft {
+    width: 530px;
+    height: 39px;
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 32px;
+    line-height: 39px;
+    letter-spacing: 0.5px;
+    color: #50897C;
+    text-align: left;
+}
+
+.contentSectionHeadingTitleRight {
+    width: 530px;
+    height: 39px;
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 32px;
+    line-height: 39px;
+    letter-spacing: 0.5px;
+    color: #50897C;
+    text-align: right;
+    margin-left: 2.7rem;
+}
+
+.contentSectionHeadingTextLeft {
+    width: 536px;
+    height: 137px;
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 32px;
+    letter-spacing: 0.5px;
+    color: #000000;
+}
+.contentSectionHeadingTextRight {
+    width: 536px;
+    height: 137px;
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 32px;
+    letter-spacing: 0.5px;
+    color: #000000;
+    margin-left: 2.7rem;
+}
+
+@media (max-width: 1024px) {
+    .paragraph {
+        width: 336px;
+    }
+    .contentsectionHeadings {
+        width: 100%;
+        height: auto;
+        grid-template-columns: 1fr;
+        place-items: center;
+    }
+    .contentSectionHeadingTitleLeft {
+        width: 100%;
+        text-align: center;
+    }
+    .contentSectionHeadingTextLeft {
+        width: 100%;
+        text-align: center;
+        padding-right: 97px;
+    }
+    .contentSectionHeadingTitleRight {
+        width: 100%;
+        text-align: center;
+    }
+    .contentSectionHeadingTextRight {
+        width: 100%;
+        text-align: center;
+        padding-left: 42px;
+        padding-right: 42px;
+    }
+}
+
+@media (max-width: 768px) {
+    .heroSection {
+        display: inline-block;
+        height: 930px;
+    }
+    .heroText {
+        width: 100%;
+    }
+    
+    .heroImage {
+        width: 100%;
+    }
+    .paragraph {
+        width: 586px;
+    }
+    .contentSectionHeadingTitleLeft {
+        width: 100%;
+        text-align: center;
+        margin-left: -40px;
+    }
+}
+
+@media (max-width: 425px) {
+    .heroSection {
+        width: 425px;
+        height: 900px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .heroImage {
+        width: 100%;
+        margin-top: 50px;
+    }
+    .h1 {
+        font-family: 'Montserrat', sans-serif;
+        font-style: normal;
+        font-weight: 900;
+        font-size: 54px;
+        line-height: 57px;
+        letter-spacing: 0.5px;
+    }
+    
+    .paragraph {
+        width: 336px;
+    }
+    .contentTitle {
+        font-family: 'Montserrat', sans-serif;
+        font-style: normal;
+        font-weight: 900;
+        font-size: 32px;
+        line-height: 48px;
+        text-align: center;
+        letter-spacing: 0.5px;
+        width: 410px;
+        color: #50897C;
+    }
+    .grid1 {
+        text-align: center;
+        padding-left: 10px;
+        padding-right: 10px;
+        margin-bottom: 10px;
+    }
+    .contentSectionHeadingTitleLeft {
+        width: 100%;
+        text-align: center;
+        margin-left: 0px;
+    }
+    .contentSectionHeadingTextLeft {
+        width: 100%;
+        text-align: center;
+        padding-right: 0px;
+    }
+    .grid2 {
+        padding: 0 10px;
+        margin-bottom: 10px;
+    }
+    .grid3 {
+        padding: 0 10px;
+        margin-bottom: 10px;
+    }
+    
+    .grid4 {
+        text-align: center;
+        padding-left: 10px;
+        padding-right: 10px;
+        margin-bottom: 10px;
+    }
+    .contentSectionHeadingTitleRight {
+        margin-left: 0px;
+        width: 410px;
+    }
+    .contentSectionHeadingTextRight {
+        margin-left: 0px;
+        width: 410px;
+    }
+}
+
+@media (max-width: 375px) {
+    .heroSection {
+        width: 375px;
+        height: 850px;
+    }
+    .contentTitle {
+        font-family: 'Montserrat', sans-serif;
+        font-style: normal;
+        font-weight: 900;
+        font-size: 32px;
+        line-height: 44px;
+        text-align: center;
+        letter-spacing: 0.5px;
+        width: 360px;
+        color: #50897C;
+    }
+    .grid1 {
+        text-align: center;
+        padding-left: 10px;
+        padding-right: 10px;
+        width: 360px;
+    }
+    .contentSectionHeadingTitleRight {
+        margin-left: 0px;
+        width: 360px;
+    }
+    .contentSectionHeadingTextRight {
+        margin-left: 0px;
+        width: 360px;
+    }
+}
+
+@media (max-width: 320px) {
+    .heroSection {
+        width: 320px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .h1 {
+        font-family: 'Montserrat', sans-serif;
+        font-style: normal;
+        font-weight: 900;
+        font-size: 47px;
+        line-height: 67px;
+        letter-spacing: 0.5px;
+        width: 300px;
+    }
+    .paragraph {
+        width: 310px;
+    }
+    .contentTitle {
+        font-family: 'Montserrat', sans-serif;
+        font-style: normal;
+        font-weight: 900;
+        font-size: 32px;
+        line-height: 44px;
+        text-align: center;
+        letter-spacing: 0.5px;
+        width: 310px;
+        color: #50897C;
+    }
+    .contentSectionHeadingTitleLeft {
+        width: 100%;
+        text-align: center;
+        margin-left: 0px;
+    }
+    .grid1 {
+        text-align: center;
+        padding-left: 10px;
+        padding-right: 10px;
+        width: 310px;
+    }
+    .contentSectionHeadingTextLeft {
+        width: 100%;
+        text-align: center;
+        padding-right: 0px;
+        margin-left: 0px;
+    }
+    .contentSectionHeadingTitleRight {
+        margin-left: 0px;
+        width: 310px;
+    }
+    .contentSectionHeadingTextRight {
+        margin-left: 0px;
+        width: 310px;
+    }
+    .grid2 {
+        padding: 0 10px;
+        margin-top: 110px;
+        margin-bottom: 10px;
+    }
+}

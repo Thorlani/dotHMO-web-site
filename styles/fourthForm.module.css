@@ -1,0 +1,272 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;400;600;700&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Poppins:ital,wght@0,200;0,300;0,500;0,600;0,700;0,800;0,900;1,400&family=Source+Serif+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,700&display=swap');
+
+.wrapper {
+    background: #FAFFFE;
+    border: 1px dashed #C6C6C6;
+    border-radius: 4px;
+    width: 100%;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 50px 0px 40px;
+}
+
+.flex {
+    display: flex;
+}
+
+.paragraph1 {
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+    letter-spacing: 0.5px;
+    color: #808080;
+}
+
+.btn {
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+    letter-spacing: 0.5px;
+    color: #65A999;
+    background: #FFFFFF;
+    border: none;
+    text-decoration: underline;
+}
+
+.paragraph2 {
+    margin-top: -10px;
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+    letter-spacing: 0.5px;
+    color: #808080;
+}
+
+.li {
+    list-style: none;
+}
+
+.provider {
+    display: flex;
+    justify-content: space-between;
+    padding: 106px 205px 22px;
+}
+
+.title {
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #808080;
+    mix-blend-mode: normal;
+    opacity: 0.9;
+}
+
+.step {
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: right;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #808080;
+    mix-blend-mode: normal;
+    opacity: 0.9;
+}
+
+.line {
+    width: 100%;
+    height: 1px;
+    background-color: #C6C6C6;
+}
+
+.end {
+    padding: 0px 205px;
+}
+
+.topic {
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 32px;
+    letter-spacing: 0.5px;
+    color: #000000;
+    margin-bottom: -10px;
+}
+
+.uploads {
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 32px;
+    letter-spacing: 0.5px;
+    color: #000000;
+}
+
+.form {
+    margin-top: 60px;
+    padding: 0px 205px 150px;
+}
+
+.button {
+    margin-top: 150px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.backButton {
+    border: 1px solid #65A999;
+    border-radius: 2px;
+    height: 42px;
+    width: 118px;
+    background: #FFFFFF;
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    letter-spacing: 0.5px;
+    color: #65A999;
+    cursor: pointer;
+}
+
+.saveAndNext {
+    display: flex;
+    align-items: center;
+}
+
+.save {
+    background-color: #FFFFFF;
+    border: none;
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 22px;
+    letter-spacing: 0.5px;
+    color: #65A999;
+    cursor: pointer;
+}
+
+.submit {
+    background: #65A999;
+    border-radius: 2px;
+    height: 42px;
+    width: 148px;
+    border: none;
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    letter-spacing: 0.5px;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+@media (max-width: 1024px) {
+    .provider {
+        padding: 106px 55px 22px;
+    }
+    .line {
+        width: 1024px;
+    }
+    .end {
+        padding: 0px 50px;
+    }
+    .form {
+        padding: 0px 50px 150px;
+    }
+    .wrapper {
+        width: 920px;
+    }
+    .button {
+        margin-top: 150px;
+        display: flex;
+        justify-content: space-between;
+        width: 920px;
+    }
+}
+
+@media (max-width: 768px) {
+    .line {
+        width: 768px;
+    }
+    .wrapper {
+        width: 670px;
+    }
+    .button {
+        margin-top: 150px;
+        display: flex;
+        justify-content: space-between;
+        width: 670px;
+    }
+}
+
+@media (max-width: 425px) {
+    .line {
+        width: 425px;
+    }
+    .wrapper {
+        width: 100%;
+        overflow: scroll;
+    }
+    .button {
+        width: 350px;
+        align-items: center;
+    }
+    .submit {
+        width: 90px;
+    }
+    .backButton {
+        width: 88px;
+    }
+    .save {
+        max-width: 90px;
+    }
+}
+
+@media (max-width: 375px) {
+    .line {
+        width: 375px;
+    }
+    .button {
+        width: 300px;
+    }
+}
+
+@media (max-width: 320px) {
+    .line {
+        width: 320px;
+    }
+    .button {
+        width: 270px;
+    }
+    .save {
+        width: 80px;
+    }
+    .backButton {
+        width: 78px;
+    }
+    .submit {
+        width: 78px;
+    }
+}

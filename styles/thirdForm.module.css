@@ -1,0 +1,432 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;400;600;700&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Poppins:ital,wght@0,200;0,300;0,500;0,600;0,700;0,800;0,900;1,400&family=Source+Serif+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,700&display=swap');
+
+.provider {
+    padding: 106px 105px 0px 105px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.title {
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #808080;
+    mix-blend-mode: normal;
+    opacity: 0.9;
+}
+
+.errorMessage {
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    color: red;
+    font-size: 14px;
+}
+
+.step {
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: right;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #808080;
+    mix-blend-mode: normal;
+    opacity: 0.9;
+}
+
+.line {
+    margin-top: 22px;
+    width: 100%;
+    height: 1px;
+    background-color: #C6C6C6;
+    margin-top: 20px;
+}
+
+.form {
+    margin-top: 50px;
+    padding: 0px 180px 140px;
+}
+
+.ward {
+    display: flex;
+    flex-direction: column;
+}
+
+.typeOfWard {
+    background: #FFFFFF;
+    border: 1px solid #C6C6C6;
+    border-radius: 2px;
+    height: 42px;
+    width: 1026px;
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: 0.5px;
+    color: #B2B2B2;
+    padding-left: 13px;
+    outline: none;
+}
+
+.bed {
+    margin-top: 23px;
+    display: flex;
+}
+
+.hdu {
+    display: flex;
+    flex-direction: column;
+}
+
+.noOfBedInHDU {
+    margin-top: 5px;
+    background: #FFFFFF;
+    border: 1px solid #C6C6C6;
+    border-radius: 2px;
+    height: 42px;
+    width: 501.0000305175781px;
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: 0.5px;
+    color: #B2B2B2;
+    outline: none;
+    padding-left: 20px;
+}
+
+.icu {
+    margin-left: 24px;
+    display: flex;
+    flex-direction: column;
+}
+
+.noOfBedInICU {
+    margin-top: 5px;
+    background: #FFFFFF;
+    border: 1px solid #C6C6C6;
+    border-radius: 2px;
+    height: 42px;
+    width: 501.0000305175781px;
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: 0.5px;
+    color: #B2B2B2;
+    outline: none;
+    padding-left: 20px;
+}
+
+.formFoot{
+    margin-top: 30px;
+    padding: 32px 122px 72px 78px;
+    background: #F9F9F9;
+    border: 1px solid #D2D5E1;
+    border-radius: 4px;
+    height: 350px;
+    width: 1026px;
+}
+
+.topic{
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #808080;
+    mix-blend-mode: normal;
+    opacity: 0.9;
+}
+
+.gridCheck {
+    margin-top: 38px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.centralize {
+    display: flex;
+    align-items: center;
+    margin-bottom: 11px;
+}
+
+.label {
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: 0.5px;
+    color: #676767;
+    margin-left: 8px;
+}
+
+.input {
+    background: #FFFFFF;
+    border: 1px solid #D2D5E1;
+    border-radius: 3px;
+    height: 24px;
+    width: 24px;
+}
+
+.button {
+    margin-top: 49px;
+    width: 1026px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.backButton {
+    border: 1px solid #65A999;
+    border-radius: 2px;
+    height: 42px;
+    width: 118px;
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    letter-spacing: 0.5px;
+    color: #65A999;
+    background-color: #FFFFFF;
+    cursor: pointer;
+}
+
+.saveAndNext {
+    display: flex;
+    align-items: center;
+}
+
+.save {
+    margin-right: 15px;
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 22px;
+    letter-spacing: 0.5px;
+    color: #65A999;
+    border: none;
+    background: #FFFFFF;
+    cursor: pointer;
+}
+
+.next {
+    background: #65A999;
+    border-radius: 2px;
+    height: 42px;
+    width: 148px;
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    letter-spacing: 0.5px;
+    color: #FFFFFF;
+    border: none;
+    cursor: pointer;
+}
+
+@media (max-width: 1024px) {
+    .line {
+        width: 1024px;
+    }
+    .form {
+        padding: 0px 27px 140px;
+        width: 1024px;
+    }
+    .typeOfWard {
+        width: 970px;
+    }
+    .noOfBedInHDU {
+        width: 450px;
+    }
+    .noOfBedInICU {
+        width: 497px;
+    }
+    .formFoot {
+        width: 970px;
+    }
+    .button {
+        width: 970px;
+    }
+}
+
+@media (max-width: 768px) {
+    .line {
+        width: 768px;
+    }
+    .form {
+        padding: 0px 10px 140px;
+        width: 768px;
+    }
+    .typeOfWard {
+        width: 750px;
+    }
+    .noOfBedInHDU {
+        width: 360px;
+    }
+    .noOfBedInICU {
+        width: 370px;
+    }
+    .formFoot {
+        padding: 32px 12px 72px 12px;
+        width: 750px;
+    }
+    .button {
+        width: 750px;
+    }
+}
+
+@media (max-width: 425px) {
+    .contentSection {
+        width: 425px;
+    }
+    .provider {
+        padding: 16px 20px 0px 20px;
+    }
+    .line {
+        width: 425px;
+    }
+    .form {
+        padding: 0px 15px 100px;
+        width: 425px;
+    }
+    .typeOfWard {
+        width: 400px;
+    }
+    .upperlabel {
+        max-width: 300px;
+    }
+    .bed {
+        margin-top: 23px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .icu {
+        margin-left: 0px;
+    }
+    .hdu {
+        margin-bottom: 10px;
+    }
+    .noOfBedInHDU {
+        width: 400px;
+    }
+    .noOfBedInICU {
+        width: 400px;
+    }
+    .formFoot {
+        width: 400px;
+        height: auto;
+        padding-bottom: 50px;
+    }
+    .gridCheck {
+        margin-top: 38px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        row-gap: 10px;
+    }
+    .button {
+        width: 400px;
+        align-items: center;
+    }
+    .next {
+        width: 88px;
+    }
+    .backButton {
+        width: 88px;
+    }
+    .save {
+        max-width: 90px;
+    }
+}
+
+@media (max-width: 375px) {
+    .contentSection {
+        width: 375px;
+    }
+    .provider {
+        padding: 16px 20px 0px 20px;
+    }
+    .line {
+        width: 375px;
+    }
+    .form {
+        padding: 0px 15px 100px;
+        width: 375px;
+    }
+    .typeOfWard {
+        width: 350px;
+    }
+    .noOfBedInHDU {
+        width: 350px;
+    }
+    .noOfBedInICU {
+        width: 350px;
+    }
+    .formFoot {
+        width: 350px;
+    }
+    .gridCheck {
+        margin-top: 38px;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-row-gap: 10px;
+        row-gap: 10px;
+        overflow-x: scroll;
+    }
+    .button {
+        width: 350px;
+    }
+}
+
+@media (max-width: 320px) {
+    .contentSection {
+        width: 320px;
+    }
+    .line {
+        width: 320px;
+    }
+    .form {
+        width: 320px;
+    }
+    .typeOfWard {
+        width: 290px;
+    }
+    .noOfBedInHDU {
+        width: 290px;
+    }
+    .noOfBedInICU {
+        width: 290px;
+    }
+    .formFoot {
+        width: 290px;
+    }
+    .button {
+        width: 290px;
+    }
+    .save {
+        width: 80px;
+    }
+    .backButton {
+        width: 78px;
+    }
+    .next {
+        width: 78px;
+    }
+}

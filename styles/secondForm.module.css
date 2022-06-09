@@ -1,0 +1,705 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;400;600;700&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Poppins:ital,wght@0,200;0,300;0,500;0,600;0,700;0,800;0,900;1,400&family=Source+Serif+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,700&display=swap');
+
+.contentSection {
+    padding-top: 106px;
+}
+
+.provider {
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 205px;
+}
+
+.title {
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #808080;
+    mix-blend-mode: normal;
+    opacity: 0.9;
+}
+
+.errorMessage {
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    color: red;
+    font-size: 14px;
+}
+
+.step {
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: right;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #808080;
+    mix-blend-mode: normal;
+    opacity: 0.9;
+}
+
+.line {
+    width: 100%;
+    height: 1px;
+    background-color: #C6C6C6;
+    margin-top: 20px;
+}
+
+.form {
+    margin-top: 50px;
+    padding: 0px 180px 140px;
+}
+
+.nameAndEmail {
+    display: flex;
+}
+
+.name {
+    display: flex;
+    flex-direction: column;
+}
+
+.nameOFManagingDirector {
+    margin-top: 5px;
+    background: #FFFFFF;
+    border: 1px solid #C6C6C6;
+    border-radius: 2px;
+    height: 42px;
+    width: 501.0000305175781px;
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: 0.5px;
+    color: #000000;
+    padding-left: 20px;
+    outline: none;
+}
+
+.email {
+    display: flex;
+    flex-direction: column;
+    margin-left: 24px;
+}
+
+.emailOfManagingDirector {
+    margin-top: 5px;
+    background: #FFFFFF;
+    border: 1px solid #C6C6C6;
+    border-radius: 2px;
+    height: 42px;
+    width: 501.0000305175781px;
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: 0.5px;
+    color: #000000;
+    padding-left: 20px;
+    outline: none;
+}
+
+.contactAndMobile {
+    margin-top: 23px;
+    display: flex;
+}
+
+.contact {
+    display: flex;
+    flex-direction: column;
+}
+
+.contactPerson {
+    margin-top: 5px;
+    background: #FFFFFF;
+    border: 1px solid #C6C6C6;
+    border-radius: 2px;
+    height: 42px;
+    width: 501.0000305175781px;
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: 0.5px;
+    color: #000000;
+    padding-left: 20px;
+    outline: none;
+}
+
+.mobile {
+    display: flex;
+    flex-direction: column;
+    margin-left: 24px;
+}
+
+.mobilePerson {
+    margin-top: 5px;
+    background: #FFFFFF;
+    border: 1px solid #C6C6C6;
+    border-radius: 2px;
+    height: 42px;
+    width: 501.0000305175781px;
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: 0.5px;
+    color: #000000;
+    padding-left: 20px;
+    outline: none;
+}
+
+.secondaryContactAndMobile {
+    margin-top: 23px;
+    display: flex;
+}
+
+.secondaryContact {
+    display: flex;
+    flex-direction: column;
+}
+
+.secondaryContactPerson {
+    margin-top: 5px;
+    background: #FFFFFF;
+    border: 1px solid #C6C6C6;
+    border-radius: 2px;
+    height: 42px;
+    width: 501.0000305175781px;
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: 0.5px;
+    color: #000000;
+    padding-left: 20px;
+    outline: none;
+}
+
+.secondaryMobile {
+    display: flex;
+    flex-direction: column;
+    margin-left: 24px;
+}
+
+.secondaryMobilePerson {
+    margin-top: 5px;
+    background: #FFFFFF;
+    border: 1px solid #C6C6C6;
+    border-radius: 2px;
+    height: 42px;
+    width: 501.0000305175781px;
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: 0.5px;
+    color: #000000;
+    padding-left: 20px;
+    outline: none;
+}
+
+.bankDetails {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 31px;
+    row-gap: 18px;
+    padding: 34px 32px 48px 29px;
+    height: 224px;
+    width: 1026px;
+    border-radius: 4px;
+    background: #F9F9F9;
+    border: 1px solid #C6C6C6;
+}
+
+.bankName {
+    display: flex;
+    flex-direction: column;
+}
+
+.bankNameDetails {
+    background: #FFFFFF;
+    border: 1px solid #C6C6C6;
+    border-radius: 2px;
+    height: 42px;
+    width: 467px;
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: 0.5px;
+    color: #000000;
+    text-transform: uppercase;
+    padding-left: 22px;
+    outline: none;
+}
+
+.bankAccount {
+    display: flex;
+    flex-direction: column;
+}
+
+.bankAccountDetails {
+    background: #FFFFFF;
+    border: 1px solid #C6C6C6;
+    border-radius: 2px;
+    height: 42px;
+    width: 467px;
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: 0.5px;
+    color: #000000;
+    padding-left: 22px;
+    outline: none;
+}
+
+.comments {
+    /* margin-top: 14px; */
+    background: #FFFFFF;
+    border: 1px solid #C6C6C6;
+    border-radius: 2px;
+    height: 42px;
+    width: 467px;
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: 0.5px;
+    color: #000000;
+    padding-left: 22px;
+    outline: none;
+}
+
+.claimsPaymentFrequency {
+    display: flex;
+    flex-direction: column;
+}
+
+.claimsPaymentFrequencyStyle {
+    background: #FFFFFF;
+    border: 1px solid #C6C6C6;
+    border-radius: 2px;
+    height: 42px;
+    width: 467px;
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: 0.5px;
+    color: #000000;
+    padding-left: 22px;
+    outline: none;
+}
+
+.button {
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+    width: 1026px;
+}
+
+.backButton {
+    border: 1px solid #65A999;
+    border-radius: 2px;
+    height: 42px;
+    width: 118px;
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    letter-spacing: 0.5px;
+    color: #65A999;
+    background-color: #FFFFFF;
+    cursor: pointer;
+}
+
+.saveAndNext {
+    display: flex;
+    align-items: center;
+}
+
+.save {
+    margin-right: 15px;
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 22px;
+    letter-spacing: 0.5px;
+    color: #65A999;
+    border: none;
+    background: #FFFFFF;
+    cursor: pointer;
+}
+
+.next {
+    background: #65A999;
+    border-radius: 2px;
+    height: 42px;
+    width: 148px;
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    letter-spacing: 0.5px;
+    color: #FFFFFF;
+    border: none;
+    cursor: pointer;
+}
+
+@media (max-width: 1024px) {
+    .line {
+        width: 1024px;
+    }
+    .form {
+        width: 1024px;
+        padding: 0px 17px 140px;
+        display: grid;
+        place-items: center;
+    }
+    .emailOfManagingDirector {
+        width: 450px;
+    }
+    .mobilePerson {
+        width: 450px;
+    }
+    .secondaryMobilePerson {
+        width: 450px;
+    }
+    .bankDetails {
+        width: 980px;
+    }
+    .bankAccountDetails {
+        width: 420px;
+    }
+    .claimsPaymentFrequencyStyle {
+        width: 420px;
+    }
+    .button {
+        width: 980px;
+    }
+}
+
+@media (max-width: 768px) {
+    .provider {
+        padding: 0px 20px;
+    }
+    .line {
+        width: 768px;
+    }
+    .form {
+        width: 768px;
+        display: grid;
+        place-items: flex-start;
+    }
+    .nameOFManagingDirector {
+        width: 350px;
+    }
+    .emailOfManagingDirector {
+        width: 350px;
+    }
+    .contactPerson {
+        width: 350px;
+    }
+    .mobilePerson {
+        width: 350px;
+    }
+    .secondaryContactPerson {
+        width: 350px;
+    }
+    .secondaryMobilePerson {
+        width: 350px;
+    }
+    .bankDetails {
+        width: 725px;
+    }
+    .bankAccountDetails {
+        width: 310px;
+    }
+    .bankNameDetails {
+        width: 310px;
+    }
+    /* .bankAccount {
+        display: flex;
+        position: relative;
+        left: -150px;
+    } */
+    .comments {
+        width: 310px;
+    }
+    .claimsPaymentFrequencyStyle {
+        width: 310px;
+    }
+    .button {
+        width: 725px;
+    }
+}
+
+@media (max-width: 425px) {
+    .contentSection {
+        width: 425px;
+        padding-top: 0px;
+    }
+    .title {
+        width: 200px;
+    }
+    .step {
+        width: 50px;
+    }
+    .provider {
+        padding: 46px 20px 0px 20px;
+    }
+    .line {
+        width: 425px;
+    }
+    .form {
+        width: 425px;
+        padding: 0px 15px 140px;
+    }
+    .nameAndEmail {
+        display: flex;
+        flex-direction: column;
+    }
+    .email {
+        margin-left: 0px;
+        margin-top: 24px;
+    }
+    .nameOFManagingDirector {
+        width: 400px;
+    }
+    .emailOfManagingDirector {
+        width: 400px;
+    }
+    .contactAndMobile {
+        flex-direction: column;
+    }
+    .mobile {
+        margin-left: 0px;
+    }
+    .contactPerson {
+        width: 400px;
+    }
+    .mobilePerson {
+        width: 400px;
+    }
+    .secondaryContactAndMobile{
+        flex-direction: column;
+    }
+    .secondaryMobile {
+        margin-left: 0px;
+        margin-top: 24px;
+    }
+    .secondaryContactPerson {
+        width: 400px;
+    }
+    .secondaryMobilePerson {
+        width: 400px;
+    }
+    .bankDetails {
+        width: 400px;
+        grid-template-columns: 1fr;
+        row-gap: 1px;
+        height: auto;
+    }
+    .claimsPaymentFrequency {
+        display: flex;
+        flex-direction: column;
+        margin-top: 24px;
+    }
+    .bankNameDetails {
+        width: 340px;
+    }
+    .bankAccountDetails {
+        width: 340px;
+    }
+    .comments {
+        width: 340px;
+        margin-top: 5px;
+    }
+    .claimsPaymentFrequencyStyle {
+        width: 340px;
+        margin-top: 5px;
+    }
+    .button {
+        width: 400px;
+    }
+    .next {
+        background: #65A999;
+        border-radius: 2px;
+        height: 42px;
+        width: 88px;
+    }
+    .backButton {
+        border: 1px solid #65A999;
+        border-radius: 2px;
+        height: 42px;
+        width: 88px;
+    }
+    .save {
+        width: 140px;
+    }
+}
+
+@media (max-width: 375px) {
+    .contentSection {
+        width: 375px;
+        padding-top: 0px;
+    }
+    .line {
+        width: 375px;
+    }
+    .form {
+        width: 375px;
+        padding: 0px 15px 140px;
+    }
+    .nameAndEmail {
+        display: flex;
+        flex-direction: column;
+    }
+    .email {
+        margin-left: 0px;
+        margin-top: 24px;
+    }
+    .nameOFManagingDirector {
+        width: 350px;
+    }
+    .emailOfManagingDirector {
+        width: 350px;
+    }
+    .contactAndMobile {
+        flex-direction: column;
+    }
+    .mobile {
+        margin-left: 0px;
+    }
+    .contactPerson {
+        width: 350px;
+    }
+    .mobilePerson {
+        width: 350px;
+    }
+    .secondaryContactAndMobile{
+        flex-direction: column;
+    }
+    .secondaryMobile {
+        margin-left: 0px;
+        margin-top: 24px;
+    }
+    .secondaryContactPerson {
+        width: 350px;
+    }
+    .secondaryMobilePerson {
+        width: 350px;
+    }
+    .bankDetails {
+        width: 350px;
+        grid-template-columns: 1fr;
+        row-gap: 1px;
+        height: auto;
+    }
+    .claimsPaymentFrequency {
+        display: flex;
+        flex-direction: column;
+        margin-top: 24px;
+    }
+    .bankNameDetails {
+        width: 290px;
+    }
+    .bankAccountDetails {
+        width: 290px;
+    }
+    .comments {
+        width: 290px;
+        margin-top: 5px;
+    }
+    .claimsPaymentFrequencyStyle {
+        width: 290px;
+        margin-top: 5px;
+    }
+    .button {
+        width: 350px;
+        align-items: center;
+    }
+    .save {
+        width: 90px;
+    }
+}
+
+@media (max-width: 320px) {
+    .contentSection {
+        width: 320px;
+        padding-top: 0px;
+    }
+    .line {
+        width: 320px;
+    }
+    .form {
+        width: 320px;
+        padding: 0px 15px 140px;
+    }
+    .nameOFManagingDirector {
+        width: 290px;
+    }
+    .emailOfManagingDirector {
+        width: 290px;
+    }
+    .label {
+        max-width: 300px;
+    }
+    .contactPerson {
+        width: 290px;
+    }
+    .mobilePerson {
+        width: 290px;
+    }
+    .secondaryContactPerson {
+        width: 290px;
+    }
+    .secondaryMobilePerson {
+        width: 290px;
+    }
+    .bankDetails {
+        width: 290px;
+    }
+    .bankNameDetails {
+        width: 230px;
+    }
+    .bankAccountDetails {
+        width: 230px;
+    }
+    .comments {
+        width: 230px;
+    }
+    .claimsPaymentFrequencyStyle {
+        width: 230px;
+    }
+    .button {
+        width: 290px;
+    }
+    .save {
+        width: 70px;
+    }
+}
