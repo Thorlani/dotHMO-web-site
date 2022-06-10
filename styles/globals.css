@@ -1,60 +1,38 @@
-@import url('https://fonts.googleapis.com/css2?family=Galano:wght@200;400;500;700&display=swap');
 
 @font-face {
   font-family: 'Galano';
-  src: url('../fonts/GalanoGrotesqueAltLight.otf') format('opentype');
+  src: url('/webfonts/GalanoGrotesqueAltLight.otf') format('opentype');
   font-weight: 200;
   font-display: swap;
 }
 
 @font-face {
   font-family: 'Galano';
-  src: url('../fonts/GalanoGrotesqueAltRegular.otf') format('opentype');
+  src: url('/webfonts/GalanoGrotesqueAltRegular.otf') format('opentype');
   font-weight: 400;
   font-display: swap;
 }
 
 @font-face {
   font-family: 'Galano';
-  src: url('../fonts/GalanoGrotesqueAltMedium.otf') format('opentype');
+  src: url('/webfonts/GalanoGrotesqueAltMedium.otf') format('opentype');
   font-weight: 500;
   font-display: swap;
 }
 
 @font-face {
   font-family: 'Galano';
-  src: url('../fonts/GalanoGrotesqueAltSemiBold.otf') format('opentype');
+  src: url('/webfonts/GalanoGrotesqueAltSemiBold.otf') format('opentype');
   font-weight: 600;
   font-display: swap;
 }
 
 @font-face {
   font-family: 'Galano';
-  src: url('../fonts/GalanoGrotesqueBold.otf') format('opentype');
+  src: url('/webfonts/GalanoGrotesqueBold.otf') format('opentype');
   font-weight: 700;
   font-display: swap;
 }
-
-/* @font-face {
-  font-family: 'Sans Caption';
-  src: url('../fonts/PTSansCaptionBold.ttf') format('opentype');
-  font-weight: 700;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Sans Caption';
-  src: url('../fonts/PTSansCaptionRegular.ttf') format('opentype');
-  font-weight: 400;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Galano';
-  src: url('../fonts/Galano.ttf') format('opentype');
-  font-weight: 500;
-  font-display: swap;
-} */
 
 html,
 body {
