@@ -8,7 +8,7 @@ const FindProvider = () => {
 
     const [searchResult, setSearchResult] = useState([]);
 
-    // let url = `https://dot-insure.herokuapp.com/provider/search/${provider.hospitalSearch}`;
+    
     useEffect(() => {
         Axios.get(`https://dot-insure.herokuapp.com/provider/search/${provider.hospitalSearch}`)
         .then(res => {
