@@ -112,10 +112,11 @@
 .flexContentRight ul {
     list-style: none;
     padding: 0;
+    margin-top: 10px;
 }
 .offeringContentLi {
-    
-    text-indent: 10px;
+    padding-left: 1.3em;
+    /* text-indent: 10px; */
     font-family: 'Galano', sans-serif;
     font-style: normal;
     font-weight: 400;
@@ -128,10 +129,11 @@
 }
 
 .offeringContentLi:before {
-    content: "\f21e";
+    content: "\2b";
     font-family: FontAwesome;
     display: inline-block;
     width: 1.3em;
+    margin-left: -1.3em;
 }
 
 @media (max-width: 1024px) {
