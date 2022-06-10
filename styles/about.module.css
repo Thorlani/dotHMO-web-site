@@ -128,7 +128,7 @@
 }
 
 .offeringContentLi:before {
-    content: "\f5f8";
+    content: "\f21e";
     font-family: FontAwesome;
     display: inline-block;
     width: 1.3em;
