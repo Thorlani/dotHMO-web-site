@@ -20,11 +20,11 @@ const SecondForm = () => {
         comments: "",
         claimsPaymentFrequency: []
     })
-    const [formErrors, setFormErrors] = useState({});
-    const [isSubmit, setIsSubmit] = useState(false);
-    const [displayNext, setDisplayNext] = useState(false);
+    const [formErrors2, setFormErrors2] = useState({});
+    const [isSubmit2, setIsSubmit2] = useState(false);
+    const [displayNext2, setDisplayNext2] = useState(false);
 
-    function handleChange(event) {
+    function handleChange2(event) {
         const { name, value, type, checked } = event.target
         setFormData2(prevFormData => {
             return {
@@ -34,7 +34,7 @@ const SecondForm = () => {
         })
     }
 
-    function errorChecker(validate) {
+    function errorChecker2(validate) {
         const errors= {};
 
         if (!validate.nameOfContactPerson) {
@@ -62,16 +62,16 @@ const SecondForm = () => {
 
     
 
-    function handleSubmit(event) {
+    function handleSubmit2(event) {
         event.preventDefault()
-        setFormErrors(errorChecker(formData2))
-        setIsSubmit(true)
-        if(displayNext === true) {
+        setFormErrors2(errorChecker2(formData2))
+        setIsSubmit2(true)
+        if(displayNext2 === true) {
             // console.log(formData2)
         } else {
             console.log("There is currently an Error Message!")
         }
-        if(isSubmit === true && Object.keys(formErrors).length === 0) {
+        if(isSubmit2 === true && Object.keys(formErrors2).length === 0) {
             Axios.post(url, {
                 nameOfManagingDirector: formData2.nameOFManagingDirector,
                 emailOfManagingDirector: formData2.emailOfManagingDirector,
@@ -92,11 +92,11 @@ const SecondForm = () => {
         }
     }
 
-    function showButton() {
-        if(isSubmit === true && Object.keys(formErrors).length === 0) {
-            setDisplayNext(true)
+    function showButton2() {
+        if(isSubmit2 === true && Object.keys(formErrors2).length === 0) {
+            setDisplayNext2(true)
         } else {
-            setDisplayNext(false)
+            setDisplayNext2(false)
         }
         
     }
@@ -111,7 +111,7 @@ const SecondForm = () => {
                     <p className={styles.step}>step 2/4</p>
                 </div>
                 <div className={styles.line}></div>
-                <form className={styles.form} onSubmit={handleSubmit}>
+                <form className={styles.form} onSubmit={handleSubmit2}>
                     <div className={styles.nameAndEmail}>
                         <div className={styles.name}>
                             <label className={styles.label}>Name of Managing Director</label>
@@ -119,7 +119,7 @@ const SecondForm = () => {
                                 type="text" 
                                 name="nameOFManagingDirector" 
                                 value={formData2.nameOFManagingDirector} 
-                                onChange={handleChange}
+                                onChange={handleChange2}
                                 className={styles.nameOFManagingDirector}
                             />
                             
@@ -130,7 +130,7 @@ const SecondForm = () => {
                                 type="email"
                                 name="emailOfManagingDirector"
                                 value={formData2.emailOfManagingDirector}
-                                onChange={handleChange}
+                                onChange={handleChange2}
                                 className={styles.emailOfManagingDirector}
                             />
                         </div>
@@ -142,10 +142,10 @@ const SecondForm = () => {
                                 type="text"
                                 name="nameOfContactPerson"
                                 value={formData2.nameOfContactPerson}
-                                onChange={handleChange}
+                                onChange={handleChange2}
                                 className={styles.contactPerson}
                             />
-                            <p className={styles.errorMessage}>{formErrors.nameOfContactPerson}</p>
+                            <p className={styles.errorMessage}>{formErrors2.nameOfContactPerson}</p>
                         </div>
                         <div className={styles.mobile}>
                             <label className={styles.label}>Mobile Number of Contact Person</label>
@@ -153,10 +153,10 @@ const SecondForm = () => {
                                 type="number"
                                 name="mobileNumberOfContactPerson"
                                 value={formData2.mobileNumberOfContactPerson}
-                                onChange={handleChange}
+                                onChange={handleChange2}
                                 className={styles.mobilePerson}
                             />
-                            <p className={styles.errorMessage}>{formErrors.mobileNumberOfContactPerson}</p>
+                            <p className={styles.errorMessage}>{formErrors2.mobileNumberOfContactPerson}</p>
                         </div>
                     </div>
                     <div className={styles.secondaryContactAndMobile}>
@@ -166,7 +166,7 @@ const SecondForm = () => {
                                 type="text"
                                 name="nameOfSecondaryContactPerson"
                                 value={formData2.nameOfSecondaryContactPerson}
-                                onChange={handleChange}
+                                onChange={handleChange2}
                                 className={styles.secondaryContactPerson}
                             />
                         </div>
@@ -176,7 +176,7 @@ const SecondForm = () => {
                                 type="number"
                                 name="mobileNumberOfSecondaryContactPerson"
                                 value={formData2.mobileNumberOfSecondaryContactPerson}
-                                onChange={handleChange}
+                                onChange={handleChange2}
                                 className={styles.secondaryMobilePerson}
                             />
                         </div>
@@ -188,10 +188,10 @@ const SecondForm = () => {
                                 type="text"
                                 name="bankName"
                                 value={formData2.bankName}
-                                onChange={handleChange}
+                                onChange={handleChange2}
                                 className={styles.bankNameDetails}
                             />
-                            <p className={styles.errorMessage}>{formErrors.bankName}</p>
+                            <p className={styles.errorMessage}>{formErrors2.bankName}</p>
                         </div>
                         <div className={styles.bankAccount}>
                             <label className={styles.label}>Bank Account Number</label>
@@ -199,10 +199,10 @@ const SecondForm = () => {
                                 type="number"
                                 name="bankAccountNumber"
                                 value={formData2.bankAccountNumber}
-                                onChange={handleChange}
+                                onChange={handleChange2}
                                 className={styles.bankAccountDetails}
                             />
-                            <p className={styles.errorMessage}>{formErrors.bankAccountNumber}</p>
+                            <p className={styles.errorMessage}>{formErrors2.bankAccountNumber}</p>
                         </div>
                         <div className={styles.claimsPayment}>
                             <label className={styles.label}>Bank Branch</label>
@@ -210,7 +210,7 @@ const SecondForm = () => {
                                 type="text"
                                 name="comments"
                                 value={formData2.comments}
-                                onChange={handleChange}
+                                onChange={handleChange2}
                                 className={styles.comments}
                             />
                         </div>
@@ -219,7 +219,7 @@ const SecondForm = () => {
                             <select 
                             name="claimsPaymentFrequency" 
                             id="claimsPaymentFrequency" 
-                            onChange={handleChange}
+                            onChange={handleChange2}
                             value={formData2.claimsPaymentFrequency}
                             className={styles.claimsPaymentFrequencyStyle}
                             required
@@ -241,9 +241,9 @@ const SecondForm = () => {
                         </div>
                         <div className={styles.saveAndNext}>
                             <Image src="/save.svg" width="18" height="18" />
-                            <button onClick={showButton} className={styles.save}>SAVE AND CONTINUE LATER</button>
+                            <button onClick={showButton2} className={styles.save}>SAVE AND CONTINUE LATER</button>
                             { 
-                                Object.keys(formErrors).length === 0 && displayNext && <Link href="/provider/thirdForm">
+                                Object.keys(formErrors2).length === 0 && displayNext2 && <Link href="/provider/thirdForm">
                                     <a>
                                         <button type="submit" className={styles.next}>Next</button>
                                     </a>
