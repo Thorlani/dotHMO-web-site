@@ -1,9 +1,23 @@
 import styles from "../../styles/findProvider.module.css"
 import Image from "next/image"
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import JSONData from "../MOCK_DATA.json"
+import Axios from "axios";
 
 const FindProvider = () => {
+
+    const [searchResult, setSearchResult] = useState([]);
+
+    // let url = `https://dot-insure.herokuapp.com/provider/search/${provider.hospitalSearch}`;
+    useEffect(() => {
+        Axios.get(`https://dot-insure.herokuapp.com/provider/search/${provider.hospitalSearch}`)
+        .then(res => {
+            setSearchResult(res.data);
+            console.log("Here is your results")
+        }).catch(err => {
+            console.log(err);
+        })
+    }) 
 
     const [display, setDisplay] = useState(true);
 
@@ -55,7 +69,7 @@ const FindProvider = () => {
                     <button className={styles.btn} onClick={displayChange}>Search</button>
                 </form>
                 <div className={display ? styles.noResults : styles.results}>
-                    {JSONData.filter((val) => {
+                    {searchResult.filter((val) => {
                         if (provider.hospitalSearch == "") {
                             return val
                         } else if (val.hospital_name.toLocaleLowerCase().includes(provider.hospitalSearch.toLocaleLowerCase())) {
