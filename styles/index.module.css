@@ -1,9 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Galano:wght@200;400;500;700;900&display=swap');
 .heroSection {
     width: 100%;
-    height: 880px;
+    height: 830px;
     padding: 86px 97px 0px 97px;
     background: #DDFFDA;
+    overflow-y: hidden;
 }
 
 .firstPart {
@@ -93,6 +94,7 @@
     mix-blend-mode: normal;
     opacity: 0.1;
     border: 1px solid #0080FF;
+    margin: 10px 0px;
 }
 
 .h2 {
@@ -174,7 +176,7 @@
     line-height: 29px;
     letter-spacing: 0.5px;
     color: #263238;
-    margin-bottom: -5px;
+    margin-bottom: 15px;
 }
 .offerParagraph {
     font-family: 'Galano', sans-serif;
@@ -184,7 +186,8 @@
     line-height: 32px;
     letter-spacing: 0.5px;
     color: #000000;
-    max-width: 889px;
+    max-width: 599px;
+    margin-bottom: 20px;
 }
 .offerListItem {
     font-family: 'Galano', sans-serif;
@@ -195,6 +198,7 @@
     letter-spacing: 0.5px;
     color: #000000;
     max-width: 889px;
+    margin-left: 25px;
 }
 .familyBtn {
     margin-top: 45px;
@@ -251,7 +255,7 @@
 @media (max-width: 1024px) {
     .heroSection {
         width: 1024px;
-        height: 890px;
+        height: 850px;
         padding: 86px 17px 0px 17px;
     }
     .secondPart {
@@ -366,6 +370,7 @@
         width: 330px;
         /* height: 78px; */
         padding-left: 20px;
+        margin-top: 40px;
     }
     .paragraph {
         /* margin-top: 20px; */
@@ -381,7 +386,7 @@
         top: 20px; */
     }
     .button {
-        margin-top: 20px;
+        margin-top: 0px;
         padding: 0;
         height: 42px;
         width: 184px;
@@ -490,7 +495,7 @@
         padding-left: 20px;
     }
     .button {
-        margin-top: 20px;
+        margin-top: 0px;
         padding: 0;
         height: 42px;
         width: 184px;
@@ -573,7 +578,7 @@
         /* height: 78px; */
         padding: 0px 20px 0px 0;
         margin-top: 40px;
-        margin-bottom: -10px;
+        /* margin-bottom: -10px; */
     }
     .paragraph {
         /* margin-top: 20px; */
@@ -587,7 +592,7 @@
         padding-left: 0px;
     }
     .button {
-        margin-top: 20px;
+        margin-top: 0px;
         padding: 0;
         height: 42px;
         width: 184px;

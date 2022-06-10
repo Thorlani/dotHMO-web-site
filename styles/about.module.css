@@ -3,7 +3,7 @@
 .heroSection {
     width: 100%;
     height: auto;
-    padding: 126px 97px 20px 97px;
+    padding: 126px 97px 70px 97px;
     background: #DDFFDA;
 }
 .heroSectionLeft {
@@ -62,7 +62,7 @@
 }
 
 .bodyParagraph {
-    max-width: 902px;
+    max-width: 650px;
     height: 137px;
     font-family: 'Galano', sans-serif;
     font-style: normal;
@@ -86,14 +86,14 @@
     color: #000000;
     display: grid;
     place-items: center;
-    position: relative;
-    top: -60px;
 }
 .flexContent {
     display: flex;
+    margin: 30px 0px;
 }
 .flexContentRight {
     margin: auto;
+    margin-left: 40px;
 }
 .images {
     object-fit: cover;
@@ -107,7 +107,6 @@
     line-height: 32px;
     letter-spacing: 0.5px;
     color: #50897C;
-    padding-left: 20px;
 }
 .flexContentRight ul {
     list-style: none;
@@ -148,7 +147,7 @@
 @media (max-width: 768px) {
     .heroSection {
         width: 768px;
-        padding: 126px 37px 20px 37px;
+        padding: 126px 37px 60px 37px;
         text-align: center;
     }
     .firstPart {
@@ -176,7 +175,6 @@
 @media (max-width: 425px) {
     .heroSection {
         width: 425px;
-        padding: 126px 37px 20px 37px;
         text-align: center;
     }
     .heroSectionRight {
