@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;400;600;700&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Poppins:ital,wght@0,200;0,300;0,500;0,600;0,700;0,800;0,900;1,400&family=Source+Serif+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;400;600;700&family=Galano:wght@100;200;300;400;500;600;700;800;900&family=Poppins:ital,wght@0,200;0,300;0,500;0,600;0,700;0,800;0,900;1,400&family=Source+Serif+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,700&display=swap');
 
 
 .heroSection {
@@ -18,7 +18,7 @@
 }
 
 .h1 {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Galano', sans-serif;
     font-style: normal;
     font-weight: 900;
     font-size: 64px;
@@ -29,7 +29,7 @@
 
 .paragraph {
     width: 536px;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Galano', sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 20px;
@@ -47,7 +47,7 @@
 }
 
 .contentTitle {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Galano', sans-serif;
     font-style: normal;
     font-weight: 900;
     font-size: 40px;
@@ -63,7 +63,7 @@
     top: -5rem;
     max-width: 902px;
     height: 137px;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Galano', sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 20px;
@@ -102,7 +102,7 @@
 .contentSectionHeadingTitleLeft {
     width: 530px;
     height: 39px;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Galano', sans-serif;
     font-style: normal;
     font-weight: 900;
     font-size: 32px;
@@ -115,7 +115,7 @@
 .contentSectionHeadingTitleRight {
     width: 530px;
     height: 39px;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Galano', sans-serif;
     font-style: normal;
     font-weight: 900;
     font-size: 32px;
@@ -129,7 +129,7 @@
 .contentSectionHeadingTextLeft {
     width: 536px;
     height: 137px;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Galano', sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 20px;
@@ -140,7 +140,7 @@
 .contentSectionHeadingTextRight {
     width: 536px;
     /* height: 137px; */
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Galano', sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 20px;
@@ -210,7 +210,7 @@
     }
 
     .h1 {
-        font-family: 'Montserrat', sans-serif;
+        font-family: 'Galano', sans-serif;
         font-style: normal;
         font-weight: 900;
         font-size: 54px;
@@ -222,7 +222,7 @@
         width: 336px;
     }
     .contentTitle {
-        font-family: 'Montserrat', sans-serif;
+        font-family: 'Galano', sans-serif;
         font-style: normal;
         font-weight: 900;
         font-size: 32px;
@@ -278,7 +278,7 @@
         width: 375px;
     }
     .contentTitle {
-        font-family: 'Montserrat', sans-serif;
+        font-family: 'Galano', sans-serif;
         font-style: normal;
         font-weight: 900;
         font-size: 32px;
@@ -311,7 +311,7 @@
         padding-right: 10px;
     }
     .h1 {
-        font-family: 'Montserrat', sans-serif;
+        font-family: 'Galano', sans-serif;
         font-style: normal;
         font-weight: 900;
         font-size: 47px;
@@ -322,7 +322,7 @@
         width: 310px;
     }
     .contentTitle {
-        font-family: 'Montserrat', sans-serif;
+        font-family: 'Galano', sans-serif;
         font-style: normal;
         font-weight: 900;
         font-size: 32px;
