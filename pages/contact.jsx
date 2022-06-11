@@ -2,6 +2,9 @@ import styles from "../styles/contact.module.css"
 import Image from "next/image"
 import { useState } from "react";
 import Axios from "axios"
+import styles2 from "../styles/submit.module.css"
+import Link from "next/link";
+
 
 const Contact = () => {
 
@@ -48,17 +51,42 @@ const Contact = () => {
                 message: contactForm.message
             })
             .then(res => {
-                console.log(res)
                 console.log("successfully sent")
+                setShowSuccess(true)
             })
             .catch(err => {
                 console.log(err)
             })
         }
+        
     }
+
+    const [showSuccess, setShowSuccess] = useState(false)
+
+    function close() {
+        setShowSuccess(false)
+    }
+
 
     return (  
         <div className={styles.container}>
+            {
+                showSuccess 
+                &&
+                <div className={styles2.backgound}>
+                    <div className={styles2.container}>
+                        <Image src="/lf20_cpjxufjf.json.svg" width="167" height="167" />
+                        <h3 className={styles2.title}>Request Sent</h3>
+                        <p className={styles2.paragraph}>Thank you for contacting us</p>
+                        <div className={styles2.hr}></div>
+                        <Link href='/'>
+                            <a>
+                                <button onClick={close} className={styles2.btn}>CLOSE</button>
+                            </a>
+                        </Link>
+                    </div>
+                </div>
+            }
             <div className={styles.heroSection}>
                 <div className={styles.leftHeroSection}>
                     <p className={styles.smallText}>contact us</p>
@@ -117,7 +145,7 @@ const Contact = () => {
                             </div>
                             <div className={styles.flex}>
                                 <label className={styles.label} htmlFor="message">message</label>
-                                <input 
+                                <textarea 
                                     type="text"
                                     name="message"
                                     className={styles.message}

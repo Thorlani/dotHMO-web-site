@@ -34,7 +34,7 @@ const Subscription = () => {
                     value={subscribe.subscribeDetails}
                     onChange={handleChange}
                  />
-                <button className={styles.btnSubscription}>Subcribe</button>
+                <button className={styles.btnSubscription}>Subscribe</button>
             </form>
         </div>
     );

@@ -26,9 +26,11 @@ const GetAQuote = () => {
 
     return (
         <div className={styles.getAQuote}>
-            <h1 className={styles.h1}>Why we you should trust your health with us</h1>
-            <button onClick={open} className={styles.btnGetAQuote}>GET A QUOTE</button>
-            {sav === true ? accept : <Getquote saved={onClos} />}
+            <div>
+                <h1 className={styles.h1}>Get the best Health plan that suits you</h1>
+                <button onClick={open} className={styles.btnGetAQuote}>GET A QUOTE</button>
+                {sav === true ? accept : <Getquote saved={onClos} />}
+            </div>
         </div>
     );
 }

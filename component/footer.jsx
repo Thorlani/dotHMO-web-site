@@ -1,11 +1,11 @@
 import styles from "../styles/footer.module.css";
-import Image from "next/image";
+import Link from "next/link";
 
 const Footer = () => {
     return (
         <footer className={styles.footer}>
             <div>
-                <img className={styles.footerImage} src="/DotHMO.svg" width="256" height="99" />
+                <img className={styles.footerImage} src="/HMOLogo.png" width="256" height="99" />
             </div>
             <div className={styles.footerContent}>
                 <h2 className={styles.footTitle}>Company</h2>
@@ -16,7 +16,11 @@ const Footer = () => {
                 </ul>
             </div>
             <div className={styles.footerContent}>
-                <h2 className={styles.footTitle}>About Us</h2>
+                <Link href="/about">
+                    <a>
+                        <h2 className={styles.footTitle}>About Us</h2>
+                    </a>
+                </Link>
                 <ul>
                     <li className={styles.footerList}>History</li>
                     <li className={styles.footerList}>Support</li>
@@ -28,6 +32,7 @@ const Footer = () => {
                 <ul>
                     <li className={styles.footerList}>Terms & Conditions</li>
                     <li className={styles.footerList}>Privacy Policy</li>
+                    <li className={styles.footerList}>Blog</li>
                 </ul>
             </div>
         </footer>

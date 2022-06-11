@@ -1,8 +1,14 @@
 import styles from "../styles/about.module.css";
 import Image from "next/image"
+import Head from "next/head";
 
 const About = () => {
     return (
+        <>
+        <Head>
+            <title>About Us | Dot HMO</title>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        </Head>
         <div className="container">
             <div className={styles.heroSection}>
                 <div className={styles.firstPart}>
@@ -14,7 +20,7 @@ const About = () => {
                         <Image src="/about.png" width="400" height="400" />
                     </div>
                 </div>
-                <p className={styles.secondPart}> We currently have  a 70% stake in Royal Exchange Healthcare Limited, and recapitalized according to the NHIS guidelines to ensure the distribution of local and international health plans across Africa.</p>
+                {/* <p className={styles.secondPart}> We currently have  a 70% stake in Royal Exchange Healthcare Limited, and recapitalized according to the NHIS guidelines to ensure the distribution of local and international health plans across Africa.</p> */}
             </div>
             <div className={styles.body}>
                 <h2 className={styles.bodyh2}>Driven to Revolutionize Healthcare.</h2>
@@ -102,6 +108,7 @@ const About = () => {
                 </div>
             </div>
         </div>
+        </>
     );
 }
  

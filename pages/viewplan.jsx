@@ -75,11 +75,10 @@ const Viewplan = () => {
                 <div className={styles.howItWorksSectionContent}>
                     <h2 className={styles.howItWorksTitle}>How it works:</h2>
                     <ul>
-                        <li className={styles.listItem}>You choose a plan </li>
-                        <li className={styles.listItem}>Pay a premium (add something like (!) that people can click on to understand what premium is). This will be a monthly payment.</li>
-                        <li className={styles.listItem}>You pick your preferred hospital (list of hospital-s depending on address and then link to a more expansive list.)</li>
-                        <li className={styles.listItem}>Bolding walk into your chosen hospital when you ill and you will be treated.</li>
-                        <li className={styles.listItem}>We pick up your bill.</li>
+                        <li className={styles.listItem}>Select a plan.</li>
+                        <li className={styles.listItem}>Enter your information for a call back.</li>
+                        <li className={styles.listItem}>Dot sale agents will contact you at your preferred time.</li>
+                        <li className={styles.listItem}>You can negotiate further and purchase a plan.</li>
                     </ul>
                 </div>
             </div>

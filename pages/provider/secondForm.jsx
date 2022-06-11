@@ -1,5 +1,5 @@
 import HeroSection from "../../component/hpHeroSection";
-import styles from "../../styles/secondForm.module.css";
+import styles2 from "../../styles/secondForm.module.css";
 import Image from "next/image";
 import { useState } from "react";
 import Link from "next/link";
@@ -7,7 +7,7 @@ import Axios from "axios"
 
 const SecondForm = () => {
 
-    const url = "https://dot-insure.herokuapp.com/provider/create"
+    const url = "https://dot-insure.herokuapp.com/provider/update"
     const [formData2, setFormData2] = useState({
         nameOFManagingDirector: "",
         emailOfManagingDirector: "",
@@ -72,7 +72,7 @@ const SecondForm = () => {
             console.log("There is currently an Error Message!")
         }
         if(isSubmit2 === true && Object.keys(formErrors2).length === 0) {
-            Axios.post(url, {
+            Axios.patch(url, {
                 nameOfManagingDirector: formData2.nameOFManagingDirector,
                 emailOfManagingDirector: formData2.emailOfManagingDirector,
                 nameOfContactPerson: formData2.nameOfContactPerson,
@@ -85,7 +85,8 @@ const SecondForm = () => {
                 branches: [
                     {
                         address: formData2.comments,
-                        lgaId: formData2.comments
+                        lgaId: 1,
+                        id: 1,
                     }
                 ]
             })
@@ -105,123 +106,123 @@ const SecondForm = () => {
     return (
         <div className="container">
             <HeroSection />
-            <div className={styles.contentSection}>
-                <div className={styles.provider}>
-                    <p className={styles.title}>CONTACT PERSON(S)</p>
-                    <p className={styles.step}>step 2/4</p>
+            <div className={styles2.contentSection}>
+                <div className={styles2.provider}>
+                    <p className={styles2.title}>CONTACT PERSON(S)</p>
+                    <p className={styles2.step}>step 2/4</p>
                 </div>
-                <div className={styles.line}></div>
-                <form className={styles.form} onSubmit={handleSubmit2}>
-                    <div className={styles.nameAndEmail}>
-                        <div className={styles.name}>
-                            <label className={styles.label}>Name of Managing Director</label>
+                <div className={styles2.line}></div>
+                <form className={styles2.form} onSubmit={handleSubmit2}>
+                    <div className={styles2.nameAndEmail}>
+                        <div className={styles2.name}>
+                            <label className={styles2.label}>Name of Managing Director</label>
                             <input 
                                 type="text" 
                                 name="nameOFManagingDirector" 
                                 value={formData2.nameOFManagingDirector} 
                                 onChange={handleChange2}
-                                className={styles.nameOFManagingDirector}
+                                className={styles2.nameOFManagingDirector}
                             />
                             
                         </div>
-                        <div className={styles.email}>
-                            <label className={styles.label}>email address OF MANAGING DIRECTOR</label>
+                        <div className={styles2.email}>
+                            <label className={styles2.label}>email address OF MANAGING DIRECTOR</label>
                             <input 
                                 type="email"
                                 name="emailOfManagingDirector"
                                 value={formData2.emailOfManagingDirector}
                                 onChange={handleChange2}
-                                className={styles.emailOfManagingDirector}
+                                className={styles2.emailOfManagingDirector}
                             />
                         </div>
                     </div>
-                    <div className={styles.contactAndMobile}>
-                        <div className={styles.contact}>
-                            <label className={styles.label}>Name of Contact Person</label>
+                    <div className={styles2.contactAndMobile}>
+                        <div className={styles2.contact}>
+                            <label className={styles2.label}>Name of Contact Person</label>
                             <input
                                 type="text"
                                 name="nameOfContactPerson"
                                 value={formData2.nameOfContactPerson}
                                 onChange={handleChange2}
-                                className={styles.contactPerson}
+                                className={styles2.contactPerson}
                             />
-                            <p className={styles.errorMessage}>{formErrors2.nameOfContactPerson}</p>
+                            <p className={styles2.errorMessage}>{formErrors2.nameOfContactPerson}</p>
                         </div>
-                        <div className={styles.mobile}>
-                            <label className={styles.label}>Mobile Number of Contact Person</label>
+                        <div className={styles2.mobile}>
+                            <label className={styles2.label}>Mobile Number of Contact Person</label>
                             <input
                                 type="number"
                                 name="mobileNumberOfContactPerson"
                                 value={formData2.mobileNumberOfContactPerson}
                                 onChange={handleChange2}
-                                className={styles.mobilePerson}
+                                className={styles2.mobilePerson}
                             />
-                            <p className={styles.errorMessage}>{formErrors2.mobileNumberOfContactPerson}</p>
+                            <p className={styles2.errorMessage}>{formErrors2.mobileNumberOfContactPerson}</p>
                         </div>
                     </div>
-                    <div className={styles.secondaryContactAndMobile}>
-                        <div className={styles.secondaryContact}>
-                            <label className={styles.label}>Name of Secondary Contact Person</label>
+                    <div className={styles2.secondaryContactAndMobile}>
+                        <div className={styles2.secondaryContact}>
+                            <label className={styles2.label}>Name of Secondary Contact Person</label>
                             <input
                                 type="text"
                                 name="nameOfSecondaryContactPerson"
                                 value={formData2.nameOfSecondaryContactPerson}
                                 onChange={handleChange2}
-                                className={styles.secondaryContactPerson}
+                                className={styles2.secondaryContactPerson}
                             />
                         </div>
-                        <div className={styles.secondaryMobile}>
-                            <label className={styles.label}>Mobile Number of Secondary Contact Person</label>
+                        <div className={styles2.secondaryMobile}>
+                            <label className={styles2.label}>Mobile Number of Secondary Contact Person</label>
                             <input 
                                 type="number"
                                 name="mobileNumberOfSecondaryContactPerson"
                                 value={formData2.mobileNumberOfSecondaryContactPerson}
                                 onChange={handleChange2}
-                                className={styles.secondaryMobilePerson}
+                                className={styles2.secondaryMobilePerson}
                             />
                         </div>
                     </div>
-                    <div className={styles.bankDetails}>
-                        <div className={styles.bankName}>
-                            <label className={styles.label}>Bank Name</label>
+                    <div className={styles2.bankDetails}>
+                        <div className={styles2.bankName}>
+                            <label className={styles2.label}>Bank Name</label>
                             <input
                                 type="text"
                                 name="bankName"
                                 value={formData2.bankName}
                                 onChange={handleChange2}
-                                className={styles.bankNameDetails}
+                                className={styles2.bankNameDetails}
                             />
-                            <p className={styles.errorMessage}>{formErrors2.bankName}</p>
+                            <p className={styles2.errorMessage}>{formErrors2.bankName}</p>
                         </div>
-                        <div className={styles.bankAccount}>
-                            <label className={styles.label}>Bank Account Number</label>
+                        <div className={styles2.bankAccount}>
+                            <label className={styles2.label}>Bank Account Number</label>
                             <input 
                                 type="number"
                                 name="bankAccountNumber"
                                 value={formData2.bankAccountNumber}
                                 onChange={handleChange2}
-                                className={styles.bankAccountDetails}
+                                className={styles2.bankAccountDetails}
                             />
-                            <p className={styles.errorMessage}>{formErrors2.bankAccountNumber}</p>
+                            <p className={styles2.errorMessage}>{formErrors2.bankAccountNumber}</p>
                         </div>
-                        <div className={styles.claimsPayment}>
-                            <label className={styles.label}>Bank Branch</label>
+                        <div className={styles2.claimsPayment}>
+                            <label className={styles2.label}>Bank Branch</label>
                             <input 
                                 type="text"
                                 name="comments"
                                 value={formData2.comments}
                                 onChange={handleChange2}
-                                className={styles.comments}
+                                className={styles2.comments}
                             />
                         </div>
-                        <div className={styles.claimsPaymentFrequency}>
-                            <label className={styles.label}>Claims Payment Frequency</label>
+                        <div className={styles2.claimsPaymentFrequency}>
+                            <label className={styles2.label}>Claims Payment Frequency</label>
                             <select 
                             name="claimsPaymentFrequency" 
                             id="claimsPaymentFrequency" 
                             onChange={handleChange2}
                             value={formData2.claimsPaymentFrequency}
-                            className={styles.claimsPaymentFrequencyStyle}
+                            className={styles2.claimsPaymentFrequencyStyle}
                             required
                             >
                                 <option value="">Select Provider Type</option>
@@ -231,27 +232,27 @@ const SecondForm = () => {
                             </select>
                         </div>
                     </div>
-                    <div className={styles.button}>
-                        <div className={styles.back}>
+                    <div className={styles2.button}>
+                        <div className={styles2.back}>
                             <Link href="/provider/firstForm">
                                 <a>
-                                    <button className={styles.backButton}>Back</button>
+                                    <button className={styles2.backButton}>Back</button>
                                 </a>
                             </Link>
                         </div>
-                        <div className={styles.saveAndNext}>
+                        <div className={styles2.saveAndNext}>
                             <Image src="/save.svg" width="18" height="18" />
-                            <button onClick={showButton2} className={styles.save}>SAVE AND CONTINUE LATER</button>
+                            <button onClick={showButton2} className={styles2.save}>SAVE AND CONTINUE LATER</button>
                             { 
                                 Object.keys(formErrors2).length === 0 && displayNext2 && <Link href="/provider/thirdForm">
                                     <a>
-                                        <button type="submit" className={styles.next}>Next</button>
+                                        <button type="submit" className={styles2.next}>Next</button>
                                     </a>
                                 </Link>
                             }
                             {/* <Link href="/provider/thirdForm">
                                 <a>
-                                    <button className={styles.next}>Next</button>
+                                    <button className={styles2.next}>Next</button>
                                 </a>
                             </Link> */}
                         </div>

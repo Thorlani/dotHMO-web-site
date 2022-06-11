@@ -42,7 +42,7 @@ const Navbar = () => {
             <div className={styles.section1}>
                 <Link href="/">
                     <a>
-                        <Image src="/DotHMO.svg" width="151" height="50" />
+                        <Image src="/HMOLogo.png" width="151" height="50" />
                     </a>
                 </Link>
             </div>
