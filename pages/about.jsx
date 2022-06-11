@@ -20,7 +20,6 @@ const About = () => {
                         <Image src="/about.png" width="400" height="400" />
                     </div>
                 </div>
-                {/* <p className={styles.secondPart}> We currently have  a 70% stake in Royal Exchange Healthcare Limited, and recapitalized according to the NHIS guidelines to ensure the distribution of local and international health plans across Africa.</p> */}
             </div>
             <div className={styles.body}>
                 <h2 className={styles.bodyh2}>Driven to Revolutionize Healthcare.</h2>
