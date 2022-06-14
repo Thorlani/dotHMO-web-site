@@ -1,13 +1,27 @@
 import styles from "../styles/subscription.module.css";
 import { useState } from "react";
-import Head from "next/head"
-import Script from "next/script"
+import Axios from "axios";
 
 const Subscription = () => {
+
+    const url = 'https://dot-insure.herokuapp.com/newsletter/subscribe';
 
     const [subscribe, setSubscribe] = useState({
         subscribeDetails: ""
     });
+    const [formError, setFormError] = useState({});
+
+    function errorChecker(values) {
+        const errors = {}
+        const regex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;
+
+        if (!values.subscribeDetails) {
+            errors.subscribeDetails = "Please enter your email address";
+        } else if (!regex.test(values.subscribeDetails)) {
+            errors.subscribeDetails = "Please enter a valid email address";
+        }
+        return errors;
+    }
 
     function handleChange(event) {
         setSubscribe(prevSubscribe => {
@@ -20,6 +34,16 @@ const Subscription = () => {
 
     function handleSubmit(event) {
         event.preventDefault();
+        setFormError(errorChecker(subscribe));
+        if (Object.keys(formError).length === 0) {
+            Axios.post(url, {
+                email: subscribe.subscribeDetails
+            })
+        }
+    }
+
+    const errorMessage = {
+        color: 'red',
     }
 
     return (
@@ -36,6 +60,7 @@ const Subscription = () => {
                  />
                 <button className={styles.btnSubscription}>Subscribe</button>
             </form>
+            <p style={errorMessage}>{formError.subscribeDetails}</p>
         </div>
     );
 }

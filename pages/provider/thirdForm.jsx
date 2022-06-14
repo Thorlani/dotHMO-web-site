@@ -7,7 +7,7 @@ import Axios from "axios"
 
 const ThirdForm = () => {
 
-    const url = "https://dot-insure.herokuapp.com/provider/update"
+    const url3 = "https://dot-insure.herokuapp.com/provider/update"
     const [formData3, setFormData3] = useState({
         typeOfWard: "",
         typeOfWardTwo: "",
@@ -26,11 +26,11 @@ const ThirdForm = () => {
         inhouseXRay: false,
         ICU: false,
     })
-    const [formErrors, setFormErrors] = useState({});
-    const [isSubmit, setIsSubmit] = useState(false);
-    const [displayNext, setDisplayNext] = useState(false);
+    const [formErrors3, setFormErrors3] = useState({});
+    const [isSubmit3, setIsSubmit3] = useState(false);
+    const [displayNext3, setDisplayNext3] = useState(false);
 
-    function handleChange(event) {
+    function handleChange3(event) {
         const { name, value, type, checked } = event.target
         setFormData3(prevFormData => {
             return {
@@ -41,7 +41,7 @@ const ThirdForm = () => {
     }
 
 
-    function errorCkecker(validate) {
+    function errorCkecker3(validate) {
         const error = {};
 
         if(!validate.noOfBedInHDU) {
@@ -53,17 +53,17 @@ const ThirdForm = () => {
         return error;
     }
 
-    function handleSubmit(event) {
+    function handleSubmit3(event) {
         event.preventDefault()
-        setFormErrors(errorCkecker(formData3))
-        setIsSubmit(true)
-        if(displayNext === true) {
+        setFormErrors3(errorCkecker3(formData3))
+        setIsSubmit3(true)
+        if(displayNext3 === true) {
             console.log(formData3)
         } else {
             console.log("There is currently an Error Message!")
         }
-        if(Object.keys(formErrors).length === 0 && displayNext) {
-            Axios.patch(url, {
+        if(Object.keys(formErrors3).length === 0 && displayNext3) {
+            Axios.patch(url3, {
                 facilities: [
                     {
                       wardType: formData3.typeOfWard,
@@ -82,11 +82,11 @@ const ThirdForm = () => {
         }
     }
 
-    function showButton() {
-        if(isSubmit === true && Object.keys(formErrors).length === 0) {
-            setDisplayNext(true)
+    function showButton3() {
+        if(isSubmit3 === true && Object.keys(formErrors3).length === 0) {
+            setDisplayNext3(true)
         } else {
-            setDisplayNext(false)
+            setDisplayNext3(false)
         }
     }
 
@@ -100,13 +100,13 @@ const ThirdForm = () => {
                     <p className={styles3.step}>step 3/4</p>
                 </div>
                 <div className={styles3.line}></div>
-                <form className={styles3.form} onSubmit={handleSubmit}>
+                <form className={styles3.form} onSubmit={handleSubmit3}>
                     <div className={styles3.ward}>
                         <label className={styles3.upperlabel}>type of ward</label>
                         <select
                             name="typeOfWard" 
                             id="typeOfWard" 
-                            onChange={handleChange}
+                            onChange={handleChange3}
                             value={formData3.typeOfWard}
                             className={styles3.typeOfWard}
                             required
@@ -124,10 +124,10 @@ const ThirdForm = () => {
                                 type="number"
                                 name="noOfBedInHDU"
                                 value={formData3.noOfBedInHDU}
-                                onChange={handleChange}
+                                onChange={handleChange3}
                                 className={styles3.noOfBedInHDU}
                             />
-                            <p className={styles3.errorMessage}>{formErrors.noOfBedInHDU}</p>
+                            <p className={styles3.errorMessage}>{formErrors3.noOfBedInHDU}</p>
                         </div>
                         <div className={styles3.icu}>
                             <label className={styles3.upperlabel}>no of bed in icu (Write 0 if you do n ot have a ICU)</label>
@@ -136,10 +136,10 @@ const ThirdForm = () => {
                                 type="number"
                                 name="noOfBedInICU"
                                 value={formData3.noOfBedInICU}
-                                onChange={handleChange}
+                                onChange={handleChange3}
                                 className={styles3.noOfBedInICU}
                             />
-                            <p className={styles3.errorMessage}>{formErrors.noOfBedInICU}</p>
+                            <p className={styles3.errorMessage}>{formErrors3.noOfBedInICU}</p>
                         </div>
                     </div>
                     <div className={styles3.ward}>
@@ -147,7 +147,7 @@ const ThirdForm = () => {
                         <select
                             name="typeOfWardTwo" 
                             id="typeOfWardTwo" 
-                            onChange={handleChange}
+                            onChange={handleChange3}
                             value={formData3.typeOfWardTwo}
                             className={styles3.typeOfWard}
                             required
@@ -165,7 +165,7 @@ const ThirdForm = () => {
                                 type="number"
                                 name="noOfBedInHDUTwo"
                                 value={formData3.noOfBedInHDUTwo}
-                                onChange={handleChange}
+                                onChange={handleChange3}
                                 className={styles3.noOfBedInHDU}
                             />
                         </div>
@@ -176,7 +176,7 @@ const ThirdForm = () => {
                                 type="number"
                                 name="noOfBedInICUTwo"
                                 value={formData3.noOfBedInICUTwo}
-                                onChange={handleChange}
+                                onChange={handleChange3}
                                 className={styles3.noOfBedInICU}
                             />
                         </div>
@@ -191,7 +191,7 @@ const ThirdForm = () => {
                                         id="ambulance"
                                         checked={formData3.ambulance}
                                         name="ambulance"
-                                        onChange={handleChange}
+                                        onChange={handleChange3}
                                         className={styles3.input}
                                         
                                     />
@@ -203,7 +203,7 @@ const ThirdForm = () => {
                                         id="CTScanMachine"
                                         checked={formData3.CTScanMachine}
                                         name="CTScanMachine"
-                                        onChange={handleChange}
+                                        onChange={handleChange3}
                                         className={styles3.input}
                                         
                                     />
@@ -215,7 +215,7 @@ const ThirdForm = () => {
                                         id="mammogram"
                                         checked={formData3.mammogram}
                                         name="mammogram"
-                                        onChange={handleChange}
+                                        onChange={handleChange3}
                                         className={styles3.input}
                                         
                                     />
@@ -227,7 +227,7 @@ const ThirdForm = () => {
                                         id="haemodialysis"
                                         checked={formData3.haemodialysis}
                                         name="haemodialysis"
-                                        onChange={handleChange}
+                                        onChange={handleChange3}
                                         className={styles3.input}
                                         
                                     />
@@ -241,7 +241,7 @@ const ThirdForm = () => {
                                         id="twoFourHrAmbulance"
                                         checked={formData3.twoFourHrAmbulance}
                                         name="twoFourHrAmbulance"
-                                        onChange={handleChange}
+                                        onChange={handleChange3}
                                         className={styles3.input}
                                         
                                     />
@@ -253,7 +253,7 @@ const ThirdForm = () => {
                                         id="MRIMachine"
                                         checked={formData3.MRIMachine}
                                         name="MRIMachine"
-                                        onChange={handleChange}
+                                        onChange={handleChange3}
                                         className={styles3.input}
                                         
                                     />
@@ -265,7 +265,7 @@ const ThirdForm = () => {
                                         id="UltrasoundScan"
                                         checked={formData3.UltrasoundScan}
                                         name="UltrasoundScan"
-                                        onChange={handleChange}
+                                        onChange={handleChange3}
                                         className={styles3.input}
                                         
                                     />
@@ -279,7 +279,7 @@ const ThirdForm = () => {
                                         id="InhouseLaboratory"
                                         checked={formData3.InhouseLaboratory}
                                         name="InhouseLaboratory"
-                                        onChange={handleChange}
+                                        onChange={handleChange3}
                                         className={styles3.input}
                                         
                                     />
@@ -291,7 +291,7 @@ const ThirdForm = () => {
                                         id="inhouseXRay"
                                         checked={formData3.inhouseXRay}
                                         name="inhouseXRay"
-                                        onChange={handleChange}
+                                        onChange={handleChange3}
                                         className={styles3.input}
                                         
                                     />
@@ -303,7 +303,7 @@ const ThirdForm = () => {
                                         id="ICU"
                                         checked={formData3.ICU}
                                         name="ICU"
-                                        onChange={handleChange}
+                                        onChange={handleChange3}
                                         className={styles3.input}
                                     />
                                     <label className={styles3.label} htmlFor="ICU">ICU</label>
@@ -321,9 +321,9 @@ const ThirdForm = () => {
                         </div>
                         <div className={styles3.saveAndNext}>
                             <Image src="/save.svg" width="18" height="18" />
-                            <button onClick={showButton} className={styles3.save}>SAVE AND CONTINUE LATER</button>
+                            <button onClick={showButton3} className={styles3.save}>SAVE AND CONTINUE LATER</button>
                             { 
-                                Object.keys(formErrors).length === 0 && displayNext && <Link href="/provider/fourthForm">
+                                Object.keys(formErrors3).length === 0 && displayNext3 && <Link href="/provider/fourthForm">
                                     <a>
                                         <button type="submit" className={styles3.next}>Next</button>
                                     </a>

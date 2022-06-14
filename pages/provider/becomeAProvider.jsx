@@ -11,7 +11,7 @@ const BecomeAProvider = ({ hide }) => {
                     <div className={styles.contentLeft}>
                     <Image src="/newReg.svg" width="99" height="85" />
                     <span className={styles.span}>New Registration</span>
-                    <Link href="/provider/firstForm">
+                    <Link href="/provider/addProvider">
                         <a>
                             <button className={styles.btnClick}>START</button>
                         </a>

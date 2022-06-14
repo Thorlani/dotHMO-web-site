@@ -32,13 +32,6 @@ const Quote = ({ closeModal, savedd }) => {
     },[]);
 
     useEffect(() => {
-        Axios.get("https://dot-insure.herokuapp.com/lga/list/25")
-        .then(res => setLga(res.data)).catch(err => console.log(err))
-    },[])
-
-    // console.log(lga)
-
-    useEffect(() => {
         Axios.get("https://dot-insure.herokuapp.com/policy-type/list")
         .then(res => setPolicyType(res.data)).catch(err => console.log(err))
     }, [])
@@ -57,11 +50,6 @@ const Quote = ({ closeModal, savedd }) => {
         )
     })
 
-    let lgas = lga.map((lga) => {
-        return (
-            <option key={lga.id} value={lga.id}>{lga.name}</option>
-        )
-    })
 
     let policyTypes = policyType.map((policy) => {
         return (
@@ -85,7 +73,27 @@ const Quote = ({ closeModal, savedd }) => {
     const [formErrors, setFormErrors] = useState({});
     const [isSubmit, setIsSubmit] = useState(false);
     const [isThereError, setIsThereError] = useState(true);
-  
+    
+    // useEffect(() => {
+    //     Axios.get(`https://dot-insure.herokuapp.com/lga/list/${formData.state}`)
+    //     .then(res => setLga(res.data)).catch(err => console.log(err))
+    // },[])
+
+    // console.log(lga)
+    // console.log(formData.state)
+    console.log(`https://dot-insure.herokuapp.com/lga/list/${formData.state}`)
+
+    const local = `https://dot-insure.herokuapp.com/lga/list/${formData.state}`
+    
+    useEffect(() => {
+        Axios.get(local).then(res => setLga(res.data)).catch(err => console.log(err))
+    }, [formData.state])
+
+    let lgas = lga.map((lga) => {
+        return (
+            <option key={lga.id} value={lga.id}>{lga.name}</option>
+        )
+    })
 
     function handleClick(event) {
         const {name, value, type, checked} = event.target
@@ -283,6 +291,7 @@ const Quote = ({ closeModal, savedd }) => {
                                         <option key={lga} value={lga}>{lga}</option>
                                     ))
                                     : null} */}
+
                                 {lgas}
                             </select>
                             <p className={styles.errorMessage}>{formErrors.localGovernment}</p>

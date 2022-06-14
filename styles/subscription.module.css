@@ -1,64 +1,126 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;400;600;700&family=Galano:wght@100;200;300;400;500;600;700;800;900&family=Poppins:ital,wght@0,200;0,300;0,500;0,600;0,700;0,800;0,900;1,400&family=Source+Serif+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,700&display=swap');
-@import url("https://groot.mailerlite.com/assets/plugins/groot/modules/includes/groot_fonts/import.css?version=1654000");
 
-.subscription {
-    width: 100%;
-    height: 296px;
-    background: #65A999;
-    padding-top: 52px;
-    padding-left: 97px;
-    padding-bottom: 67px;
+@media (min-width: 2201px) {
+    .subscription {
+        width: 100%;
+        height: 296px;
+        background: #65A999;
+        padding: 0px 500px;
+        padding-top: 52px;
+        padding-bottom: 67px;
+    }
+    
+    .subscriptionText {
+        width: 530px;
+        font-family: 'Galano', sans-serif;
+        font-style: normal;
+        font-weight: 900;
+        font-size: 40px;
+        line-height: 48px;
+        letter-spacing: 0.5px;
+        color: #FFFFFF;
+    }
+    
+    .subscriptionForm {
+        display: flex;
+    }
+    
+    .subscriptionInput {
+        background: #FFFFFF;
+        border: 1px solid #C6C6C6;
+        border-radius: 2px;
+        height: 42px;
+        width: 346px;
+        border-radius: 2px;
+        font-family: 'Galano', sans-serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 19px;
+        letter-spacing: 0.5px;
+        color: #343434;
+        padding-left: 14px;
+        outline: none;
+    }
+    
+    .btnSubscription {
+        margin-left: 46px;
+        height: 42px;
+        width: 118px;
+        border-radius: 2px;
+        background: #2E353A;
+        border-radius: 2px;
+        font-family: 'Galano', sans-serif;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 19px;
+        letter-spacing: 0.5px;
+        color: #FFFFFF;
+        border: none;
+        cursor: pointer;
+    }
 }
 
-.subscriptionText {
-    width: 530px;
-    font-family: 'Galano', sans-serif;
-    font-style: normal;
-    font-weight: 900;
-    font-size: 40px;
-    line-height: 48px;
-    letter-spacing: 0.5px;
-    color: #FFFFFF;
-}
-
-.subscriptionForm {
-    display: flex;
-}
-
-.subscriptionInput {
-    background: #FFFFFF;
-    border: 1px solid #C6C6C6;
-    border-radius: 2px;
-    height: 42px;
-    width: 346px;
-    border-radius: 2px;
-    font-family: 'Galano', sans-serif;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 19px;
-    letter-spacing: 0.5px;
-    color: #343434;
-    padding-left: 14px;
-    outline: none;
-}
-
-.btnSubscription {
-    margin-left: 46px;
-    height: 42px;
-    width: 118px;
-    border-radius: 2px;
-    background: #2E353A;
-    border-radius: 2px;
-    font-family: 'Galano', sans-serif;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 19px;
-    letter-spacing: 0.5px;
-    color: #FFFFFF;
-    border: none;
-    cursor: pointer;
+@media (max-width: 2200px) {
+    .subscription {
+        width: 100%;
+        height: 296px;
+        background: #65A999;
+        padding-top: 52px;
+        padding-left: 97px;
+        padding-bottom: 67px;
+    }
+    
+    .subscriptionText {
+        width: 530px;
+        font-family: 'Galano', sans-serif;
+        font-style: normal;
+        font-weight: 900;
+        font-size: 40px;
+        line-height: 48px;
+        letter-spacing: 0.5px;
+        color: #FFFFFF;
+    }
+    
+    .subscriptionForm {
+        display: flex;
+    }
+    
+    .subscriptionInput {
+        background: #FFFFFF;
+        border: 1px solid #C6C6C6;
+        border-radius: 2px;
+        height: 42px;
+        width: 346px;
+        border-radius: 2px;
+        font-family: 'Galano', sans-serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 19px;
+        letter-spacing: 0.5px;
+        color: #343434;
+        padding-left: 14px;
+        outline: none;
+    }
+    
+    .btnSubscription {
+        margin-left: 46px;
+        height: 42px;
+        width: 118px;
+        border-radius: 2px;
+        background: #2E353A;
+        border-radius: 2px;
+        font-family: 'Galano', sans-serif;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 19px;
+        letter-spacing: 0.5px;
+        color: #FFFFFF;
+        border: none;
+        cursor: pointer;
+    }
 }
 
 @media (max-width: 1024px) {
