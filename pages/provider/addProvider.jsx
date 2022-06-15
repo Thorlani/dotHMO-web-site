@@ -17,15 +17,25 @@ const AddProvider = () => {
     const firstUrl = "https://dot-insure.herokuapp.com/provider/create";
     const secondUrl = "https://dot-insure.herokuapp.com/provider/update";
     // const docs = `https://dot-insure.herokuapp.com/provider/documents/${providerId}`;
-    const providerTypeFeatures = "https://dot-insure.herokuapp.com/provider/features-by-type/1";
+    
     const [facilities, setFacilites] = useState([])
+    const [providerTypeID, setProviderTypeID] = useState([]);
 
     useEffect(() => {
-        Axios.get(providerTypeFeatures).then(res => {
-            setFacilites(res.data)
+        Axios.get("https://dot-insure.herokuapp.com/provider/provider-types")
+        .then(res => {
+            setProviderTypeID(res.data);
         }).catch(err => {
-            console.log(err)
+            console.log(err);
         })
+    }, [])
+
+    // console.log(providerTypeID);
+
+    let option = providerTypeID.map((item) => {
+        return (
+            <option key={item.id} value={item.id}>{item.typeName}</option>
+        )
     })
 
 
@@ -143,6 +153,8 @@ const AddProvider = () => {
         return errors;
     }
 
+    const [providerId, setProviderId] = useState({})
+    
 
     function handleSubmit(event) {
         event.preventDefault()
@@ -153,7 +165,21 @@ const AddProvider = () => {
         } else {
             console.log("There is currently an Error Message!")
         }
+        if (Object.keys(formErrors).length === 0 && displayNext) {
+            Axios.post(firstUrl, {
+                providerTypeId: parseInt(formData.providerType),
+                providerName: formData.providerName,
+                address: formData.providerAddress,
+                lgaId: parseInt(formData.localGovernment),
+                phone: formData.phoneNumber,
+                email: formData.email
+            }).then(res => {
+                setProviderId(res.data)
+            })
+        }
     }
+
+    // console.log(providerId.id)
 
     function showButton() {
         if(isSubmit === true && Object.keys(formErrors).length === 0) {
@@ -225,6 +251,36 @@ const AddProvider = () => {
         } else {
             console.log("There is currently an Error Message!")
         }
+        if (Object.keys(formErrors2).length === 0 && displayNext2) {
+            Axios.patch(secondUrl, {
+                providerTypeId: parseInt(formData.providerType),
+                providerName: formData.providerName,
+                address: formData.providerAddress,
+                lgaId: parseInt(formData.localGovernment),
+                phone: formData.phoneNumber,
+                email: formData.email,
+                nameOfManagingDirector: formData2.nameOFManagingDirector,
+                emailOfManagingDirector: formData2.emailOfManagingDirector,
+                nameOfContactPerson: formData2.nameOfContactPerson,
+                phoneOfContactPerson: formData2.mobileNumberOfContactPerson,
+                nameOfSecondaryContactPerson: formData2.nameOfSecondaryContactPerson,
+                phoneOfSecondaryContactPerson: formData2.mobileNumberOfSecondaryContactPerson,
+                bankName: formData2.bankName,
+                bankAccountNumber: formData2.bankAccountNumber,
+                claimsPaymentFreq: formData2.claimsPaymentFrequency.toLowerCase(),
+                branches: [
+                    {
+                    address: formData2.comments,
+                    lgaId: 1,
+                    id: 1
+                    }
+                ],
+                id: providerId.id.toString()
+            }).then(res => {
+                console.log(res.data)
+                console.log("Successfully updated!")
+            })
+        }
     }
 
     function showButton2() {
@@ -236,6 +292,19 @@ const AddProvider = () => {
         
     }
 
+    const providerTypeFeatures = `https://dot-insure.herokuapp.com/provider/features-by-type/${formData.providerType}`;
+
+    useEffect(() => {
+        Axios.get(providerTypeFeatures).then(res => {
+            setFacilites(res.data)
+            console.log(res.data)
+        }).catch(err => {
+            console.log(err)
+        })
+    }, [formData.providerType])
+
+    console.log(facilities)
+
     const url3 = "https://dot-insure.herokuapp.com/provider/update"
     const [formData3, setFormData3] = useState({
         typeOfWard: "",
@@ -246,7 +315,6 @@ const AddProvider = () => {
         noOfBedInICUTwo: "",
         ambulance: false,
         CTScanMachine: false,
-        mammogram: false,
         haemodialysis: false,
         twoFourHrAmbulance: false,
         MRIMachine: false,
@@ -255,6 +323,53 @@ const AddProvider = () => {
         inhouseXRay: false,
         ICU: false,
     })
+
+    // function ambulanceTwo() {
+    //     if(formData3.ambulance === true) {
+    //         return parseInt(facilities[0].id)
+    //     }
+    // }
+    // function CTScanMachineTwo() {
+    //     if(formData3.CTScanMachine === true) {
+    //         return parseInt(facilities[1].id)
+    //     }
+    // }
+    // function haemodialysisTwo() {
+    //     if(formData3.haemodialysis === true) {
+    //         return parseInt(facilities[2].id)
+    //     }
+    // }
+    // function twoFourHrAmbulanceTwo() {
+    //     if(formData3.twoFourHrAmbulance === true) {
+    //         return parseInt(facilities[3].id)
+    //     }
+    // }
+    // function MRIMachineTwo() {
+    //     if(formData3.MRIMachine === true) {
+    //         return parseInt(facilities[4].id)
+    //     }
+    // }
+    // function UltrasoundScanTwo() {
+    //     if(formData3.UltrasoundScan === true) {
+    //         return parseInt(facilities[5].id)
+    //     }
+    // }
+    // function InhouseLaboratoryTwo() {
+    //     if(formData3.InhouseLaboratory === true) {
+    //         return parseInt(facilities[6].id)
+    //     }
+    // }
+    // function inhouseXRayTwo() {
+    //     if(formData3.inhouseXRay === true) {
+    //         return parseInt(facilities[7].id)
+    //     }
+    // }
+    // function ICUTwo() {
+    //     if(formData3.ICU === true) {
+    //         return parseInt(facilities[8].id)
+    //     }
+    // }
+
     const [formErrors3, setFormErrors3] = useState({});
     const [isSubmit3, setIsSubmit3] = useState(false);
     const [displayNext3, setDisplayNext3] = useState(false);
@@ -287,9 +402,54 @@ const AddProvider = () => {
         setFormErrors3(errorCkecker3(formData3))
         setIsSubmit3(true)
         if(displayNext3 === true) {
-            console.log(formData3)
+            // console.log(formData3)
         } else {
             console.log("There is currently an Error Message!")
+        }
+        if (Object.keys(formErrors3).length === 0 && displayNext3) {
+            Axios.patch(secondUrl, {
+                providerTypeId: parseInt(formData.providerType),
+                providerName: formData.providerName,
+                address: formData.providerAddress,
+                lgaId: parseInt(formData.localGovernment),
+                phone: formData.phoneNumber,
+                email: formData.email,
+                nameOfManagingDirector: formData2.nameOFManagingDirector,
+                emailOfManagingDirector: formData2.emailOfManagingDirector,
+                nameOfContactPerson: formData2.nameOfContactPerson,
+                phoneOfContactPerson: formData2.mobileNumberOfContactPerson,
+                nameOfSecondaryContactPerson: formData2.nameOfSecondaryContactPerson,
+                phoneOfSecondaryContactPerson: formData2.mobileNumberOfSecondaryContactPerson,
+                bankName: formData2.bankName,
+                bankAccountNumber: formData2.bankAccountNumber,
+                claimsPaymentFreq: formData2.claimsPaymentFrequency.toLowerCase(),
+                branches: [
+                    {
+                    address: formData2.comments,
+                    lgaId: 1,
+                    id: 1
+                    }
+                ],
+                facilities: [
+                    {
+                      wardType: formData3.typeOfWard,
+                      numberOfBedsHDU: parseInt(formData3.noOfBedInHDU),
+                      numberOfBedsICU: parseInt(formData3.noOfBedInICU),
+                      features: [
+                        {
+                          id: 1
+                        }
+                        
+                      ],
+
+                      id: 1
+                    }
+                  ],
+                id: providerId.id.toString()
+            }).then(res => {
+                console.log(res.data)
+                console.log("This has been successfully updated!")
+            })
         }
     }
 
@@ -352,7 +512,7 @@ const AddProvider = () => {
                 ],
                 facilities: [
                     {
-                    wardType: "string",
+                    wardType: formData3.typeOfWard,
                     numberOfBedsHDU: 0,
                     numberOfBedsICU: 0,
                     features: [
@@ -363,7 +523,7 @@ const AddProvider = () => {
                     id: 1
                     }
                 ],
-                id: "string"
+                id: providerId.id.toString()
             })
         }
         // if(Object.keys(filesAccepted).length === 0) {
@@ -384,6 +544,11 @@ const AddProvider = () => {
         setShowSubmitted(false);
     }
 
+    // styles
+
+    let flex = {
+        display: 'flex'
+    }
 
     return (
         <div className="container">
@@ -412,6 +577,7 @@ const AddProvider = () => {
                             required
                         >
                             <option value="">Select Provider Type</option>
+                            {option}
                         </select>
                     </div>
                     <div className={styles.providerName}>
@@ -536,7 +702,6 @@ const AddProvider = () => {
                                         value={formData.anotherBranchAddress}
                                         onChange={handleChange}
                                         className={styles.inputPlace}
-                                        required
                                     />
                                 </div>
                                 <div className={styles.flexColumnState}>
@@ -547,7 +712,6 @@ const AddProvider = () => {
                                         onChange={handleChange}
                                         value={formData.anotherBranchState}
                                         className={styles.selectanotherBranchState}
-                                        required
                                     >
                                     <option value="">Select State</option>
                                     {states}
@@ -561,7 +725,6 @@ const AddProvider = () => {
                                         onChange={handleChange}
                                         value={formData.anotherBranchLG}
                                         className={styles.selectanotherBranchLG}
-                                        required
                                     >
                                         <option value="">Select Local Government</option>
                                         {anotherLgas}
@@ -573,10 +736,12 @@ const AddProvider = () => {
                         <p className={styles.addBranch}> + Add another branch</p>
                     </div>
                     <div className={styles.formNext}>
+                        <div style={flex}  onClick={showButton}>
                         <Image src="/save.svg" width="18" height="18" />
-                        <button onClick={showButton} className={styles.save}>
+                        <button type="submit" className={styles.save}>
                             SAVE AND CONTINUE
                         </button>
+                        </div>
                         { 
                             Object.keys(formErrors).length === 0 && displayNext && <button onClick={incrementFormStage} className={styles.next}>Next</button>
                         }
@@ -731,8 +896,10 @@ const AddProvider = () => {
                             </Link> */}
                         </div>
                         <div className={styles2.saveAndNext}>
+                            <div style={flex} onClick={showButton2}>
                             <Image src="/save.svg" width="18" height="18" />
-                            <button onClick={showButton2} className={styles2.save}>SAVE AND CONTINUE LATER</button>
+                            <button type="submit" className={styles2.save}>SAVE AND CONTINUE LATER</button>
+                            </div>
                             {
                                 Object.keys(formErrors2).length === 0 && displayNext2 && <button onClick={incrementFormStage} className={styles2.next}>Next</button>
                             }
@@ -849,7 +1016,7 @@ const AddProvider = () => {
                                         className={styles3.input}
                                         
                                     />
-                                    <label className={styles3.label} htmlFor="ambulance">Ambulance</label>
+                                    <label className={styles3.label} htmlFor="ambulance">{facilities[0].name}</label>
                                 </div>
                                 <div className={styles3.centralize}>
                                     <input 
@@ -861,19 +1028,7 @@ const AddProvider = () => {
                                         className={styles3.input}
                                         
                                     />
-                                    <label className={styles3.label} htmlFor="CTScanMachine">CT Scan Machine</label>
-                                </div>
-                                <div className={styles3.centralize}>
-                                    <input 
-                                        type="checkbox"
-                                        id="mammogram"
-                                        checked={formData3.mammogram}
-                                        name="mammogram"
-                                        onChange={handleChange3}
-                                        className={styles3.input}
-                                        
-                                    />
-                                    <label className={styles3.label} htmlFor="mammogram">Mammogram</label>
+                                    <label className={styles3.label} htmlFor="CTScanMachine">{facilities[1].name}</label>
                                 </div>
                                 <div className={styles3.centralize}>
                                     <input 
@@ -885,7 +1040,7 @@ const AddProvider = () => {
                                         className={styles3.input}
                                         
                                     />
-                                    <label className={styles3.label} htmlFor="haemodialysis">Haemodialysis</label>
+                                    <label className={styles3.label} htmlFor="haemodialysis">{facilities[2].name}</label>
                                 </div>
                             </div>
                             <div className={styles3.grid2}>
@@ -899,7 +1054,7 @@ const AddProvider = () => {
                                         className={styles3.input}
                                         
                                     />
-                                    <label className={styles3.label} htmlFor="twoFourHrAmbulance">24-hr Ambulance</label>
+                                    <label className={styles3.label} htmlFor="twoFourHrAmbulance">{facilities[3].name}</label>
                                 </div>
                                 <div className={styles3.centralize}>
                                     <input 
@@ -911,7 +1066,7 @@ const AddProvider = () => {
                                         className={styles3.input}
                                         
                                     />
-                                    <label className={styles3.label} htmlFor="MRIMachine">MRI Machine</label>
+                                    <label className={styles3.label} htmlFor="MRIMachine">{facilities[4].name}</label>
                                 </div>
                                 <div className={styles3.centralize}>
                                     <input 
@@ -923,7 +1078,7 @@ const AddProvider = () => {
                                         className={styles3.input}
                                         
                                     />
-                                    <label className={styles3.label} htmlFor="UltrasoundScan">Ultrasound Scan</label>
+                                    <label className={styles3.label} htmlFor="UltrasoundScan">{facilities[5].name}</label>
                                 </div>
                             </div>
                             <div className={styles3.grid3}>
@@ -937,7 +1092,7 @@ const AddProvider = () => {
                                         className={styles3.input}
                                         
                                     />
-                                    <label className={styles3.label} htmlFor="InhouseLaboratory">In-house Laboratory</label>
+                                    <label className={styles3.label} htmlFor="InhouseLaboratory">{facilities[6].name}</label>
                                 </div>
                                 <div className={styles3.centralize}>
                                     <input 
@@ -949,7 +1104,7 @@ const AddProvider = () => {
                                         className={styles3.input}
                                         
                                     />
-                                    <label className={styles3.label} htmlFor="inhouseXRay">in-house X-Ray</label>
+                                    <label className={styles3.label} htmlFor="inhouseXRay">{facilities[7].name}</label>
                                 </div>
                                 <div className={styles3.centralize}>
                                     <input 
@@ -960,7 +1115,7 @@ const AddProvider = () => {
                                         onChange={handleChange3}
                                         className={styles3.input}
                                     />
-                                    <label className={styles3.label} htmlFor="ICU">ICU</label>
+                                    <label className={styles3.label} htmlFor="ICU">{facilities[8].name}</label>
                                 </div>
                             </div>
                         </div>
@@ -970,8 +1125,10 @@ const AddProvider = () => {
                             <button onClick={decrementFormStage} className={styles3.backButton}>Back</button>
                         </div>
                         <div className={styles3.saveAndNext}>
+                            <div style={flex} onClick={showButton3}>
                             <Image src="/save.svg" width="18" height="18" />
-                            <button onClick={showButton3} className={styles3.save}>SAVE AND CONTINUE LATER</button>
+                            <button className={styles3.save}>SAVE AND CONTINUE LATER</button>
+                            </div>
                             { 
                                 Object.keys(formErrors3).length === 0 && displayNext3 && <button onClick={incrementFormStage} className={styles3.next}>Next</button>
                             }
@@ -1035,7 +1192,7 @@ const AddProvider = () => {
                             </div>
                             <div className={styles4.saveAndNext}>
                                 <Image src="/save.svg" width="18" height="18" />
-                                <button className={styles4.save}>SAVE AND CONTINUE LATER</button>
+                                <button className={styles4.save}>CANCEL</button>
                                 <Link href="#">
                                     <a>
                                         <button onClick={handleClose4} className={styles4.submit}>submit</button>

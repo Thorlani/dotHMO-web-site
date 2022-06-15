@@ -1,373 +1,747 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;400;600;700&family=Galano:wght@100;200;300;400;500;600;700;800;900&family=Poppins:ital,wght@0,200;0,300;0,500;0,600;0,700;0,800;0,900;1,400&family=Source+Serif+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,700&display=swap');
+@media (min-width: 2201px) {
+    .contentSection {
+        padding-top: 106px;
+    }
 
-.contentSection {
-    padding-top: 106px;
+    .provider {
+        display: flex;
+        justify-content: space-between;
+        padding: 0px 500px;
+    }
+
+    .title {
+        font-family: 'Galano', sans-serif;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 24px;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        color: #808080;
+        mix-blend-mode: normal;
+        opacity: 0.9;
+    }
+
+    .errorMessage {
+        font-family: 'Galano', sans-serif;
+        font-style: normal;
+        color: red;
+        font-size: 14px;
+    }
+
+    .step {
+        font-family: 'Galano', sans-serif;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 24px;
+        text-align: right;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        color: #808080;
+        mix-blend-mode: normal;
+        opacity: 0.9;
+    }
+
+    .line {
+        width: 100%;
+        height: 1px;
+        background-color: #C6C6C6;
+        margin-top: 20px;
+    }
+
+    .form {
+        margin-top: 50px;
+        padding-bottom: 140px;
+        display: grid;
+        place-items: center;
+    }
+
+    .nameAndEmail {
+        display: flex;
+    }
+
+    .name {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .nameOFManagingDirector {
+        margin-top: 5px;
+        background: #FFFFFF;
+        border: 1px solid #C6C6C6;
+        border-radius: 2px;
+        height: 42px;
+        width: 501.0000305175781px;
+        font-family: 'Galano', sans-serif;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 19px;
+        letter-spacing: 0.5px;
+        color: #000000;
+        padding-left: 20px;
+        outline: none;
+    }
+
+    .email {
+        display: flex;
+        flex-direction: column;
+        margin-left: 24px;
+    }
+
+    .emailOfManagingDirector {
+        margin-top: 5px;
+        background: #FFFFFF;
+        border: 1px solid #C6C6C6;
+        border-radius: 2px;
+        height: 42px;
+        width: 501.0000305175781px;
+        font-family: 'Galano', sans-serif;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 19px;
+        letter-spacing: 0.5px;
+        color: #000000;
+        padding-left: 20px;
+        outline: none;
+    }
+
+    .contactAndMobile {
+        margin-top: 23px;
+        display: flex;
+    }
+
+    .contact {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .contactPerson {
+        margin-top: 5px;
+        background: #FFFFFF;
+        border: 1px solid #C6C6C6;
+        border-radius: 2px;
+        height: 42px;
+        width: 501.0000305175781px;
+        font-family: 'Galano', sans-serif;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 19px;
+        letter-spacing: 0.5px;
+        color: #000000;
+        padding-left: 20px;
+        outline: none;
+    }
+
+    .mobile {
+        display: flex;
+        flex-direction: column;
+        margin-left: 24px;
+    }
+
+    .mobilePerson {
+        margin-top: 5px;
+        background: #FFFFFF;
+        border: 1px solid #C6C6C6;
+        border-radius: 2px;
+        height: 42px;
+        width: 501.0000305175781px;
+        font-family: 'Galano', sans-serif;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 19px;
+        letter-spacing: 0.5px;
+        color: #000000;
+        padding-left: 20px;
+        outline: none;
+    }
+
+    .secondaryContactAndMobile {
+        margin-top: 23px;
+        display: flex;
+    }
+
+    .secondaryContact {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .secondaryContactPerson {
+        margin-top: 5px;
+        background: #FFFFFF;
+        border: 1px solid #C6C6C6;
+        border-radius: 2px;
+        height: 42px;
+        width: 501.0000305175781px;
+        font-family: 'Galano', sans-serif;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 19px;
+        letter-spacing: 0.5px;
+        color: #000000;
+        padding-left: 20px;
+        outline: none;
+    }
+
+    .secondaryMobile {
+        display: flex;
+        flex-direction: column;
+        margin-left: 24px;
+    }
+
+    .secondaryMobilePerson {
+        margin-top: 5px;
+        background: #FFFFFF;
+        border: 1px solid #C6C6C6;
+        border-radius: 2px;
+        height: 42px;
+        width: 501.0000305175781px;
+        font-family: 'Galano', sans-serif;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 19px;
+        letter-spacing: 0.5px;
+        color: #000000;
+        padding-left: 20px;
+        outline: none;
+    }
+
+    .bankDetails {
+        margin-top: 40px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 31px;
+        row-gap: 18px;
+        padding: 34px 32px 48px 29px;
+        height: 224px;
+        width: 1026px;
+        border-radius: 4px;
+        background: #F9F9F9;
+        border: 1px solid #C6C6C6;
+    }
+
+    .bankName {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .bankNameDetails {
+        background: #FFFFFF;
+        border: 1px solid #C6C6C6;
+        border-radius: 2px;
+        height: 42px;
+        width: 467px;
+        font-family: 'Galano', sans-serif;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 19px;
+        letter-spacing: 0.5px;
+        color: #000000;
+        text-transform: uppercase;
+        padding-left: 22px;
+        outline: none;
+    }
+
+    .bankAccount {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .bankAccountDetails {
+        background: #FFFFFF;
+        border: 1px solid #C6C6C6;
+        border-radius: 2px;
+        height: 42px;
+        width: 467px;
+        font-family: 'Galano', sans-serif;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 19px;
+        letter-spacing: 0.5px;
+        color: #000000;
+        padding-left: 22px;
+        outline: none;
+    }
+
+    .comments {
+        /* margin-top: 14px; */
+        background: #FFFFFF;
+        border: 1px solid #C6C6C6;
+        border-radius: 2px;
+        height: 42px;
+        width: 467px;
+        font-family: 'Galano', sans-serif;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 19px;
+        letter-spacing: 0.5px;
+        color: #000000;
+        padding-left: 22px;
+        outline: none;
+    }
+
+    .claimsPaymentFrequency {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .claimsPaymentFrequencyStyle {
+        background: #FFFFFF;
+        border: 1px solid #C6C6C6;
+        border-radius: 2px;
+        height: 42px;
+        width: 467px;
+        font-family: 'Galano', sans-serif;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 19px;
+        letter-spacing: 0.5px;
+        color: #000000;
+        padding-left: 22px;
+        outline: none;
+    }
+
+    .button {
+        margin-top: 50px;
+        display: flex;
+        justify-content: space-between;
+        width: 1026px;
+    }
+
+    .backButton {
+        border: 1px solid #65A999;
+        border-radius: 2px;
+        height: 42px;
+        width: 118px;
+        font-family: 'Galano', sans-serif;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 19px;
+        text-align: center;
+        letter-spacing: 0.5px;
+        color: #65A999;
+        background-color: #FFFFFF;
+        cursor: pointer;
+    }
+
+    .saveAndNext {
+        display: flex;
+        align-items: center;
+    }
+
+    .save {
+        margin-right: 15px;
+        font-family: 'Galano', sans-serif;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 12px;
+        line-height: 22px;
+        letter-spacing: 0.5px;
+        color: #65A999;
+        border: none;
+        background: #FFFFFF;
+        cursor: pointer;
+    }
+
+    .next {
+        background: #65A999;
+        border-radius: 2px;
+        height: 42px;
+        width: 148px;
+        font-family: 'Galano', sans-serif;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 19px;
+        text-align: center;
+        letter-spacing: 0.5px;
+        color: #FFFFFF;
+        border: none;
+        cursor: pointer;
+    }
 }
 
-.provider {
-    display: flex;
-    justify-content: space-between;
-    padding: 0px 205px;
-}
+@media (max-width: 2200px) {
+    .contentSection {
+        padding-top: 106px;
+    }
 
-.title {
-    font-family: 'Galano', sans-serif;
-    font-style: normal;
-    font-weight: 700;
-    font-size: 20px;
-    line-height: 24px;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    color: #808080;
-    mix-blend-mode: normal;
-    opacity: 0.9;
-}
+    .provider {
+        display: flex;
+        justify-content: space-between;
+        padding: 0px 205px;
+    }
 
-.errorMessage {
-    font-family: 'Galano', sans-serif;
-    font-style: normal;
-    color: red;
-    font-size: 14px;
-}
+    .title {
+        font-family: 'Galano', sans-serif;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 24px;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        color: #808080;
+        mix-blend-mode: normal;
+        opacity: 0.9;
+    }
 
-.step {
-    font-family: 'Galano', sans-serif;
-    font-style: normal;
-    font-weight: 700;
-    font-size: 20px;
-    line-height: 24px;
-    text-align: right;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    color: #808080;
-    mix-blend-mode: normal;
-    opacity: 0.9;
-}
+    .errorMessage {
+        font-family: 'Galano', sans-serif;
+        font-style: normal;
+        color: red;
+        font-size: 14px;
+    }
 
-.line {
-    width: 100%;
-    height: 1px;
-    background-color: #C6C6C6;
-    margin-top: 20px;
-}
+    .step {
+        font-family: 'Galano', sans-serif;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 24px;
+        text-align: right;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        color: #808080;
+        mix-blend-mode: normal;
+        opacity: 0.9;
+    }
 
-.form {
-    margin-top: 50px;
-    padding: 0px 180px 140px;
-}
+    .line {
+        width: 100%;
+        height: 1px;
+        background-color: #C6C6C6;
+        margin-top: 20px;
+    }
 
-.nameAndEmail {
-    display: flex;
-}
+    .form {
+        margin-top: 50px;
+        padding: 0px 180px 140px;
+    }
 
-.name {
-    display: flex;
-    flex-direction: column;
-}
+    .nameAndEmail {
+        display: flex;
+    }
 
-.nameOFManagingDirector {
-    margin-top: 5px;
-    background: #FFFFFF;
-    border: 1px solid #C6C6C6;
-    border-radius: 2px;
-    height: 42px;
-    width: 501.0000305175781px;
-    font-family: 'Galano', sans-serif;
-    font-style: normal;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 19px;
-    letter-spacing: 0.5px;
-    color: #000000;
-    padding-left: 20px;
-    outline: none;
-}
+    .name {
+        display: flex;
+        flex-direction: column;
+    }
 
-.email {
-    display: flex;
-    flex-direction: column;
-    margin-left: 24px;
-}
+    .nameOFManagingDirector {
+        margin-top: 5px;
+        background: #FFFFFF;
+        border: 1px solid #C6C6C6;
+        border-radius: 2px;
+        height: 42px;
+        width: 501.0000305175781px;
+        font-family: 'Galano', sans-serif;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 19px;
+        letter-spacing: 0.5px;
+        color: #000000;
+        padding-left: 20px;
+        outline: none;
+    }
 
-.emailOfManagingDirector {
-    margin-top: 5px;
-    background: #FFFFFF;
-    border: 1px solid #C6C6C6;
-    border-radius: 2px;
-    height: 42px;
-    width: 501.0000305175781px;
-    font-family: 'Galano', sans-serif;
-    font-style: normal;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 19px;
-    letter-spacing: 0.5px;
-    color: #000000;
-    padding-left: 20px;
-    outline: none;
-}
+    .email {
+        display: flex;
+        flex-direction: column;
+        margin-left: 24px;
+    }
 
-.contactAndMobile {
-    margin-top: 23px;
-    display: flex;
-}
+    .emailOfManagingDirector {
+        margin-top: 5px;
+        background: #FFFFFF;
+        border: 1px solid #C6C6C6;
+        border-radius: 2px;
+        height: 42px;
+        width: 501.0000305175781px;
+        font-family: 'Galano', sans-serif;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 19px;
+        letter-spacing: 0.5px;
+        color: #000000;
+        padding-left: 20px;
+        outline: none;
+    }
 
-.contact {
-    display: flex;
-    flex-direction: column;
-}
+    .contactAndMobile {
+        margin-top: 23px;
+        display: flex;
+    }
 
-.contactPerson {
-    margin-top: 5px;
-    background: #FFFFFF;
-    border: 1px solid #C6C6C6;
-    border-radius: 2px;
-    height: 42px;
-    width: 501.0000305175781px;
-    font-family: 'Galano', sans-serif;
-    font-style: normal;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 19px;
-    letter-spacing: 0.5px;
-    color: #000000;
-    padding-left: 20px;
-    outline: none;
-}
+    .contact {
+        display: flex;
+        flex-direction: column;
+    }
 
-.mobile {
-    display: flex;
-    flex-direction: column;
-    margin-left: 24px;
-}
+    .contactPerson {
+        margin-top: 5px;
+        background: #FFFFFF;
+        border: 1px solid #C6C6C6;
+        border-radius: 2px;
+        height: 42px;
+        width: 501.0000305175781px;
+        font-family: 'Galano', sans-serif;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 19px;
+        letter-spacing: 0.5px;
+        color: #000000;
+        padding-left: 20px;
+        outline: none;
+    }
 
-.mobilePerson {
-    margin-top: 5px;
-    background: #FFFFFF;
-    border: 1px solid #C6C6C6;
-    border-radius: 2px;
-    height: 42px;
-    width: 501.0000305175781px;
-    font-family: 'Galano', sans-serif;
-    font-style: normal;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 19px;
-    letter-spacing: 0.5px;
-    color: #000000;
-    padding-left: 20px;
-    outline: none;
-}
+    .mobile {
+        display: flex;
+        flex-direction: column;
+        margin-left: 24px;
+    }
 
-.secondaryContactAndMobile {
-    margin-top: 23px;
-    display: flex;
-}
+    .mobilePerson {
+        margin-top: 5px;
+        background: #FFFFFF;
+        border: 1px solid #C6C6C6;
+        border-radius: 2px;
+        height: 42px;
+        width: 501.0000305175781px;
+        font-family: 'Galano', sans-serif;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 19px;
+        letter-spacing: 0.5px;
+        color: #000000;
+        padding-left: 20px;
+        outline: none;
+    }
 
-.secondaryContact {
-    display: flex;
-    flex-direction: column;
-}
+    .secondaryContactAndMobile {
+        margin-top: 23px;
+        display: flex;
+    }
 
-.secondaryContactPerson {
-    margin-top: 5px;
-    background: #FFFFFF;
-    border: 1px solid #C6C6C6;
-    border-radius: 2px;
-    height: 42px;
-    width: 501.0000305175781px;
-    font-family: 'Galano', sans-serif;
-    font-style: normal;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 19px;
-    letter-spacing: 0.5px;
-    color: #000000;
-    padding-left: 20px;
-    outline: none;
-}
+    .secondaryContact {
+        display: flex;
+        flex-direction: column;
+    }
 
-.secondaryMobile {
-    display: flex;
-    flex-direction: column;
-    margin-left: 24px;
-}
+    .secondaryContactPerson {
+        margin-top: 5px;
+        background: #FFFFFF;
+        border: 1px solid #C6C6C6;
+        border-radius: 2px;
+        height: 42px;
+        width: 501.0000305175781px;
+        font-family: 'Galano', sans-serif;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 19px;
+        letter-spacing: 0.5px;
+        color: #000000;
+        padding-left: 20px;
+        outline: none;
+    }
 
-.secondaryMobilePerson {
-    margin-top: 5px;
-    background: #FFFFFF;
-    border: 1px solid #C6C6C6;
-    border-radius: 2px;
-    height: 42px;
-    width: 501.0000305175781px;
-    font-family: 'Galano', sans-serif;
-    font-style: normal;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 19px;
-    letter-spacing: 0.5px;
-    color: #000000;
-    padding-left: 20px;
-    outline: none;
-}
+    .secondaryMobile {
+        display: flex;
+        flex-direction: column;
+        margin-left: 24px;
+    }
 
-.bankDetails {
-    margin-top: 40px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    column-gap: 31px;
-    row-gap: 18px;
-    padding: 34px 32px 48px 29px;
-    height: 224px;
-    width: 1026px;
-    border-radius: 4px;
-    background: #F9F9F9;
-    border: 1px solid #C6C6C6;
-}
+    .secondaryMobilePerson {
+        margin-top: 5px;
+        background: #FFFFFF;
+        border: 1px solid #C6C6C6;
+        border-radius: 2px;
+        height: 42px;
+        width: 501.0000305175781px;
+        font-family: 'Galano', sans-serif;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 19px;
+        letter-spacing: 0.5px;
+        color: #000000;
+        padding-left: 20px;
+        outline: none;
+    }
 
-.bankName {
-    display: flex;
-    flex-direction: column;
-}
+    .bankDetails {
+        margin-top: 40px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 31px;
+        row-gap: 18px;
+        padding: 34px 32px 48px 29px;
+        height: 224px;
+        width: 1026px;
+        border-radius: 4px;
+        background: #F9F9F9;
+        border: 1px solid #C6C6C6;
+    }
 
-.bankNameDetails {
-    background: #FFFFFF;
-    border: 1px solid #C6C6C6;
-    border-radius: 2px;
-    height: 42px;
-    width: 467px;
-    font-family: 'Galano', sans-serif;
-    font-style: normal;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 19px;
-    letter-spacing: 0.5px;
-    color: #000000;
-    text-transform: uppercase;
-    padding-left: 22px;
-    outline: none;
-}
+    .bankName {
+        display: flex;
+        flex-direction: column;
+    }
 
-.bankAccount {
-    display: flex;
-    flex-direction: column;
-}
+    .bankNameDetails {
+        background: #FFFFFF;
+        border: 1px solid #C6C6C6;
+        border-radius: 2px;
+        height: 42px;
+        width: 467px;
+        font-family: 'Galano', sans-serif;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 19px;
+        letter-spacing: 0.5px;
+        color: #000000;
+        text-transform: uppercase;
+        padding-left: 22px;
+        outline: none;
+    }
 
-.bankAccountDetails {
-    background: #FFFFFF;
-    border: 1px solid #C6C6C6;
-    border-radius: 2px;
-    height: 42px;
-    width: 467px;
-    font-family: 'Galano', sans-serif;
-    font-style: normal;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 19px;
-    letter-spacing: 0.5px;
-    color: #000000;
-    padding-left: 22px;
-    outline: none;
-}
+    .bankAccount {
+        display: flex;
+        flex-direction: column;
+    }
 
-.comments {
-    /* margin-top: 14px; */
-    background: #FFFFFF;
-    border: 1px solid #C6C6C6;
-    border-radius: 2px;
-    height: 42px;
-    width: 467px;
-    font-family: 'Galano', sans-serif;
-    font-style: normal;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 19px;
-    letter-spacing: 0.5px;
-    color: #000000;
-    padding-left: 22px;
-    outline: none;
-}
+    .bankAccountDetails {
+        background: #FFFFFF;
+        border: 1px solid #C6C6C6;
+        border-radius: 2px;
+        height: 42px;
+        width: 467px;
+        font-family: 'Galano', sans-serif;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 19px;
+        letter-spacing: 0.5px;
+        color: #000000;
+        padding-left: 22px;
+        outline: none;
+    }
 
-.claimsPaymentFrequency {
-    display: flex;
-    flex-direction: column;
-}
+    .comments {
+        /* margin-top: 14px; */
+        background: #FFFFFF;
+        border: 1px solid #C6C6C6;
+        border-radius: 2px;
+        height: 42px;
+        width: 467px;
+        font-family: 'Galano', sans-serif;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 19px;
+        letter-spacing: 0.5px;
+        color: #000000;
+        padding-left: 22px;
+        outline: none;
+    }
 
-.claimsPaymentFrequencyStyle {
-    background: #FFFFFF;
-    border: 1px solid #C6C6C6;
-    border-radius: 2px;
-    height: 42px;
-    width: 467px;
-    font-family: 'Galano', sans-serif;
-    font-style: normal;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 19px;
-    letter-spacing: 0.5px;
-    color: #000000;
-    padding-left: 22px;
-    outline: none;
-}
+    .claimsPaymentFrequency {
+        display: flex;
+        flex-direction: column;
+    }
 
-.button {
-    margin-top: 50px;
-    display: flex;
-    justify-content: space-between;
-    width: 1026px;
-}
+    .claimsPaymentFrequencyStyle {
+        background: #FFFFFF;
+        border: 1px solid #C6C6C6;
+        border-radius: 2px;
+        height: 42px;
+        width: 467px;
+        font-family: 'Galano', sans-serif;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 19px;
+        letter-spacing: 0.5px;
+        color: #000000;
+        padding-left: 22px;
+        outline: none;
+    }
 
-.backButton {
-    border: 1px solid #65A999;
-    border-radius: 2px;
-    height: 42px;
-    width: 118px;
-    font-family: 'Galano', sans-serif;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 19px;
-    text-align: center;
-    letter-spacing: 0.5px;
-    color: #65A999;
-    background-color: #FFFFFF;
-    cursor: pointer;
-}
+    .button {
+        margin-top: 50px;
+        display: flex;
+        justify-content: space-between;
+        width: 1026px;
+    }
 
-.saveAndNext {
-    display: flex;
-    align-items: center;
-}
+    .backButton {
+        border: 1px solid #65A999;
+        border-radius: 2px;
+        height: 42px;
+        width: 118px;
+        font-family: 'Galano', sans-serif;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 19px;
+        text-align: center;
+        letter-spacing: 0.5px;
+        color: #65A999;
+        background-color: #FFFFFF;
+        cursor: pointer;
+    }
 
-.save {
-    margin-right: 15px;
-    font-family: 'Galano', sans-serif;
-    font-style: normal;
-    font-weight: 700;
-    font-size: 12px;
-    line-height: 22px;
-    letter-spacing: 0.5px;
-    color: #65A999;
-    border: none;
-    background: #FFFFFF;
-    cursor: pointer;
-}
+    .saveAndNext {
+        display: flex;
+        align-items: center;
+    }
 
-.next {
-    background: #65A999;
-    border-radius: 2px;
-    height: 42px;
-    width: 148px;
-    font-family: 'Galano', sans-serif;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 19px;
-    text-align: center;
-    letter-spacing: 0.5px;
-    color: #FFFFFF;
-    border: none;
-    cursor: pointer;
+    .save {
+        margin-right: 15px;
+        font-family: 'Galano', sans-serif;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 12px;
+        line-height: 22px;
+        letter-spacing: 0.5px;
+        color: #65A999;
+        border: none;
+        background: #FFFFFF;
+        cursor: pointer;
+    }
+
+    .next {
+        background: #65A999;
+        border-radius: 2px;
+        height: 42px;
+        width: 148px;
+        font-family: 'Galano', sans-serif;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 19px;
+        text-align: center;
+        letter-spacing: 0.5px;
+        color: #FFFFFF;
+        border: none;
+        cursor: pointer;
+    }
 }
 
 @media (max-width: 1024px) {

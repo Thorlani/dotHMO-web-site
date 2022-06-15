@@ -23,6 +23,7 @@
         letter-spacing: 0.5px;
         color: #343434;
         margin-bottom: 42px;
+        cursor: pointer;
     }
     
     .footerList {
