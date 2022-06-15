@@ -16,7 +16,6 @@ const AddProvider = () => {
 
     const firstUrl = "https://dot-insure.herokuapp.com/provider/create";
     const secondUrl = "https://dot-insure.herokuapp.com/provider/update";
-    // const docs = `https://dot-insure.herokuapp.com/provider/documents/${providerId}`;
     
     const [facilities, setFacilites] = useState([])
     const [providerTypeID, setProviderTypeID] = useState([]);
@@ -154,6 +153,10 @@ const AddProvider = () => {
     }
 
     const [providerId, setProviderId] = useState({})
+
+    const docs = `https://dot-insure.herokuapp.com/provider/documents/${providerId}`;
+
+    // console.log(docs)
     
 
     function handleSubmit(event) {
@@ -175,6 +178,7 @@ const AddProvider = () => {
                 email: formData.email
             }).then(res => {
                 setProviderId(res.data)
+                console.log("Sent successfully")
             })
         }
     }
@@ -297,14 +301,15 @@ const AddProvider = () => {
     useEffect(() => {
         Axios.get(providerTypeFeatures).then(res => {
             setFacilites(res.data)
-            console.log(res.data)
+            // console.log(res.data)
         }).catch(err => {
             console.log(err)
         })
     }, [formData.providerType])
 
-    console.log(facilities)
+    // console.log(facilities)
 
+    
     const url3 = "https://dot-insure.herokuapp.com/provider/update"
     const [formData3, setFormData3] = useState({
         typeOfWard: "",
@@ -313,62 +318,33 @@ const AddProvider = () => {
         noOfBedInICU: "",
         noOfBedInHDUTwo: "",
         noOfBedInICUTwo: "",
-        ambulance: false,
-        CTScanMachine: false,
-        haemodialysis: false,
-        twoFourHrAmbulance: false,
-        MRIMachine: false,
-        UltrasoundScan: false,
-        InhouseLaboratory: false,
-        inhouseXRay: false,
-        ICU: false,
+        // ambulance: false,
+        // CTScanMachine: false,
+        // haemodialysis: false,
+        // twoFourHrAmbulance: false,
+        // MRIMachine: false,
+        // UltrasoundScan: false,
+        // InhouseLaboratory: false,
+        // inhouseXRay: false,
+        // ICU: false,
+    })
+    // console.log(formData3)
+
+    let amenities = facilities.map((facility) => {
+        return <div key={facility.id} className={styles3.centralize}>
+            <input 
+                type="checkbox"
+                id={facility.name}
+                checked={formData3[facility.name] || false}
+                name={facility.name}
+                onChange={handleChange3}
+                className={styles3.input}
+            />
+            <label className={styles3.label} htmlFor={facility.name}>{facility.name}</label>
+        </div>
     })
 
-    // function ambulanceTwo() {
-    //     if(formData3.ambulance === true) {
-    //         return parseInt(facilities[0].id)
-    //     }
-    // }
-    // function CTScanMachineTwo() {
-    //     if(formData3.CTScanMachine === true) {
-    //         return parseInt(facilities[1].id)
-    //     }
-    // }
-    // function haemodialysisTwo() {
-    //     if(formData3.haemodialysis === true) {
-    //         return parseInt(facilities[2].id)
-    //     }
-    // }
-    // function twoFourHrAmbulanceTwo() {
-    //     if(formData3.twoFourHrAmbulance === true) {
-    //         return parseInt(facilities[3].id)
-    //     }
-    // }
-    // function MRIMachineTwo() {
-    //     if(formData3.MRIMachine === true) {
-    //         return parseInt(facilities[4].id)
-    //     }
-    // }
-    // function UltrasoundScanTwo() {
-    //     if(formData3.UltrasoundScan === true) {
-    //         return parseInt(facilities[5].id)
-    //     }
-    // }
-    // function InhouseLaboratoryTwo() {
-    //     if(formData3.InhouseLaboratory === true) {
-    //         return parseInt(facilities[6].id)
-    //     }
-    // }
-    // function inhouseXRayTwo() {
-    //     if(formData3.inhouseXRay === true) {
-    //         return parseInt(facilities[7].id)
-    //     }
-    // }
-    // function ICUTwo() {
-    //     if(formData3.ICU === true) {
-    //         return parseInt(facilities[8].id)
-    //     }
-    // }
+    
 
     const [formErrors3, setFormErrors3] = useState({});
     const [isSubmit3, setIsSubmit3] = useState(false);
@@ -377,9 +353,15 @@ const AddProvider = () => {
     function handleChange3(event) {
         const { name, value, type, checked } = event.target
         setFormData3(prevFormData => {
+            if (type === 'checkbox') {
+                return {
+                    ...prevFormData,
+                    [name]: checked
+                }
+            }
             return {
                 ...prevFormData,
-                [name]: type === "checkbox" ? checked : value
+                [name]: value
             }
         })
     }
@@ -435,14 +417,8 @@ const AddProvider = () => {
                       wardType: formData3.typeOfWard,
                       numberOfBedsHDU: parseInt(formData3.noOfBedInHDU),
                       numberOfBedsICU: parseInt(formData3.noOfBedInICU),
-                      features: {
-                        id: [
-                            
-                          ]
-
-                        },
-                      
-                      id: 1
+                      features: facilities.map(facility => formData3[facility.name] ? {id: facility.id} : null ).filter(facility => facility),
+                    // id: 1
                     }
                   ],
                 id: providerId.id.toString()
@@ -452,6 +428,8 @@ const AddProvider = () => {
             })
         }
     }
+
+    // console.log(facilities);
 
     function showButton3() {
         if(isSubmit3 === true && Object.keys(formErrors3).length === 0) {
@@ -472,25 +450,25 @@ const AddProvider = () => {
         }
     });
 
-    // console.log(acceptedFiles[0])
+    
   
     const filesAccepted = acceptedFiles.map(file => (
         <li className={styles4.li} key={file.path}>
         {file.path} - {file.size} bytes
         </li>
     ));
-    
-    
+
+    console.log(acceptedFiles)
 
     function handleSubmit4(event) {
         event.preventDefault();
         console.log(filesAccepted);
         if(Object.keys(filesAccepted).length === 0) {
-            Axios.post(firstUrl, {
-                providerTypeId: formData.providerType,
+            Axios.patch(secondUrl, {
+                providerTypeId: parseInt(formData.providerType),
                 providerName: formData.providerName,
                 address: formData.providerAddress,
-                lgaId: formData.localGovernment,
+                lgaId: parseInt(formData.localGovernment),
                 phone: formData.phoneNumber,
                 email: formData.email,
                 nameOfManagingDirector: formData2.nameOFManagingDirector,
@@ -501,8 +479,7 @@ const AddProvider = () => {
                 phoneOfSecondaryContactPerson: formData2.mobileNumberOfSecondaryContactPerson,
                 bankName: formData2.bankName,
                 bankAccountNumber: formData2.bankAccountNumber,
-                accountName: "string",
-                claimsPaymentFreq: formData2.claimsPaymentFrequency,
+                claimsPaymentFreq: formData2.claimsPaymentFrequency.toLowerCase(),
                 branches: [
                     {
                     address: formData2.comments,
@@ -512,25 +489,32 @@ const AddProvider = () => {
                 ],
                 facilities: [
                     {
-                    wardType: formData3.typeOfWard,
-                    numberOfBedsHDU: 0,
-                    numberOfBedsICU: 0,
-                    features: [
-                        {
-                        id: 1
-                        }
-                    ],
-                    id: 1
+                      wardType: formData3.typeOfWard,
+                      numberOfBedsHDU: parseInt(formData3.noOfBedInHDU),
+                      numberOfBedsICU: parseInt(formData3.noOfBedInICU),
+                      features: facilities.map(facility => formData3[facility.name] ? {id: facility.id} : null ).filter(facility => facility),
+                    // id: 1
                     }
-                ],
+                  ],
                 id: providerId.id.toString()
+            }).then(res => {
+                console.log(res.data)
+                console.log("Finally submitted")
+            }).catch(err => {
+                console.log(err)
+                console.log("Form NOT submitted")
             })
         }
-        // if(Object.keys(filesAccepted).length === 0) {
-        //     Axios.post(docs, {
-
-        //     }
-        // }
+        if(Object.keys(acceptedFiles).length === 3) {
+            Axios.patch(docs, acceptedFiles).then(res => {
+                console.log(res.data)
+                console.log("This documents have been uploaded")
+                setShowSubmitted(false);
+            }).catch(err => {
+                console.log(err)
+                console.log("This docs were NOT uploaded")
+            })
+        }
     }
 
 
@@ -558,7 +542,8 @@ const AddProvider = () => {
                     <p className={styles.title}>{
                         formStages === 1 && "Provider Information" ||
                         formStages === 2 && "CONTACT PERSON(S)" || 
-                        formStages === 3 && "facility information"
+                        formStages === 3 && "facility information" ||
+                        formStages === 4 && "upload documents"
                     }</p>
                     <p className={styles.step}>step {formStages}/4</p>
                 </div>
@@ -1006,117 +991,7 @@ const AddProvider = () => {
                         <p className={styles3.topic}>confirm the availability of the following</p>
                         <div className={styles3.gridCheck}>
                             <div className={styles3.grid1}>
-                                <div className={styles3.centralize}>
-                                    <input 
-                                        type="checkbox"
-                                        id="ambulance"
-                                        checked={formData3.ambulance}
-                                        name="ambulance"
-                                        onChange={handleChange3}
-                                        className={styles3.input}
-                                        
-                                    />
-                                    <label className={styles3.label} htmlFor="ambulance">{facilities[0].name}</label>
-                                </div>
-                                <div className={styles3.centralize}>
-                                    <input 
-                                        type="checkbox"
-                                        id="CTScanMachine"
-                                        checked={formData3.CTScanMachine}
-                                        name="CTScanMachine"
-                                        onChange={handleChange3}
-                                        className={styles3.input}
-                                        
-                                    />
-                                    <label className={styles3.label} htmlFor="CTScanMachine">{facilities[1].name}</label>
-                                </div>
-                                <div className={styles3.centralize}>
-                                    <input 
-                                        type="checkbox"
-                                        id="haemodialysis"
-                                        checked={formData3.haemodialysis}
-                                        name="haemodialysis"
-                                        onChange={handleChange3}
-                                        className={styles3.input}
-                                        
-                                    />
-                                    <label className={styles3.label} htmlFor="haemodialysis">{facilities[2].name}</label>
-                                </div>
-                            </div>
-                            <div className={styles3.grid2}>
-                                <div className={styles3.centralize}>
-                                    <input 
-                                        type="checkbox"
-                                        id="twoFourHrAmbulance"
-                                        checked={formData3.twoFourHrAmbulance}
-                                        name="twoFourHrAmbulance"
-                                        onChange={handleChange3}
-                                        className={styles3.input}
-                                        
-                                    />
-                                    <label className={styles3.label} htmlFor="twoFourHrAmbulance">{facilities[3].name}</label>
-                                </div>
-                                <div className={styles3.centralize}>
-                                    <input 
-                                        type="checkbox"
-                                        id="MRIMachine"
-                                        checked={formData3.MRIMachine}
-                                        name="MRIMachine"
-                                        onChange={handleChange3}
-                                        className={styles3.input}
-                                        
-                                    />
-                                    <label className={styles3.label} htmlFor="MRIMachine">{facilities[4].name}</label>
-                                </div>
-                                <div className={styles3.centralize}>
-                                    <input 
-                                        type="checkbox"
-                                        id="UltrasoundScan"
-                                        checked={formData3.UltrasoundScan}
-                                        name="UltrasoundScan"
-                                        onChange={handleChange3}
-                                        className={styles3.input}
-                                        
-                                    />
-                                    <label className={styles3.label} htmlFor="UltrasoundScan">{facilities[5].name}</label>
-                                </div>
-                            </div>
-                            <div className={styles3.grid3}>
-                                <div className={styles3.centralize}>
-                                    <input 
-                                        type="checkbox"
-                                        id="InhouseLaboratory"
-                                        checked={formData3.InhouseLaboratory}
-                                        name="InhouseLaboratory"
-                                        onChange={handleChange3}
-                                        className={styles3.input}
-                                        
-                                    />
-                                    <label className={styles3.label} htmlFor="InhouseLaboratory">{facilities[6].name}</label>
-                                </div>
-                                <div className={styles3.centralize}>
-                                    <input 
-                                        type="checkbox"
-                                        id="inhouseXRay"
-                                        checked={formData3.inhouseXRay}
-                                        name="inhouseXRay"
-                                        onChange={handleChange3}
-                                        className={styles3.input}
-                                        
-                                    />
-                                    <label className={styles3.label} htmlFor="inhouseXRay">{facilities[7].name}</label>
-                                </div>
-                                <div className={styles3.centralize}>
-                                    <input 
-                                        type="checkbox"
-                                        id="ICU"
-                                        checked={formData3.ICU}
-                                        name="ICU"
-                                        onChange={handleChange3}
-                                        className={styles3.input}
-                                    />
-                                    <label className={styles3.label} htmlFor="ICU">{facilities[8].name}</label>
-                                </div>
+                                {amenities}
                             </div>
                         </div>
                     </div>
@@ -1150,12 +1025,7 @@ const AddProvider = () => {
                 }
                 {
                     formStages === 4 ? 
-                    <div className={styles4.contentSection}>
-                    <div className={styles4.provider}>
-                        <p className={styles4.title}>upload documents</p>
-                        <p className={styles4.step}>step 4/4</p>
-                    </div>
-                    <div className={styles4.line}></div>
+                <div>
                     <div className={styles4.end}>
                         <p className={styles4.topic}>Upload the following documents</p>
                         <ul>
@@ -1192,12 +1062,8 @@ const AddProvider = () => {
                             </div>
                             <div className={styles4.saveAndNext}>
                                 <Image src="/save.svg" width="18" height="18" />
-                                <button className={styles4.save}>CANCEL</button>
-                                <Link href="#">
-                                    <a>
-                                        <button onClick={handleClose4} className={styles4.submit}>submit</button>
-                                    </a>
-                                </Link>
+                                <button type="submit" className={styles4.save}>SAVE AND CONTINUE</button>
+                                <button type="submit" className={styles4.submit}>submit</button>
                             </div>
                         </div>
                     </form>
