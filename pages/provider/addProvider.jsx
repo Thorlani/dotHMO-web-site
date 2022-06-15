@@ -435,13 +435,13 @@ const AddProvider = () => {
                       wardType: formData3.typeOfWard,
                       numberOfBedsHDU: parseInt(formData3.noOfBedInHDU),
                       numberOfBedsICU: parseInt(formData3.noOfBedInICU),
-                      features: [
-                        {
-                          id: 1
-                        }
-                        
-                      ],
+                      features: {
+                        id: [
+                            
+                          ]
 
+                        },
+                      
                       id: 1
                     }
                   ],

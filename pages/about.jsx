@@ -7,7 +7,7 @@ const About = () => {
         <>
         <Head>
             <title>About Us | Dot HMO</title>
-            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossOrigin="anonymous" referrerpolicy="no-referrer" />
         </Head>
         <div className="container">
             <div className={styles.heroSection}>
@@ -17,7 +17,7 @@ const About = () => {
                         <p className={styles.paragraph}>Dot HMO, a subsidiary of the DOT Group, is an AI-led Health insurance company fully geared towards directly impacting the lives of our customers through simplified, top-tier digital solutions.</p>
                     </div>
                     <div className={styles.heroSectionRight}>
-                        <Image src="/about.png" width="400" height="400" />
+                        <Image src="/about.png" width="400" height="400" alt="About Us image" />
                     </div>
                 </div>
             </div>
@@ -29,7 +29,7 @@ const About = () => {
                 <div className={styles.offeringContent}>
                     <div className={styles.flexContent}>
                         <div className={styles.flexContentLeft}>
-                            <img className={styles.images} src="/globalCoverage.jpg" width="305" height="305" />
+                            <img className={styles.images} src="/globalCoverage.jpg" width="305" height="305" alt="Global coverage image" />
                         </div>
                         <div className={styles.flexContentRight}>
                             <span className={styles.offeringContentSpan}>Global Coverage</span>
@@ -50,12 +50,12 @@ const About = () => {
                             </ul>
                         </div>
                         <div className={styles.flexContentLeft}>
-                            <img className={styles.images} src="/acrossHospitals.jpg" width="305" height="305" />
+                            <img className={styles.images} src="/acrossHospitals.jpg" width="305" height="305" alt="Across hospitals image" />
                         </div>
                     </div>
                     <div className={styles.flexContent}>
                         <div className={styles.flexContentLeft}>
-                            <img className={styles.images} src="/callService.jpg" width="305" height="305" />
+                            <img className={styles.images} src="/callService.jpg" width="305" height="305" alt="Call service image" />
                         </div>
                         <div className={styles.flexContentRight}>
                             <span className={styles.offeringContentSpan}>Easy Access to Care</span>
@@ -76,12 +76,12 @@ const About = () => {
                             </ul>
                         </div>
                         <div className={styles.flexContentLeft}>
-                            <img className={styles.images} src="/teleMedicine.jpg" width="305" height="305" />
+                            <img className={styles.images} src="/teleMedicine.jpg" width="305" height="305" alt="Telemedicine image" />
                         </div>
                     </div>
                     <div className={styles.flexContent}>
                         <div className={styles.flexContentLeft}>
-                            <img className={styles.images} src="/pharmacy.jpg" width="305" height="305" />
+                            <img className={styles.images} src="/pharmacy.jpg" width="305" height="305" alt="Pharmacy image"/>
                         </div>
                         <div className={styles.flexContentRight}>
                             <span className={styles.offeringContentSpan}>Pharmacy Benefit</span>
@@ -101,7 +101,7 @@ const About = () => {
                             </ul>
                         </div>
                         <div className={styles.flexContentLeft}>
-                            <img className={styles.images} src="/health.jpg" width="305" height="305" />
+                            <img className={styles.images} src="/health.jpg" width="305" height="305" alt="Health tracker image" />
                         </div>
                     </div>
                 </div>
