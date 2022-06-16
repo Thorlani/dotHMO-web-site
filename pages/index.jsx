@@ -75,7 +75,7 @@ export default function Home() {
               {save === true ? popUp : <Submitted saved={onClose} />}
             </div>
             <div className={styles.sectionImage}>
-              <Image src="/hero-section-image.svg" width="600" height="600"/>
+              <Image src="/hero-section-image.svg" width="600" height="600" alt='Hero-section image'/>
             </div>
           </div>
           <div className={styles.secondPart}>
@@ -121,22 +121,22 @@ export default function Home() {
           <div className={styles.trustUsContainer}>
               <a>
                 <div className='images'>
-                <Image src="/group-2.svg" width="289" height="362px" />
+                <Image src="/group-2.svg" width="289" height="362px" alt='Zero delay, no preauthorization for care' />
                 </div>
               </a>
               <a>
                 <div className='images'>
-                <Image src="/group-3.svg" width="289" height="362px" />
+                <Image src="/group-3.svg" width="289" height="362px" alt='AI led insure tech' />
                 </div>
               </a>
               <a>
                 <div className='images'>
-                <Image src="/group-1.svg" width="289" height="362px" />
+                <Image src="/group-1.svg" width="289" height="362px" alt='Advance telemedicine' />
                 </div>
               </a>
               <a>
                 <div className='images'>
-                <Image src="/group-4.svg" width="289" height="362px" />
+                <Image src="/group-4.svg" width="289" height="362px" alt='Employee assistance programme' />
                 </div>
               </a>
           </div>
@@ -147,7 +147,7 @@ export default function Home() {
         <div className={styles.offerContainer}>
           <div className={styles.content}>
             <div className={styles.offerImage}>
-              <img src="/family.svg" alt='plan image' width="203.93px" height="126.66px"/>
+              <img src="/family.svg" alt='Family plan image' width="203.93px" height="126.66px" />
             </div>
             <div className={styles.offerText}>
               <h4 className={styles.offerTitle}>For you, family and friends</h4>
@@ -163,7 +163,7 @@ export default function Home() {
           </div>
           <div className={styles.content}>
             <div className={styles.offerImage}>
-              <img src="/business.svg" alt='plan image' width="203.93px" height="126.66px"/>
+              <img src="/business.svg" alt=' Business plan image' width="203.93px" height="126.66px"/>
             </div>
             <div className={styles.offerText}>
               <h4 className={styles.offerTitle}>For Businesses</h4>
@@ -182,7 +182,7 @@ export default function Home() {
           </div>
           <div className={styles.content}>
             <div className={styles.offerImage}>
-              <img src="/elderly.svg" alt='plan image' width="203.93px" height="126.66px"/>
+              <img src="/elderly.svg" alt='Elderly plan image' width="203.93px" height="126.66px"/>
             </div>
             <div className={styles.offerText}>
               <h4 className={styles.offerTitle}>Senior Citizen-For your loved ones</h4>

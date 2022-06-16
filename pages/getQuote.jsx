@@ -13,7 +13,7 @@ const Getquote = ({ saved, onClick }) => {
     return (
         <div className={styles.backgound}>
             <div className={styles.container}>
-                <Image src="/lf20_cpjxufjf.json.svg" width="167" height="167" />
+                <Image src="/lf20_cpjxufjf.json.svg" width="167" height="167" alt="Sent" />
                 <h3 className={styles.title}>Request Sent</h3>
                 <p className={styles.paragraph}>An email has been sent containing the details of your quote request</p>
                 <div className={styles.hr}></div>

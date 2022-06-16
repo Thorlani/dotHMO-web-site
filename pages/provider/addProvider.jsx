@@ -73,6 +73,7 @@ const AddProvider = () => {
         setFormStages(prevState => prevState - 1);
     }
 
+
     const [formData, setFormData] = useState({
         providerType: [],
         providerName: "",
@@ -86,6 +87,7 @@ const AddProvider = () => {
         anotherBranchState: [],
         anotherBranchLG: [],
     });
+
     const [formErrors, setFormErrors] = useState({});
     const [isSubmit, setIsSubmit] = useState(false);
     const [displayNext, setDisplayNext] = useState(false);
@@ -960,9 +962,7 @@ const AddProvider = () => {
                     <div className={styles3.formFoot}>
                         <p className={styles3.topic}>confirm the availability of the following</p>
                         <div className={styles3.gridCheck}>
-                            <div className={styles3.grid1}>
-                                {amenities}
-                            </div>
+                            {amenities}
                         </div>
                     </div>
                     <div className={styles3.button}>

@@ -53,7 +53,7 @@ const FindProvider = () => {
                     </p> */}
                 </div>
                 <div className={styles.FindProviderHeaderRight}>
-                    <Image src="/hospital-building.svg" width="600" height="400" />
+                    <Image src="/hospital-building.svg" width="600" height="400" alt="Image of hospital building" />
                 </div>
             </div>
             <div className={styles.FindProviderBody}>

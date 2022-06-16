@@ -75,7 +75,7 @@ const Contact = () => {
                 &&
                 <div className={styles2.backgound}>
                     <div className={styles2.container}>
-                        <Image src="/lf20_cpjxufjf.json.svg" width="167" height="167" />
+                        <Image src="/lf20_cpjxufjf.json.svg" width="167" height="167" alt="Successful" />
                         <h3 className={styles2.title}>Request Sent</h3>
                         <p className={styles2.paragraph}>Thank you for contacting us</p>
                         <div className={styles2.hr}></div>
@@ -94,7 +94,7 @@ const Contact = () => {
                     <p className={styles.smallTextt}>Fill the form or send us an email</p>
                 </div>
                 <div className={styles.rightHeroSection}>
-                    <Image src="/contactImage.svg" width="570" height="300" />
+                    <Image src="/contactImage.svg" width="570" height="300" alt="Contact Us"/>
                 </div>
             </div>
             <div className={styles.bodySection}>

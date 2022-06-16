@@ -9,7 +9,7 @@ const BecomeAProvider = ({ hide }) => {
                 <button onClick={hide} className={styles.btnX}>X</button>
                 <div className={styles.content}>
                     <div className={styles.contentLeft}>
-                    <Image src="/newReg.svg" width="99" height="85" />
+                    <Image src="/newReg.svg" width="99" height="85" alt="start" />
                     <span className={styles.span}>New Registration</span>
                     <Link href="/provider/addProvider">
                         <a>
@@ -18,7 +18,7 @@ const BecomeAProvider = ({ hide }) => {
                     </Link>
                     </div>
                     <div className={styles.contentRight}>
-                        <Image src="/contReg.svg" width="99" height="85" />
+                        <Image src="/contReg.svg" width="99" height="85" alt="continue"/>
                         <span className={styles.span}>New Registration</span>
                         <button className={styles.btnClick}>CONTINUE</button>
                     </div>
