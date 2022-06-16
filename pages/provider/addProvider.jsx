@@ -4,12 +4,14 @@ import styles from "../../styles/firstForm.module.css";
 import styles2 from "../../styles/secondForm.module.css";
 import styles3 from "../../styles/thirdForm.module.css";
 import styles4 from "../../styles/fourthForm.module.css";
-import { useState } from "react";
+import { useState, useCallback } from "react";
 import { useEffect } from "react";
 import Link from "next/link";
 import Axios from "axios";
 import { useDropzone } from "react-dropzone";
 import ApplicationSubmitted from "./applicationSubmitted";
+import FormData from "form-data";
+import _ from "lodash";
 
 
 const AddProvider = () => {
@@ -154,11 +156,6 @@ const AddProvider = () => {
 
     const [providerId, setProviderId] = useState({})
 
-    const docs = `https://dot-insure.herokuapp.com/provider/documents/${providerId}`;
-
-    // console.log(docs)
-    
-
     function handleSubmit(event) {
         event.preventDefault()
         setFormErrors(validate(formData))
@@ -182,7 +179,7 @@ const AddProvider = () => {
             })
         }
     }
-
+    
     // console.log(providerId.id)
 
     function showButton() {
@@ -281,7 +278,7 @@ const AddProvider = () => {
                 ],
                 id: providerId.id.toString()
             }).then(res => {
-                console.log(res.data)
+                // console.log(res.data)
                 console.log("Successfully updated!")
             })
         }
@@ -318,15 +315,6 @@ const AddProvider = () => {
         noOfBedInICU: "",
         noOfBedInHDUTwo: "",
         noOfBedInICUTwo: "",
-        // ambulance: false,
-        // CTScanMachine: false,
-        // haemodialysis: false,
-        // twoFourHrAmbulance: false,
-        // MRIMachine: false,
-        // UltrasoundScan: false,
-        // InhouseLaboratory: false,
-        // inhouseXRay: false,
-        // ICU: false,
     })
     // console.log(formData3)
 
@@ -423,7 +411,7 @@ const AddProvider = () => {
                   ],
                 id: providerId.id.toString()
             }).then(res => {
-                console.log(res.data)
+                // console.log(res.data)
                 console.log("This has been successfully updated!")
             })
         }
@@ -438,9 +426,24 @@ const AddProvider = () => {
             setDisplayNext3(false)
         }
     }
+    
+    const docs = `https://dot-insure.herokuapp.com/provider/documents/${providerId.id}`;
+    
+    
+    const [files, setFiles] = useState([])
 
+    const onDrop = useCallback((acceptedFiles) => {
+        acceptedFiles.forEach(file => {
+            setFiles(prevState => [...prevState, file])
+        });
+    })
 
-    const {acceptedFiles, getRootProps, getInputProps} = useDropzone({
+    // useEffect(() => {
+    //     console.log(files)
+    // }, [files])
+
+    const {acceptedFiles, getRootProps, getInputProps, isDragActive} = useDropzone({
+        onDrop,
         maxFiles: 3,
         maxSize: 4242880,
         multiple: true,
@@ -458,64 +461,31 @@ const AddProvider = () => {
         </li>
     ));
 
-    console.log(acceptedFiles)
-
     function handleSubmit4(event) {
         event.preventDefault();
-        console.log(filesAccepted);
-        if(Object.keys(filesAccepted).length === 0) {
-            Axios.patch(secondUrl, {
-                providerTypeId: parseInt(formData.providerType),
-                providerName: formData.providerName,
-                address: formData.providerAddress,
-                lgaId: parseInt(formData.localGovernment),
-                phone: formData.phoneNumber,
-                email: formData.email,
-                nameOfManagingDirector: formData2.nameOFManagingDirector,
-                emailOfManagingDirector: formData2.emailOfManagingDirector,
-                nameOfContactPerson: formData2.nameOfContactPerson,
-                phoneOfContactPerson: formData2.mobileNumberOfContactPerson,
-                nameOfSecondaryContactPerson: formData2.nameOfSecondaryContactPerson,
-                phoneOfSecondaryContactPerson: formData2.mobileNumberOfSecondaryContactPerson,
-                bankName: formData2.bankName,
-                bankAccountNumber: formData2.bankAccountNumber,
-                claimsPaymentFreq: formData2.claimsPaymentFrequency.toLowerCase(),
-                branches: [
-                    {
-                    address: formData2.comments,
-                    lgaId: 1,
-                    id: 1
-                    }
-                ],
-                facilities: [
-                    {
-                      wardType: formData3.typeOfWard,
-                      numberOfBedsHDU: parseInt(formData3.noOfBedInHDU),
-                      numberOfBedsICU: parseInt(formData3.noOfBedInICU),
-                      features: facilities.map(facility => formData3[facility.name] ? {id: facility.id} : null ).filter(facility => facility),
-                    // id: 1
-                    }
-                  ],
-                id: providerId.id.toString()
+        let formData = new FormData();
+
+        for (let i = 0 ; i < files.length ; i++) {
+            formData.append('files', files[i])
+        }
+
+        if(Object.keys(files).length === 3) {
+            Axios.patch(docs, formData, {
+                headers: {
+                    "Content-Type": "multipart/form-data",
+                },
             }).then(res => {
                 console.log(res.data)
-                console.log("Finally submitted")
-            }).catch(err => {
-                console.log(err)
-                console.log("Form NOT submitted")
-            })
-        }
-        if(Object.keys(acceptedFiles).length === 3) {
-            Axios.patch(docs, acceptedFiles).then(res => {
-                console.log(res.data)
                 console.log("This documents have been uploaded")
-                setShowSubmitted(false);
+                setShowSubmitted(true);
             }).catch(err => {
                 console.log(err)
                 console.log("This docs were NOT uploaded")
             })
         }
     }
+
+    
 
 
     const [showSubmitted, setShowSubmitted] = useState(false);
@@ -1041,8 +1011,9 @@ const AddProvider = () => {
                             <div {...getRootProps({className: 'dropzone'})}>
                                 <input {...getInputProps()} />
                                 <div className={styles4.flex}>
-                                    <p className={styles4.paragraph1}>Drag & drop file here or </p>
-                                    <button className={styles4.btn}>choose files</button>
+                                {isDragActive ? <p className={styles4.paragraph1}>Drop your documents </p> 
+                                : <p className={styles4.paragraph1}>Drag & drop file here or </p> }
+                                <button className={styles4.btn}>choose files</button>
                                 </div>
                                 <p className={styles4.paragraph2}>PNG, JPEG & PDF (Max 4mb)</p>
                             </div>
@@ -1061,8 +1032,8 @@ const AddProvider = () => {
                                 </Link> */}
                             </div>
                             <div className={styles4.saveAndNext}>
-                                <Image src="/save.svg" width="18" height="18" />
-                                <button type="submit" className={styles4.save}>SAVE AND CONTINUE</button>
+                                {/* <Image src="/save.svg" width="18" height="18" />
+                                <button type="submit" className={styles4.save}>SAVE AND CONTINUE</button> */}
                                 <button type="submit" className={styles4.submit}>submit</button>
                             </div>
                         </div>
