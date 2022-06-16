@@ -4,9 +4,13 @@ import Link from "next/link";
 const Footer = () => {
     return (
         <footer className={styles.footer}>
-            <div>
-                <img className={styles.footerImage} src="/HMOLogo.png" width="256" height="99" />
-            </div>
+            <Link href='/'>
+                <a>
+                    <div>
+                        <img className={styles.footerImage} src="/HMOLogo.png" width="256" height="99" />
+                    </div>
+                </a>
+            </Link>
             <div className={styles.footerContent}>
                 <h2 className={styles.footTitle}>Company</h2>
                 <ul>
