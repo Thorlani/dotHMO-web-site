@@ -18,6 +18,10 @@
     cursor: pointer;
     }
 
+    .navlogo {
+        object-fit: contain;
+    }
+
     .section2 {
         display: flex;
         justify-content: space-between;
@@ -36,6 +40,7 @@
         text-align: center;
         letter-spacing: 0.5px;
         color: #808080;
+        position: relative;
     }
 
     .listItemsActive {
@@ -46,17 +51,17 @@
         font-style: normal;
         list-style: none;
     }
-    .listItemsActive:hover {
-        width: 180px;
-        padding: 0px 25px 5px;
-        border: 2px solid #65A999;
-        border-top: none;
-        border-left: none;
-        border-right: none;
-        margin-right: 57px;
-        font-family: 'Galano', sans-serif;
-        font-style: normal;
-        list-style: none;
+
+    .listItemsActive:hover::after {
+        content: "";
+        width: 80px;
+        height: 3px;
+        position: absolute;
+        bottom: -10px;
+        left: 11%;
+        background-color: #65A999;
+        border-radius: 20px;
+        transform: translate(-50%, 0rem)
     }
 
     .listItemsAbout {
@@ -67,12 +72,16 @@
         list-style: none;
     }
 
-    .listItemsAbout:hover {
-        padding: 0px 10px 5px;
-        border-bottom: 2px solid #65A999;
-        font-family: 'Galano', sans-serif;
-        font-style: normal;
-        list-style: none;
+    .listItemsAbout:hover::after {
+        content: "";
+        width: 100px;
+        height: 3px;
+        position: absolute;
+        bottom: -10px;
+        left: 44%;
+        background-color: #65A999;
+        border-radius: 20px;
+        transform: translate(-50%, 0rem)
     }
 
     .listItemsContact {
@@ -83,12 +92,16 @@
         list-style: none;
     }
 
-    .listItemsContact:hover {
-        padding: 0px 10px 5px;
-        border-bottom: 2px solid #65A999;
-        font-family: 'Galano', sans-serif;
-        font-style: normal;
-        list-style: none;
+    .listItemsContact:hover::after {
+        content: "";
+        width: 110px;
+        height: 3px;
+        position: absolute;
+        bottom: -10px;
+        left: 76.5%;
+        background-color: #65A999;
+        border-radius: 20px;
+        transform: translate(-50%, 0rem)
     }
 
     .menuIcon {
@@ -157,6 +170,10 @@
         cursor: pointer;
     }
 
+    .navlogo {
+        object-fit: contain;
+    }
+
     .section2 {
         display: flex;
         justify-content: space-between;
@@ -175,6 +192,7 @@
         text-align: center;
         letter-spacing: 0.5px;
         color: #808080;
+        position: relative;
     }
 
     .listItemsActive {
@@ -185,17 +203,17 @@
         font-style: normal;
         list-style: none;
     }
-    .listItemsActive:hover {
-        width: 180px;
-        padding: 0px 25px 5px;
-        border: 2px solid #65A999;
-        border-top: none;
-        border-left: none;
-        border-right: none;
-        margin-right: 57px;
-        font-family: 'Galano', sans-serif;
-        font-style: normal;
-        list-style: none;
+
+    .listItemsActive:hover::after {
+        content: "";
+        width: 80px;
+        height: 3px;
+        position: absolute;
+        bottom: -10px;
+        left: 11%;
+        background-color: #65A999;
+        border-radius: 20px;
+        transform: translate(-50%, 0rem)
     }
 
     .listItemsAbout {
@@ -206,12 +224,16 @@
         list-style: none;
     }
 
-    .listItemsAbout:hover {
-        padding: 0px 10px 5px;
-        border-bottom: 2px solid #65A999;
-        font-family: 'Galano', sans-serif;
-        font-style: normal;
-        list-style: none;
+    .listItemsAbout:hover::after {
+        content: "";
+        width: 100px;
+        height: 3px;
+        position: absolute;
+        bottom: -10px;
+        left: 44%;
+        background-color: #65A999;
+        border-radius: 20px;
+        transform: translate(-50%, 0rem)
     }
 
     .listItemsContact {
@@ -222,12 +244,16 @@
         list-style: none;
     }
 
-    .listItemsContact:hover {
-        padding: 0px 10px 5px;
-        border-bottom: 2px solid #65A999;
-        font-family: 'Galano', sans-serif;
-        font-style: normal;
-        list-style: none;
+    .listItemsContact:hover::after {
+        content: "";
+        width: 110px;
+        height: 3px;
+        position: absolute;
+        bottom: -10px;
+        left: 76.5%;
+        background-color: #65A999;
+        border-radius: 20px;
+        transform: translate(-50%, 0rem)
     }
 
     .menuIcon {
@@ -280,6 +306,10 @@
     .navbar {
         width: 1024px;
     }
+
+    .navlogo {
+        object-fit: contain;
+    }
     .section2 {
         position: absolute;
         z-index: 999999;
@@ -295,6 +325,9 @@
 @media (max-width: 768px) {
     .navbar {
         width: 768px;
+    }
+    .navlogo {
+        object-fit: contain;
     }
     .menuIcon {
         display: inline;
@@ -333,7 +366,7 @@
     .btnActive {
         position: absolute;  
         left: 110px;
-        top: 100px; 
+        top: 450px;
         transform: translateX(0%);
         transition: all .5s ease;
         z-index: 100001;
@@ -414,6 +447,12 @@
         width: 425px;
         height: 63px;
         padding: 15px 28px 14px;
+    }
+    .navlogo {
+        object-fit: contain;
+        margin-top: -15px;
+        margin-left: -15px;
+        height: 45px;
     }
     .section1 {
         margin-top: 35px;
@@ -536,6 +575,9 @@
         height: 63px;
         padding: 15px 28px 14px;
     }
+    .navlogo {
+        object-fit: contain;
+    }
     .section1 {
         margin-top: 35px;
     }
@@ -606,6 +648,9 @@
         width: 320px;
         height: 63px;
         padding: 15px 28px 14px;
+    }
+    .navlogo {
+        object-fit: contain;
     }
     .section1 {
         margin-top: 35px;

@@ -1,7 +1,6 @@
 import styles from "../../styles/findProvider.module.css"
 import Image from "next/image"
 import { useState, useEffect } from "react";
-import JSONData from "../MOCK_DATA.json"
 import Axios from "axios";
 
 const FindProvider = () => {

@@ -42,7 +42,7 @@ const Navbar = () => {
             <div className={styles.section1}>
                 <Link href="/">
                     <a>
-                        <Image src="/HMOLogo.png" width="151" height="50" />
+                        <img className={styles.navlogo} src="/HMOLogo.png" width="151" height="50" />
                     </a>
                 </Link>
             </div>

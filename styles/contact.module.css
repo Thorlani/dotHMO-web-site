@@ -244,7 +244,7 @@
         font-style: normal;
         font-weight: 700;
         font-size: 12px;
-        line-height: 15px;
+        line-height: 25px;
         letter-spacing: 2px;
         text-transform: uppercase;
         color: #263238;
@@ -258,11 +258,10 @@
         font-style: normal;
         font-weight: 700;
         font-size: 20px;
-        line-height: 24px;
+        line-height: 28px;
         letter-spacing: 0.5px;
         color: #50897C;
-        /* margin-left: -40px; */
-        max-width: 530px;
+        max-width: 430px;
         }
 
     .rightBodySection {
@@ -373,6 +372,7 @@
         width: 100%;
     }
     .form {
+        padding-top: 60px;
         display: flex;
         justify-content: flex-start;
     }

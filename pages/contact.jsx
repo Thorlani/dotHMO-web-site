@@ -109,7 +109,7 @@ const Contact = () => {
                     <div>
                         <span className={styles.span}>email address</span>
                         <ul>
-                            <li className={styles.listItem}>address-care@dothmo.com</li>
+                            <li className={styles.listItem}>care@dothmo.com</li>
                         </ul>
                     </div>
                     <div>

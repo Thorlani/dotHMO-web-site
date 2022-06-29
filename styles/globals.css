@@ -34,11 +34,19 @@
   font-display: swap;
 }
 
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
 html,
-body {
+body,
+#root {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 a {
@@ -46,11 +54,6 @@ a {
   text-decoration: none;
 }
 
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-}
 
 label {
   font-family: 'Inter';
@@ -64,3 +67,4 @@ label {
   mix-blend-mode: normal;
   opacity: 0.9;
 }
+

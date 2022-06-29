@@ -7,7 +7,7 @@ const Footer = () => {
             <Link href='/'>
                 <a>
                     <div>
-                        <img className={styles.footerImage} src="/HMOLogo.png" width="256" height="99" />
+                        <img className={styles.footerImage} src="/HMOLogo.png"  />
                     </div>
                 </a>
             </Link>
