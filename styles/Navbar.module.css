@@ -329,6 +329,15 @@
     .navlogo {
         object-fit: contain;
     }
+    .listItemsActive:hover::after {
+        display: none;
+    }
+    .listItemsAbout:hover::after {
+        display: none;
+    }
+    .listItemsContact:hover::after {
+        display: none;
+    }
     .menuIcon {
         display: inline;
         position: relative;
