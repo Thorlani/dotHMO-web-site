@@ -103,13 +103,13 @@ const Contact = () => {
                         <span className={styles.span}>mobile number</span>
                         <ul>
                             <li className={styles.listItem}>0700DOTHMO</li>
-                            <li className={styles.listItem}>+234 808 154 4406</li>
+                            <li className={styles.listItem}>08170369507</li>
                         </ul>
                     </div>
                     <div>
                         <span className={styles.span}>email address</span>
                         <ul>
-                            <li className={styles.listItem}>care@dothmo.com</li>
+                            <li className={styles.listItem}>hello@dothmo.com</li>
                         </ul>
                     </div>
                     <div>
