@@ -145,7 +145,7 @@ const Contact = () => {
               >
                 <Link
                   href={
-                    "https://wa.me/08170369507?text=Hello%20%F0%9F%91%8B%20%2C%20I%20am%20messaging%20you%20from%20the%20DOTHMO%20website.%20My%20name%20is%20"
+                    "https://wa.me/%2B2348170369507?text=Hello%20%F0%9F%91%8B%2C%20I%20am%20messaging%20you%20from%20the%20DOTHMO%20website.%20My%20name%20is%20"
                   }
                 >
                   <Image
@@ -157,10 +157,12 @@ const Contact = () => {
                 </Link>
                 <Link
                   href={
-                    "https://wa.me/08170369507?text=Hello%20%F0%9F%91%8B%20%2C%20I%20am%20messaging%20you%20from%20the%20DOTHMO%20website.%20My%20name%20is%20"
+                    "https://wa.me/%2B2348170369507?text=Hello%20%F0%9F%91%8B%2C%20I%20am%20messaging%20you%20from%20the%20DOTHMO%20website.%20My%20name%20is%20"
                   }
                 >
-                  <span style={{ marginLeft: "10px" }}>08170369507</span>
+                  <span style={{ marginLeft: "10px", cursor: "pointer" }}>
+                    08170369507
+                  </span>
                 </Link>
               </li>
             </ul>
