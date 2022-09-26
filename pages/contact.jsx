@@ -132,7 +132,7 @@ const Contact = () => {
                 </svg>
 
                 <span style={{ marginLeft: "10px" }}>
-                  0700DOTHMO (07000368466)
+                  07000DOTHMO (07000368466)
                 </span>
               </li>
               <li
