@@ -615,7 +615,7 @@
 
 @media (max-width: 425px) {
   .heroSection {
-    width: 100vw;
+    width: 425px;
     height: 730px;
     padding: 100px 57px 56px 28px;
     overflow-x: hidden;
@@ -736,7 +736,7 @@
 
 @media (max-width: 375px) {
   .heroSection {
-    width: 100vw;
+    width: 375px;
     height: 730px;
     padding: 89px 57px 56px 28px;
     overflow-x: hidden;
@@ -839,7 +839,7 @@
 
 @media (max-width: 320px) {
   .heroSection {
-    width: 100vw;
+    width: 320px;
     height: 690px;
     padding: 49px 28px 56px 28px;
     overflow-x: hidden;

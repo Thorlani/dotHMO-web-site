@@ -379,7 +379,7 @@
 
 @media (max-width: 425px) {
   .container {
-    width: 100vw;
+    width: 425px;
     padding: 100px 17px 10px 17px;
     height: 1480px;
   }
@@ -449,7 +449,7 @@
 
 @media (max-width: 375px) {
   .container {
-    width: 100vw;
+    width: 375px;
   }
 
   .name {
@@ -465,7 +465,7 @@
 
 @media (max-width: 320px) {
   .container {
-    width: 100vw;
+    width: 320px;
   }
   .bigText {
     font-family: "Galano", sans-serif;

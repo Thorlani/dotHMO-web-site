@@ -311,7 +311,7 @@
 
 @media (max-width: 425px) {
     .heroSection {
-        width: 100vw;
+        width: 425px;
         text-align: center;
     }
     .heroSectionRight {
@@ -366,7 +366,7 @@
 
 @media (max-width: 375px) {
     .heroSection {
-        width: 100vw;
+        width: 375px;
     }
     .h1 {
         font-size: 50px;
@@ -385,7 +385,7 @@
 
 @media (max-width: 320px) {
     .heroSection {
-        width: 100vw;
+        width: 320px;
     }
     .h1 {
         font-size: 40px;

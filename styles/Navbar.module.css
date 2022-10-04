@@ -453,7 +453,7 @@
 
 @media (max-width: 425px) {
     .navbar {
-        width: 100vw;
+        width: 425px;
         height: 63px;
         padding: 15px 28px 14px;
     }
@@ -580,7 +580,7 @@
 
 @media (max-width: 375px) {
     .navbar {
-        width: 100vw;
+        width: 375px;
         height: 63px;
         padding: 15px 28px 14px;
     }
@@ -654,7 +654,7 @@
 
 @media (max-width: 320px) {
     .navbar {
-        width: 100vw;
+        width: 320px;
         height: 63px;
         padding: 15px 28px 14px;
     }

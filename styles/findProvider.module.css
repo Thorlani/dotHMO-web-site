@@ -272,7 +272,7 @@
 
 @media (max-width: 425px) {
   .FindProviderHeader {
-    width: 100vw;
+    width: 425px;
   }
   .input {
     width: 238px;
@@ -327,7 +327,7 @@
 
 @media (max-width: 375px) {
   .FindProviderHeader {
-    width: 100vw;
+    width: 375px;
   }
   .h1 {
     font-size: 48px;
@@ -371,7 +371,7 @@
 
 @media (max-width: 320px) {
   .FindProviderHeader {
-    width: 100vw;
+    width: 320px;
   }
   .h1 {
     font-size: 38px;

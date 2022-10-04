@@ -206,7 +206,7 @@
 
 @media (max-width: 425px) {
   .heroSection {
-    width: 100vw;
+    width: 425px;
     height: 900px;
     padding-left: 20px;
     padding-right: 20px;
@@ -278,7 +278,7 @@
 
 @media (max-width: 375px) {
   .heroSection {
-    width: 100vw;
+    width: 375px;
   }
   .contentTitle {
     font-family: "Galano", sans-serif;
@@ -309,7 +309,7 @@
 
 @media (max-width: 320px) {
   .heroSection {
-    width: 100vw;
+    width: 320px;
     padding-left: 10px;
     padding-right: 10px;
   }

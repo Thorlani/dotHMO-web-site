@@ -60,7 +60,7 @@
 
 @media (max-width: 425px) {
   .getAQuote {
-    width: 100vw;
+    width: 425px;
   }
   .h1 {
     font-family: "Galano", sans-serif;
@@ -77,7 +77,7 @@
 }
 @media (max-width: 375px) {
   .getAQuote {
-    width: 100vw;
+    width: 375px;
   }
   .h1 {
     font-family: "Galano", sans-serif;
@@ -94,7 +94,7 @@
 }
 @media (max-width: 320px) {
   .getAQuote {
-    width: 100vw;
+    width: 320px;
   }
   .h1 {
     font-family: "Galano", sans-serif;
