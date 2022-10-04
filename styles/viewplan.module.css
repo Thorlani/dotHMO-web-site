@@ -407,7 +407,7 @@
 
 @media (max-width: 425px) {
     .heroSection {
-        width: 425px;
+        width: 100vw;
         height: 670px;
         padding: 23px 12px 0 27px;
     }
@@ -419,7 +419,7 @@
         line-height: 57px;
     }
     .planSection {
-        width: 425px;
+        width: 100vw;
     }
     .planContent {
         width: 360px;
@@ -436,10 +436,10 @@
 
 @media (max-width: 375px) {
     .heroSection {
-        width: 375px;
+        width: 100vw;
     }
     .planSection {
-        width: 375px;
+        width: 100vw;
     }
     .planContentContainer {
         margin-top: 40px;
@@ -458,7 +458,7 @@
 
 @media (max-width: 320px) {
     .heroSection {
-        width: 320px;
+        width: 100vw;
         height: 670px;
         padding: 23px 17px 27px;
     }
@@ -470,7 +470,7 @@
         line-height: 45px;
     }
     .planSection {
-        width: 320px;
+        width: 100vw;
         padding: 28px 17px 70px;
     }
     .planContent {

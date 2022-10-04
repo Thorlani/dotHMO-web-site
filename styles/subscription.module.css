@@ -142,7 +142,7 @@
 @media (max-width: 425px) {
     .subscription {
         height: 296px;
-        width: 425px;
+        width: 100vw;
         background: #65A999;
         padding-top: 55px;
         padding-left: 0px;
@@ -174,7 +174,7 @@
 @media (max-width: 375px) {
     .subscription {
         height: 296px;
-        width: 375px;
+        width: 100vw;
         background: #65A999;
         padding-top: 55px;
         padding-left: 0px;
@@ -205,7 +205,7 @@
 @media (max-width: 320px) {
     .subscription {
         height: 296px;
-        width: 320px;
+        width: 100vw;
         background: #65A999;
         padding-top: 55px;
         padding-left: 0px;

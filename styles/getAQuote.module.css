@@ -1,111 +1,111 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;400;600;700&family=Galano:wght@100;200;300;400;500;600;700;800;900&family=Poppins:ital,wght@0,200;0,300;0,500;0,600;0,700;0,800;0,900;1,400&family=Source+Serif+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@200;400;600;700&family=Galano:wght@100;200;300;400;500;600;700;800;900&family=Poppins:ital,wght@0,200;0,300;0,500;0,600;0,700;0,800;0,900;1,400&family=Source+Serif+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,700&display=swap");
 
 .getAQuote {
-    width: 100%;
-    height: 400px;
-    background: #DDFFDA;
-    display: grid;
-    place-items: center;
-    text-align: center;
+  width: 100%;
+  height: 400px;
+  background: #ddffda;
+  display: grid;
+  place-items: center;
+  text-align: center;
 }
 
 .h1 {
-    width: 530px;
-    font-family: 'Galano', sans-serif;
-    font-style: normal;
-    font-weight: 900;
-    font-size: 40px;
-    line-height: 48px;
-    letter-spacing: 0.5px;
-    text-align: center;
-    color: #50897C;
+  width: 530px;
+  font-family: "Galano", sans-serif;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 40px;
+  line-height: 48px;
+  letter-spacing: 0.5px;
+  text-align: center;
+  color: #50897c;
 }
 
 .btnGetAQuote {
-    height: 55px;
-    width: 205px;
-    border-radius: 2px;
-    background: #118D6E;
-    border: none;
-    font-family: 'Galano', sans-serif;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 19px;
-    text-align: center;
-    letter-spacing: 0.5px;
-    color: #FFFFFF;
-    margin: 15px 0;
+  height: 55px;
+  width: 205px;
+  border-radius: 2px;
+  background: #118d6e;
+  border: none;
+  font-family: "Galano", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  letter-spacing: 0.5px;
+  color: #ffffff;
+  margin: 15px 0;
 }
 
 @media (max-width: 1024px) {
-    .getAQuote {
-        width: 1024px;
-        padding-left: 0px;
-        display: grid;
-        place-items: center;
-    }
+  .getAQuote {
+    width: 1024px;
+    padding-left: 0px;
+    display: grid;
+    place-items: center;
+  }
 }
 
 @media (max-width: 768px) {
-    .getAQuote {
-        width: 768px;
-        padding-top: 5px;
-        padding-left: 0px;
-        display: grid;
-        place-items: center;
-        height: 300px;
-    }
+  .getAQuote {
+    width: 768px;
+    padding-top: 5px;
+    padding-left: 0px;
+    display: grid;
+    place-items: center;
+    height: 300px;
+  }
 }
 
 @media (max-width: 425px) {
-    .getAQuote {
-        width: 425px;
-    }
-    .h1 {
-        font-family: 'Galano', sans-serif;
-        font-style: normal;
-        font-weight: 900;
-        font-size: 24px;
-        line-height: 29px;
-        text-align: center;
-        letter-spacing: 0.5px;
-        color: #50897C;
-        width: 309px;
-        height: 58px;
-    }
+  .getAQuote {
+    width: 100vw;
+  }
+  .h1 {
+    font-family: "Galano", sans-serif;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 24px;
+    line-height: 29px;
+    text-align: center;
+    letter-spacing: 0.5px;
+    color: #50897c;
+    width: 309px;
+    height: 58px;
+  }
 }
 @media (max-width: 375px) {
-    .getAQuote {
-        width: 375px;
-    }
-    .h1 {
-        font-family: 'Galano', sans-serif;
-        font-style: normal;
-        font-weight: 900;
-        font-size: 24px;
-        line-height: 29px;
-        text-align: center;
-        letter-spacing: 0.5px;
-        color: #50897C;
-        width: 309px;
-        height: 58px;
-    }
+  .getAQuote {
+    width: 100vw;
+  }
+  .h1 {
+    font-family: "Galano", sans-serif;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 24px;
+    line-height: 29px;
+    text-align: center;
+    letter-spacing: 0.5px;
+    color: #50897c;
+    width: 309px;
+    height: 58px;
+  }
 }
 @media (max-width: 320px) {
-    .getAQuote {
-        width: 320px;
-    }
-    .h1 {
-        font-family: 'Galano', sans-serif;
-        font-style: normal;
-        font-weight: 900;
-        font-size: 24px;
-        line-height: 29px;
-        text-align: center;
-        letter-spacing: 0.5px;
-        color: #50897C;
-        width: 299px;
-        height: 58px;
-    }
+  .getAQuote {
+    width: 100vw;
+  }
+  .h1 {
+    font-family: "Galano", sans-serif;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 24px;
+    line-height: 29px;
+    text-align: center;
+    letter-spacing: 0.5px;
+    color: #50897c;
+    width: 299px;
+    height: 58px;
+  }
 }
