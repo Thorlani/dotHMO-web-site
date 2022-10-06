@@ -66,7 +66,15 @@ const Viewplan = () => {
             <img
               className={styles.plansImage}
               src="/maestro-lite.svg"
-              alt="Dot maestro-lite image"
+              alt={
+                path === "individual"
+                  ? "Waso"
+                  : path === "business"
+                  ? "Coral Plan"
+                  : path === "senior"
+                  ? "Senior Coral"
+                  : ""
+              }
               width="350px"
               height="350px"
             />
@@ -88,7 +96,15 @@ const Viewplan = () => {
             <img
               className={styles.plansImage}
               src="/classic-lite.svg"
-              alt="Dot classic-lite image"
+              alt={
+                path === "individual"
+                  ? "Jolly"
+                  : path === "business"
+                  ? "Dot Emerald"
+                  : path === "senior"
+                  ? "Senior Beryl"
+                  : ""
+              }
               width="350px"
               height="350px"
             />
@@ -110,7 +126,15 @@ const Viewplan = () => {
             <img
               className={styles.plansImage}
               src="/ultimate.svg"
-              alt="Dot ultimate  image"
+              alt={
+                path === "individual"
+                  ? "Better-life"
+                  : path === "business"
+                  ? "Dot Beryl"
+                  : path === "senior"
+                  ? "Senior Diamond"
+                  : ""
+              }
               width="350px"
               height="350px"
             />
@@ -133,7 +157,15 @@ const Viewplan = () => {
               <img
                 className={styles.plansImage}
                 src="/executive.svg"
-                alt="Dot executive image"
+                alt={
+                  path === "individual"
+                    ? "Awoof"
+                    : path === "business"
+                    ? "Dot Diamond"
+                    : path === "senior"
+                    ? ""
+                    : ""
+                }
                 width="350px"
                 height="350px"
               />
