@@ -104,6 +104,12 @@
     top: -50px;
     right: -139px;
   }
+  .new_feature {
+    display: flex;
+  }
+  .new_feature > button:nth-child(2) {
+    margin-left: 5%;
+  }
   .planBtn {
     margin-top: 42px;
     background: #65a999;
@@ -261,6 +267,9 @@
     top: -50px;
     right: -139px;
   }
+  .new_feature > button:nth-child(2) {
+    margin-left: 5%;
+  }
   .planBtn {
     margin-top: 82px;
     background: #65a999;
@@ -357,7 +366,7 @@
   }
   .span {
     font-size: 32px;
-    line-height: 44px;
+    line-height: 34px;
     margin: 10px 0px;
     width: 210px;
     margin-top: -10px;
@@ -365,11 +374,33 @@
   .line {
     margin-top: 0px;
   }
-  .planBtn {
-    margin-top: 42px;
+  .new_feature {
+    display: flex;
+    flex-direction: column;
+  }
+  .new_feature > button {
+    margin-top: 4%;
+  }
+  .new_feature > button:nth-child(2) {
+    margin-left: 0%;
   }
   .howItWorksSection {
     padding: 56px 27px 57px;
+  }
+  .planContentContainer > .planContent {
+    padding-top: 20px;
+  }
+  .planContentContainer
+    > .planContent:nth-child(4)
+    > .new_feature
+    > button:nth-child(1) {
+    margin-top: 1%;
+  }
+  .planContentContainer
+    > .planContent:nth-child(4)
+    > .new_feature
+    > button:nth-child(2) {
+    margin-top: 3%;
   }
 }
 
@@ -427,9 +458,18 @@
   .plansImage {
     right: -189px;
   }
+  .planContentContainer
+    > .planContent:nth-child(4)
+    > .new_feature
+    > button:nth-child(1) {
+    margin-top: 1%;
+  }
+  /* .new_feature > button {
+    margin-top: 8%;
+  } */
   .span {
     line-height: 34px;
-    margin-top: 20px;
+    margin-top: 0px;
   }
 }
 
@@ -450,8 +490,11 @@
   .plansImage {
     right: -199px;
   }
+  /* .new_feature > button {
+    margin-top: 4%;
+  } */
   .span {
-    margin-top: -10px;
+    margin-top: 0px;
   }
 }
 
@@ -478,5 +521,8 @@
   }
   .plansImage {
     right: -219px;
+  }
+  .new_feature > button {
+    margin-top: 5%;
   }
 }

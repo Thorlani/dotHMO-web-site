@@ -78,9 +78,40 @@ const Viewplan = () => {
               width="350px"
               height="350px"
             />
-            <button onClick={onRequest} className={styles.planBtn}>
-              Request Call
-            </button>
+            <div className={styles.new_feature}>
+              <button className={styles.planBtn}>
+                <a
+                  href={
+                    path === "individual"
+                      ? "/plans/retail-plans.pdf"
+                      : path === "business"
+                      ? "/plans/corporate-plans.pdf"
+                      : path === "senior"
+                      ? "/plans/senior-citizen-plans.pdf"
+                      : ""
+                  }
+                  download={
+                    path === "individual"
+                      ? "/plans/retail-plans.pdf"
+                      : path === "business"
+                      ? "/plans/corporate-plans.pdf"
+                      : path === "senior"
+                      ? "/plans/senior-citizen-plans.pdf"
+                      : ""
+                  }
+                  style={{ textDecoration: "none" }}
+                >
+                  About Plan
+                </a>
+              </button>
+              <button
+                style={{ cursor: "pointer" }}
+                onClick={onRequest}
+                className={styles.planBtn}
+              >
+                Request Call
+              </button>
+            </div>
           </div>
           <div className={styles.planContent}>
             <p className={styles.span}>
@@ -108,9 +139,40 @@ const Viewplan = () => {
               width="350px"
               height="350px"
             />
-            <button onClick={onRequest} className={styles.planBtn}>
-              Request Call
-            </button>
+            <div className={styles.new_feature}>
+              <button className={styles.planBtn}>
+                <a
+                  href={
+                    path === "individual"
+                      ? "/plans/retail-plans.pdf"
+                      : path === "business"
+                      ? "/plans/corporate-plans.pdf"
+                      : path === "senior"
+                      ? "/plans/senior-citizen-plans.pdf"
+                      : ""
+                  }
+                  download={
+                    path === "individual"
+                      ? "/plans/retail-plans.pdf"
+                      : path === "business"
+                      ? "/plans/corporate-plans.pdf"
+                      : path === "senior"
+                      ? "/plans/senior-citizen-plans.pdf"
+                      : ""
+                  }
+                  style={{ textDecoration: "none" }}
+                >
+                  About Plan
+                </a>
+              </button>
+              <button
+                style={{ cursor: "pointer" }}
+                onClick={onRequest}
+                className={styles.planBtn}
+              >
+                Request Call
+              </button>
+            </div>
           </div>
           <div className={styles.planContent}>
             <p className={styles.span}>
@@ -138,9 +200,40 @@ const Viewplan = () => {
               width="350px"
               height="350px"
             />
-            <button onClick={onRequest} className={styles.planBtn}>
-              Request Call
-            </button>
+            <div className={styles.new_feature}>
+              <button className={styles.planBtn}>
+                <a
+                  href={
+                    path === "individual"
+                      ? "/plans/retail-plans.pdf"
+                      : path === "business"
+                      ? "/plans/corporate-plans.pdf"
+                      : path === "senior"
+                      ? "/plans/senior-citizen-plans.pdf"
+                      : ""
+                  }
+                  download={
+                    path === "individual"
+                      ? "/plans/retail-plans.pdf"
+                      : path === "business"
+                      ? "/plans/corporate-plans.pdf"
+                      : path === "senior"
+                      ? "/plans/senior-citizen-plans.pdf"
+                      : ""
+                  }
+                  style={{ textDecoration: "none" }}
+                >
+                  About Plan
+                </a>
+              </button>
+              <button
+                style={{ cursor: "pointer" }}
+                onClick={onRequest}
+                className={styles.planBtn}
+              >
+                Request Call
+              </button>
+            </div>
           </div>
           {path === "senior" ? null : (
             <div className={styles.planContent}>
@@ -169,9 +262,40 @@ const Viewplan = () => {
                 width="350px"
                 height="350px"
               />
-              <button onClick={onRequest} className={styles.planBtn}>
-                Request Call
-              </button>
+              <div className={styles.new_feature}>
+                <button className={styles.planBtn}>
+                  <a
+                    href={
+                      path === "individual"
+                        ? "/plans/retail-plans.pdf"
+                        : path === "business"
+                        ? "/plans/corporate-plans.pdf"
+                        : path === "senior"
+                        ? "/plans/senior-citizen-plans.pdf"
+                        : ""
+                    }
+                    download={
+                      path === "individual"
+                        ? "/plans/retail-plans.pdf"
+                        : path === "business"
+                        ? "/plans/corporate-plans.pdf"
+                        : path === "senior"
+                        ? "/plans/senior-citizen-plans.pdf"
+                        : ""
+                    }
+                    style={{ textDecoration: "none" }}
+                  >
+                    About Plan
+                  </a>
+                </button>
+                <button
+                  style={{ cursor: "pointer" }}
+                  onClick={onRequest}
+                  className={styles.planBtn}
+                >
+                  Request Call
+                </button>
+              </div>
             </div>
           )}
         </div>
