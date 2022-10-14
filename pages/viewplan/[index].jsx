@@ -101,7 +101,7 @@ const Viewplan = () => {
                   }
                   style={{ textDecoration: "none" }}
                 >
-                  About Plan
+                  Plan Benefits
                 </a>
               </button>
               <button
@@ -162,7 +162,7 @@ const Viewplan = () => {
                   }
                   style={{ textDecoration: "none" }}
                 >
-                  About Plan
+                  Plan Benefits
                 </a>
               </button>
               <button
@@ -223,7 +223,7 @@ const Viewplan = () => {
                   }
                   style={{ textDecoration: "none" }}
                 >
-                  About Plan
+                  Plan Benefits
                 </a>
               </button>
               <button
@@ -285,7 +285,7 @@ const Viewplan = () => {
                     }
                     style={{ textDecoration: "none" }}
                   >
-                    About Plan
+                   Plan Benefits
                   </a>
                 </button>
                 <button
